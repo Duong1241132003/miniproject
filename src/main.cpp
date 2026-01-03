@@ -59,6 +59,11 @@ void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
 
         library.addSong(song);
     }
+    
+    // Create an index entry pointing to the stored song
+    library.initializeSongByID();
+    library.initializeSongByTitle();
+    library.initializeSongByArtist();
 }
 
 /*
@@ -84,9 +89,22 @@ void playSong(const Song& song)
 // test function for require 1.1, 1.2
 int testMusicPlayer();
 int testSmartPlaylist();
+void testFindSongByID(MusicLibrary& library, int songID);
+void testFindSongByTitle(MusicLibrary& library, const std::string& title);
+void testFindSongByArtist(MusicLibrary& library, const std::string& artist);
+
+MusicLibrary library;
+PlaybackQueue queue;
+
 int main()
 {
-    testSmartPlaylist();
+    // Load music library from CSV
+    loadLibraryFromCSV("data/playlist.csv", library);
+
+    std::cout << "Loaded "
+            << library.getSongCount()
+            << " songs into the library.\n\n";
+    testFindSongByArtist(library, "artist1");
     return 0;
 }
 
@@ -94,16 +112,6 @@ int testMusicPlayer()
 {
     try
         {
-            MusicLibrary library;
-            PlaybackQueue queue;
-
-            // Load music library from CSV
-            loadLibraryFromCSV("data/playlist.csv", library);
-
-            std::cout << "Loaded "
-                    << library.getSongCount()
-                    << " songs into the library.\n\n";
-
             // Add some songs to the playback queue
             queue.addSong(library.getSongByIndex(0));
             queue.addSong(library.getSongByIndex(3));
@@ -129,16 +137,6 @@ int testSmartPlaylist()
 {
     try
         {
-            MusicLibrary library;
-            PlaybackQueue queue;
-
-            // Load music library from CSV
-            loadLibraryFromCSV("data/playlist.csv", library);
-
-            std::cout << "Loaded "
-                    << library.getSongCount()
-                    << " songs into the library.\n\n";
-
             // Add some songs to the playback queue
             addAlbumToQueue("album1", library, queue);
 
@@ -156,4 +154,52 @@ int testSmartPlaylist()
         return 1;
     }
     return 0;
+}
+
+void testFindSongByID(MusicLibrary& library, int songID)
+{
+    Song* song = library.findSongByID(songID);
+
+    if (song != nullptr)
+    {
+        std::cout << "Found song: " << song->title << std::endl;
+    }
+    else
+    {
+        std::cout << "Song not found\n";
+    }
+
+}
+
+void testFindSongByTitle(MusicLibrary& library, const std::string& title)
+{
+    Song* song = library.findSongByTitle(title);
+
+    if (song != nullptr)
+    {
+        std::cout << "Found song: " << song->id << std::endl;
+    }
+    else
+    {
+        std::cout << "Song not found\n";
+    }
+
+}
+
+void testFindSongByArtist(MusicLibrary& library, const std::string& artist)
+{
+    std::vector<Song*> songs = library.findSongsByArtist(artist);
+
+    if (!songs.empty())
+    {
+        std::cout << "Found songs by artist: " << artist << std::endl;
+        for (const Song* song : songs)
+        {
+            playSong(*song);
+        }
+    }
+    else
+    {
+        std::cout << "No songs found for artist: " << artist << std::endl;
+    }
 }
