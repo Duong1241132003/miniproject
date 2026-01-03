@@ -1,0 +1,11 @@
+id,title,artist,album,duration,path
+1,ahem,artist1,album1,1,D:\\hocCpp\\Playlist\\ahem_x.wav
+2,airplane_beep_chime,artist2,album2,4,D:\\hocCpp\\Playlist\\airplane_chime_x.wav
+3,alarm_beep,artist3,album3,3,D:\\hocCpp\\Playlist\\alarm_beep.wav
+4,applause,artist1,album2,2,D:\\hocCpp\\Playlist\\applause_y.wav
+5,baby,artist2,album3,1,D:\\hocCpp\\Playlist\\baby_x.wav
+6,blip,artist1,album1,1,D:\\hocCpp\\Playlist\\blip.wav
+7,blurp,artist3,album3,1,D:\\hocCpp\\Playlist\\blurp_x.wav
+8,bomb,artist3,album1,2,D:\\hocCpp\\Playlist\\bomb_x.wav
+9,burp,artist1,album2,1,D:\\hocCpp\\Playlist\\burp_x.wav
+10,car,artist2,album3,5,D:\\hocCpp\\Playlist\\car_x.wav
