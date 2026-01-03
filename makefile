@@ -1,14 +1,14 @@
 CC = g++
 
-INC_DIR := ./inc/model ./inc/library ./inc/playback 
-SRC_DIR := ./src/model ./src/library ./src/playback ./src
+INC_DIR := ./inc/model ./inc/library ./inc/playback ./inc/algorithm
+SRC_DIR := ./src/model ./src/library ./src/playback ./src/algorithm ./src
 
 DEPS = $(wildcard $(foreach dir, $(INC_DIR), $(dir)/*.h))
 
 CFLAGS = -std=c++17 -Wall -Wextra -Wpedantic $(foreach inc, $(INC_DIR),-I$(inc))
 VPATH = $(foreach source, $(SRC_DIR),$(source))
 
-OBJECT = build/main.o build/MusicLibrary.o build/Song.o build/PlaybackQueue.o
+OBJECT = build/main.o build/MusicLibrary.o build/Song.o build/PlaybackQueue.o build/SmartPlaylist.o
 
 LDFLAGS  = -lwinmm
 

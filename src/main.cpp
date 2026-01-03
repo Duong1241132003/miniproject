@@ -8,7 +8,7 @@
 #include "Song.h"
 #include "MusicLibrary.h"
 #include "PlaybackQueue.h"
-
+#include "SmartPlaylist.h"
 
 /*
  * Loads songs from a CSV file into the music library.
@@ -81,38 +81,79 @@ void playSong(const Song& song)
                 );
 }
 
+// test function for require 1.1, 1.2
+int testMusicPlayer();
+int testSmartPlaylist();
 int main()
 {
+    testSmartPlaylist();
+    return 0;
+}
+
+int testMusicPlayer()
+{
     try
-    {
-        MusicLibrary library;
-        PlaybackQueue queue;
-
-        // Load music library from CSV
-        loadLibraryFromCSV("data/playlist.csv", library);
-
-        std::cout << "Loaded "
-                  << library.getSongCount()
-                  << " songs into the library.\n\n";
-
-        // Add some songs to the playback queue
-        queue.addSong(library.getSongByIndex(0));
-        queue.addSong(library.getSongByIndex(3));
-        queue.addSong(library.getSongByIndex(5));
-
-        // Simulate playback
-        for (int i = 0; i < 3; ++i)
         {
-            Song current = queue.getCurrentSong();
-            playSong(current);
-            queue.playNext();
+            MusicLibrary library;
+            PlaybackQueue queue;
+
+            // Load music library from CSV
+            loadLibraryFromCSV("data/playlist.csv", library);
+
+            std::cout << "Loaded "
+                    << library.getSongCount()
+                    << " songs into the library.\n\n";
+
+            // Add some songs to the playback queue
+            queue.addSong(library.getSongByIndex(0));
+            queue.addSong(library.getSongByIndex(3));
+            queue.addSong(library.getSongByIndex(5));
+
+            // Simulate playback
+            for (int i = 0; i < 3; ++i)
+            {
+                Song current = queue.getCurrentSong();
+                playSong(current);
+                queue.playNext();
+            }
         }
-    }
     catch (const std::exception& ex)
     {
         std::cerr << "Error: " << ex.what() << std::endl;
         return 1;
     }
+    return 0;
+}
 
+int testSmartPlaylist()
+{
+    try
+        {
+            MusicLibrary library;
+            PlaybackQueue queue;
+
+            // Load music library from CSV
+            loadLibraryFromCSV("data/playlist.csv", library);
+
+            std::cout << "Loaded "
+                    << library.getSongCount()
+                    << " songs into the library.\n\n";
+
+            // Add some songs to the playback queue
+            addAlbumToQueue("album1", library, queue);
+
+            // Simulate playback
+            for (int i = 0; i < 3; ++i)
+            {
+                Song current = queue.getCurrentSong();
+                playSong(current);
+                queue.playNext();
+            }
+        }
+    catch (const std::exception& ex)
+    {
+        std::cerr << "Error: " << ex.what() << std::endl;
+        return 1;
+    }
     return 0;
 }
