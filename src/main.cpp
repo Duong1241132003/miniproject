@@ -9,10 +9,13 @@
 #include "MusicLibrary.h"
 #include "PlaybackQueue.h"
 #include "SmartPlaylist.h"
+#include "PlayNextQueue.h"
+#include "ShuffleManager.h"
+#include "PlaybackHistory.h"
 
 /*
  * Loads songs from a CSV file into the music library.
- * Expected CSV format:
+ * Expected CSV format
  * id,title,artist,album,duration,path
  */
 void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
@@ -73,6 +76,7 @@ void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
 void playSong(const Song& song)
 {
     std::cout << "Now playing:\n";
+    std::cout << "  ID      : " << song.id << "\n";
     std::cout << "  Title   : " << song.title << "\n";
     std::cout << "  Artist  : " << song.artist << "\n";
     std::cout << "  Album   : " << song.album << "\n";
@@ -92,6 +96,9 @@ int testSmartPlaylist();
 void testFindSongByID(MusicLibrary& library, int songID);
 void testFindSongByTitle(MusicLibrary& library, const std::string& title);
 void testFindSongByArtist(MusicLibrary& library, const std::string& artist);
+void testPlayNextQueue(MusicLibrary& library);
+void testShuffleManager(MusicLibrary& library);
+void testPlaybackHistory(MusicLibrary& library);
 
 MusicLibrary library;
 PlaybackQueue queue;
@@ -104,7 +111,7 @@ int main()
     std::cout << "Loaded "
             << library.getSongCount()
             << " songs into the library.\n\n";
-    testFindSongByArtist(library, "artist1");
+    testShuffleManager(library);
     return 0;
 }
 
@@ -201,5 +208,64 @@ void testFindSongByArtist(MusicLibrary& library, const std::string& artist)
     else
     {
         std::cout << "No songs found for artist: " << artist << std::endl;
+    }
+}
+
+void testPlayNextQueue(MusicLibrary& library)
+{
+    PlayNextQueue playNextQueue;
+
+    // Add songs to PlayNextQueue
+    playNextQueue.addSong(library.getSongByIndex(1));
+    playNextQueue.addSong(library.getSongByIndex(4));
+    playNextQueue.addSong(library.getSongByIndex(6));
+
+    // Simulate playing songs from PlayNextQueue
+    while (!playNextQueue.isEmpty())
+    {
+        Song nextSong = playNextQueue.playNext();
+        playSong(nextSong);
+    }
+}
+void testShuffleManager(MusicLibrary& library)
+{
+    ShuffleManager shuffleManager;
+
+    // Initialize shuffle with all songs in the library
+    std::vector<Song*> allSongs;
+    for (size_t i = 0; i < library.getSongCount(); ++i)
+    {
+        allSongs.push_back(const_cast<Song*>(&library.getSongByIndex(i)));
+    }
+    shuffleManager.initialize(allSongs);
+
+    // Simulate playing shuffled songs
+    for (size_t i = 0; i < library.getSongCount(); ++i)
+    {
+        Song* nextSong = shuffleManager.getNextSong();
+        if (nextSong != nullptr)
+        {
+            playSong(*nextSong);
+        }
+    }
+}
+void testPlaybackHistory(MusicLibrary& library)
+{
+    PlaybackHistory playbackHistory;
+
+    // Simulate playing some songs and recording history
+    for (size_t i = 0; i < 10; i+=2)
+    {
+        Song currentSong = library.getSongByIndex(i);
+        playSong(currentSong);
+        playbackHistory.pushSong(currentSong);
+    }
+
+    // Simulate going back in playback history
+    while (!playbackHistory.isEmpty())
+    {
+        Song previousSong = playbackHistory.playPreviousSong();
+        std::cout << "Replaying previous song from history:\n";
+        playSong(previousSong);
     }
 }
