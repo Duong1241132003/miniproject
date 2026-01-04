@@ -42,6 +42,11 @@ public:
     std::vector<Song*> findSongsByArtist(const std::string& artist);
 
     /*
+    * Finds all songs in a given album.
+    * Returns empty vector if album not found.
+    */
+    std::vector<Song*> findSongsByAlbum(const std::string& album);
+    /*
      * Returns total number of songs.
      */
     size_t getSongCount() const;
@@ -63,6 +68,12 @@ public:
      * Must be called after loading all songs.
      */
     void initializeSongByArtist();
+
+    /*
+     * Initializes the songByAlbum .
+     * Must be called after loading all songs.
+     */
+    void initializeSongByAlbum();
 
 private:
     /*
@@ -87,6 +98,13 @@ private:
      * Value : list of songs by that artist
      */
     std::unordered_map<std::string, std::vector<Song*>> songByArtist;
+
+    /*
+     * Key   : album name
+     * Value : list of songs in that album
+     */
+    std::unordered_map<std::string, std::vector<Song*>> songByAlbum;
+
 };
 
 

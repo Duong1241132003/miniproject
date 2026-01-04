@@ -12,86 +12,87 @@
 #include "PlayNextQueue.h"
 #include "ShuffleManager.h"
 #include "PlaybackHistory.h"
+#include "MusicPlayer.h"
 
-/*
- * Loads songs from a CSV file into the music library.
- * Expected CSV format
- * id,title,artist,album,duration,path
- */
-void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
-{
-    std::ifstream file(filePath);
+// /*
+//  * Loads songs from a CSV file into the music library.
+//  * Expected CSV format
+//  * id,title,artist,album,duration,path
+//  */
+// void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
+// {
+//     std::ifstream file(filePath);
 
-    if (!file.is_open())
-    {
-        throw std::runtime_error("Failed to open CSV file");
-    }
+//     if (!file.is_open())
+//     {
+//         throw std::runtime_error("Failed to open CSV file");
+//     }
 
-    std::string line;
+//     std::string line;
 
-    // Skip header line
-    std::getline(file, line);
+//     // Skip header line
+//     std::getline(file, line);
 
-    while (std::getline(file, line))
-    {
-        std::stringstream ss(line);
-        std::string token;
+//     while (std::getline(file, line))
+//     {
+//         std::stringstream ss(line);
+//         std::string token;
 
-        Song song;
+//         Song song;
 
-        // id
-        std::getline(ss, token, ',');
-        std::cout << "Parsing id = [" << token << "]\n";
-        song.id = std::stoi(token);
+//         // id
+//         std::getline(ss, token, ',');
+//         std::cout << "Parsing id = [" << token << "]\n";
+//         song.id = std::stoi(token);
 
-        // title
-        std::getline(ss, song.title, ',');
+//         // title
+//         std::getline(ss, song.title, ',');
 
-        // artist
-        std::getline(ss, song.artist, ',');
+//         // artist
+//         std::getline(ss, song.artist, ',');
 
-        // album
-        std::getline(ss, song.album, ',');
+//         // album
+//         std::getline(ss, song.album, ',');
 
-        // duration
-        std::getline(ss, token, ',');
-        song.duration = std::stoi(token);
+//         // duration
+//         std::getline(ss, token, ',');
+//         song.duration = std::stoi(token);
 
-        // path (last column)
-        std::getline(ss, song.path);
+//         // path (last column)
+//         std::getline(ss, song.path);
 
-        library.addSong(song);
-    }
+//         library.addSong(song);
+//     }
     
-    // Create an index entry pointing to the stored song
-    library.initializeSongByID();
-    library.initializeSongByTitle();
-    library.initializeSongByArtist();
-}
+//     // Create an index entry pointing to the stored song
+//     library.initializeSongByID();
+//     library.initializeSongByTitle();
+//     library.initializeSongByArtist();
+// }
 
 /*
  * Simulates playing a song.
  * This is a placeholder for real audio playback logic.
  */
-void playSong(const Song& song)
-{
-    std::cout << "Now playing:\n";
-    std::cout << "  ID      : " << song.id << "\n";
-    std::cout << "  Title   : " << song.title << "\n";
-    std::cout << "  Artist  : " << song.artist << "\n";
-    std::cout << "  Album   : " << song.album << "\n";
-    std::cout << "  Duration: " << song.duration << " s\n";
-    std::cout << "  Path    : " << song.path << "\n";
-    std::cout << "-----------------------------------\n";
-    PlaySoundA(
-                    song.path.c_str(),
-                    NULL,
-                    SND_FILENAME | SND_SYNC
-                );
-}
+// void playSong(const Song& song)
+// {
+//     std::cout << "Now playing:\n";
+//     std::cout << "  ID      : " << song.id << "\n";
+//     std::cout << "  Title   : " << song.title << "\n";
+//     std::cout << "  Artist  : " << song.artist << "\n";
+//     std::cout << "  Album   : " << song.album << "\n";
+//     std::cout << "  Duration: " << song.duration << " s\n";
+//     std::cout << "  Path    : " << song.path << "\n";
+//     std::cout << "-----------------------------------\n";
+//     PlaySoundA(
+//                     song.path.c_str(),
+//                     NULL,
+//                     SND_FILENAME | SND_SYNC
+//                 );
+// }
 
 // test function for require 1.1, 1.2
-int testMusicPlayer();
+int testMusicLibrary();
 int testSmartPlaylist();
 void testFindSongByID(MusicLibrary& library, int songID);
 void testFindSongByTitle(MusicLibrary& library, const std::string& title);
@@ -99,9 +100,10 @@ void testFindSongByArtist(MusicLibrary& library, const std::string& artist);
 void testPlayNextQueue(MusicLibrary& library);
 void testShuffleManager(MusicLibrary& library);
 void testPlaybackHistory(MusicLibrary& library);
-
+void testMusicPlayer();
 MusicLibrary library;
 PlaybackQueue queue;
+MusicPlayer player;
 
 int main()
 {
@@ -111,18 +113,23 @@ int main()
     std::cout << "Loaded "
             << library.getSongCount()
             << " songs into the library.\n\n";
-    testShuffleManager(library);
+    player.library = library;
+    testMusicPlayer();
+    while(1)
+    {
+        player.playNext();
+    }
     return 0;
 }
 
-int testMusicPlayer()
+int testMusicLibrary()
 {
     try
         {
             // Add some songs to the playback queue
-            queue.addSong(library.getSongByIndex(0));
-            queue.addSong(library.getSongByIndex(3));
-            queue.addSong(library.getSongByIndex(5));
+            queue.addSong(library.getSongByIndex(1));
+            queue.addSong(library.getSongByIndex(4));
+            queue.addSong(library.getSongByIndex(8));
 
             // Simulate playback
             for (int i = 0; i < 3; ++i)
@@ -145,7 +152,7 @@ int testSmartPlaylist()
     try
         {
             // Add some songs to the playback queue
-            addAlbumToQueue("album1", library, queue);
+            addAlbumToQueue("album3", library, queue);
 
             // Simulate playback
             for (int i = 0; i < 3; ++i)
@@ -268,4 +275,14 @@ void testPlaybackHistory(MusicLibrary& library)
         std::cout << "Replaying previous song from history:\n";
         playSong(previousSong);
     }
+}
+
+void testMusicPlayer()
+{
+    player.selectAndPlaySong(3);
+    player.selectAndPlaySong(5);
+
+    player.playNextQueue.addSong(*library.findSongByID(1));
+    player.playNextQueue.addSong(*library.findSongByID(7));
+
 }

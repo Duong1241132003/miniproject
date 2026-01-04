@@ -21,10 +21,16 @@ void PlaybackQueue::removeSongById(int songId)
             // Move current iterator safely if the current song is removed
             if (it == current)
             {
-                current = std::next(it);
+                auto next = std::next(it);
+                queue.erase(it);
+
+                current = (next != queue.end()) ? next : queue.begin();
+            }
+            else
+            {
+                queue.erase(it);
             }
 
-            queue.erase(it);
             break;
         }
     }
@@ -36,7 +42,7 @@ void PlaybackQueue::removeSongById(int songId)
     }
 }
 
-Song PlaybackQueue::getCurrentSong() const
+const Song& PlaybackQueue::getCurrentSong()
 {
     if (queue.empty() || current == queue.end())
     {
@@ -65,4 +71,25 @@ void PlaybackQueue::playNext()
 bool PlaybackQueue::isEmpty() const
 {
     return queue.empty();
+}
+
+/*
+ * Iterates through the entire music library and appends
+ * all songs that match the given album name to the queue.
+ */
+void addAlbumToQueue(const std::string& albumName,
+                     const MusicLibrary& library,
+                     PlaybackQueue& queue)
+{
+    const size_t songCount = library.getSongCount();
+
+    for (size_t i = 0; i < songCount; ++i)
+    {
+        const Song& song = library.getSongByIndex(i);
+
+        if (song.album == albumName)
+        {
+            queue.addSong(song);
+        }
+    }
 }

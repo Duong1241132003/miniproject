@@ -2,7 +2,9 @@
 #define PLAYBACK_QUEUE_H
 
 #include <list>
+#include <string>
 #include "Song.h"
+#include "MusicLibrary.h"
 
 /*
  * PlaybackQueue manages the order of songs during playback.
@@ -26,8 +28,7 @@ public:
      * Returns the currently playing song.
      * Throws an exception if the queue is empty.
      */
-    Song getCurrentSong() const;
-
+    const Song& getCurrentSong();
     /*
      * Advances playback to the next song.
      */
@@ -51,5 +52,13 @@ private:
      */
     std::list<Song>::iterator current = queue.end();
 };
+
+/*
+ * Adds all songs belonging to a specific album
+ * from the music library to the playback queue.
+ */
+void addAlbumToQueue(const std::string& albumName,
+                     const MusicLibrary& library,
+                     PlaybackQueue& queue);
 
 #endif

@@ -1,22 +1,81 @@
 #include "SmartPlaylist.h"
+#include <queue>
+#include <set>
 
 /*
- * Iterates through the entire music library and appends
- * all songs that match the given album name to the queue.
+ * Generates a smart playlist based on artist and album similarity.
  */
-void addAlbumToQueue(const std::string& albumName,
-                     const MusicLibrary& library,
-                     PlaybackQueue& queue)
+PlaybackQueue generateSmartPlaylist(
+    Song& startSong,
+    MusicLibrary& library,
+    int maxSize
+)
 {
-    const size_t songCount = library.getSongCount();
+    PlaybackQueue resultQueue;
 
-    for (size_t i = 0; i < songCount; ++i)
+    /*
+     * Queue used for BFS traversal.
+     */
+    std::queue<const Song*> bfsQueue;
+
+    /*
+     * Set to track songs already added to playlist.
+     */
+    std::set<int> visitedSongIDs;
+
+    /*
+     * Initialize BFS with the starting song.
+     */
+    bfsQueue.push(&startSong);
+    visitedSongIDs.insert(startSong.id);
+    resultQueue.addSong(startSong);
+
+    /*
+     * Perform BFS until playlist reaches max size.
+     */
+    while (!bfsQueue.empty() && visitedSongIDs.size() < static_cast<size_t>(maxSize))
     {
-        const Song& song = library.getSongByIndex(i);
+        const Song* currentSong = bfsQueue.front();
+        bfsQueue.pop();
 
-        if (song.album == albumName)
+        /*
+         * Explore neighbors by artist.
+         */
+        auto artistNeighbors = library.findSongsByArtist(currentSong->artist);
+
+        for (const Song* neighbor : artistNeighbors)
         {
-            queue.addSong(song);
+            if (visitedSongIDs.size() >= static_cast<size_t>(maxSize))
+            {
+                break;
+            }
+
+            if (visitedSongIDs.insert(neighbor->id).second)
+            {
+                resultQueue.addSong(*neighbor);
+                bfsQueue.push(neighbor);
+            }
+        }
+
+        /*
+         * Explore neighbors by album.
+         */
+        auto albumNeighbors = library.findSongsByAlbum(currentSong->album);
+
+        for (const Song* neighbor : albumNeighbors)
+        {
+            if (visitedSongIDs.size() >= static_cast<size_t>(maxSize))
+            {
+                break;
+            }
+
+            if (visitedSongIDs.insert(neighbor->id).second)
+            {
+                resultQueue.addSong(*neighbor);
+                bfsQueue.push(neighbor);
+            }
         }
     }
+
+    return resultQueue;
 }

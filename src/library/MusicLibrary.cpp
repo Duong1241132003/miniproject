@@ -53,6 +53,18 @@ std::vector<Song*> MusicLibrary::findSongsByArtist(const std::string& artist)
     return it->second;
 }
 
+std::vector<Song*> MusicLibrary::findSongsByAlbum(const std::string& album)
+{
+    auto it = songByAlbum.find(album);
+
+    if (it == songByAlbum.end())
+    {
+        return {};
+    }
+
+    return it->second;
+}
+
 size_t MusicLibrary::getSongCount() const
 {
     return songs.size();
@@ -84,5 +96,15 @@ void MusicLibrary::initializeSongByArtist()
     for (Song& song : songs)
     {
         songByArtist[song.artist].push_back(&song);
+    }
+}
+
+void MusicLibrary::initializeSongByAlbum()
+{
+    songByAlbum.clear();
+
+    for (Song& song : songs)
+    {
+        songByAlbum[song.album].push_back(&song);
     }
 }
