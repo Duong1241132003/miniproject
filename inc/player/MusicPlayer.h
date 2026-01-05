@@ -22,6 +22,36 @@ class MusicPlayer
 {
 public:
     /*
+     * Constructor
+     * Loads the music library from CSV.
+     */
+    MusicPlayer();
+
+    /*
+     * Selects a song by ID and starts playback.
+     */
+    void selectAndPlaySong(int songID);
+
+    /*
+     * Adds a song to the playNextQueue.
+     */
+    void addSongToPlayNext(const Song& song);
+
+    /*
+     * Advances playback to the next song.
+     * Priority order:
+     * 1. PlayNextQueue
+     * 2. Main PlaybackQueue
+     */
+    void playNext();
+
+    /*
+     * get library
+     */
+    MusicLibrary& getLibrary();
+    
+private:
+    /*
      * Music library containing all songs.
      */
     MusicLibrary library;
@@ -40,21 +70,6 @@ public:
      * Playback history for "Back" functionality.
      */
     PlaybackHistory playbackHistory;
-
-    /*
-     * Selects a song by ID and starts playback.
-     */
-    void selectAndPlaySong(int songID);
-
-    /*
-     * Advances playback to the next song.
-     * Priority order:
-     * 1. PlayNextQueue
-     * 2. Main PlaybackQueue
-     */
-    void playNext();
-
-private:
 
     /*
      * Currently playing song.

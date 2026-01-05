@@ -100,21 +100,23 @@ void testFindSongByArtist(MusicLibrary& library, const std::string& artist);
 void testPlayNextQueue(MusicLibrary& library);
 void testShuffleManager(MusicLibrary& library);
 void testPlaybackHistory(MusicLibrary& library);
-void testMusicPlayer();
+void testMusicPlayer(MusicPlayer& player);
+
 MusicLibrary library;
 PlaybackQueue queue;
-MusicPlayer player;
+
 
 int main()
 {
+    MusicPlayer player;
     // Load music library from CSV
-    loadLibraryFromCSV("data/playlist.csv", library);
+    // loadLibraryFromCSV("data/playlist.csv", library);
 
-    std::cout << "Loaded "
-            << library.getSongCount()
-            << " songs into the library.\n\n";
-    player.library = library;
-    testMusicPlayer();
+    // std::cout << "Loaded "
+    //         << library.getSongCount()
+    //         << " songs into the library.\n\n";
+    // player.library = library;
+    testMusicPlayer(player);
     while(1)
     {
         player.playNext();
@@ -277,12 +279,12 @@ void testPlaybackHistory(MusicLibrary& library)
     }
 }
 
-void testMusicPlayer()
+void testMusicPlayer(MusicPlayer& player)
 {
     player.selectAndPlaySong(3);
     player.selectAndPlaySong(5);
 
-    player.playNextQueue.addSong(*library.findSongByID(1));
-    player.playNextQueue.addSong(*library.findSongByID(7));
+    player.addSongToPlayNext(*(player.getLibrary().findSongByID(1)));
+    player.addSongToPlayNext(*(player.getLibrary().findSongByID(7)));
 
 }

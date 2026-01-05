@@ -1,6 +1,22 @@
 #include "MusicPlayer.h"
 #include <stdexcept>
 
+MusicPlayer::MusicPlayer()
+{
+    /*
+     * Load music library from CSV at initialization.
+     */
+    loadLibraryFromCSV("data/playlist.csv", library);
+
+    /*
+     * Initialize all indexes for fast lookup.
+     */
+    library.initializeSongByID();
+    library.initializeSongByTitle();
+    library.initializeSongByArtist();
+    library.initializeSongByAlbum();
+}
+
 void MusicPlayer::selectAndPlaySong(int songID)
 {
     /*
@@ -32,6 +48,14 @@ void MusicPlayer::selectAndPlaySong(int songID)
      * Add the selected song.
      */
     playbackQueue.addSong(currentSong);
+}
+
+void MusicPlayer::addSongToPlayNext(const Song& song)
+{
+    /*
+     * Add the song to the PlayNextQueue.
+     */
+    playNextQueue.addSong(song);
 }
 
 void MusicPlayer::playNext()
@@ -74,6 +98,11 @@ void MusicPlayer::playNext()
      */
     playSong(currentSong);
     hasCurrentSong = true;
+}
+
+MusicLibrary& MusicPlayer::getLibrary()
+{
+    return library;
 }
 
 void playSong(const Song& song)
@@ -142,10 +171,4 @@ void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
 
         library.addSong(song);
     }
-    
-    // Create an index entry pointing to the stored song
-    library.initializeSongByID();
-    library.initializeSongByTitle();
-    library.initializeSongByArtist();
-    library.initializeSongByAlbum();
 }
