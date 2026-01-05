@@ -105,6 +105,11 @@ MusicLibrary& MusicPlayer::getLibrary()
     return library;
 }
 
+void MusicPlayer::setPlaybackQueue(PlaybackQueue pb)
+{
+    playbackQueue = pb;
+}
+
 void playSong(const Song& song)
 {
     std::cout << "Now playing:\n";

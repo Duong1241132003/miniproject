@@ -101,6 +101,7 @@ void testPlayNextQueue(MusicLibrary& library);
 void testShuffleManager(MusicLibrary& library);
 void testPlaybackHistory(MusicLibrary& library);
 void testMusicPlayer(MusicPlayer& player);
+void testBFS(MusicPlayer& player);
 
 MusicLibrary library;
 PlaybackQueue queue;
@@ -110,13 +111,13 @@ int main()
 {
     MusicPlayer player;
     // Load music library from CSV
-    // loadLibraryFromCSV("data/playlist.csv", library);
+    loadLibraryFromCSV("data/playlist.csv", library);
 
-    // std::cout << "Loaded "
-    //         << library.getSongCount()
-    //         << " songs into the library.\n\n";
+    std::cout << "Loaded "
+            << library.getSongCount()
+            << " songs into the library.\n\n";
     // player.library = library;
-    testMusicPlayer(player);
+    testBFS(player);
     while(1)
     {
         player.playNext();
@@ -287,4 +288,10 @@ void testMusicPlayer(MusicPlayer& player)
     player.addSongToPlayNext(*(player.getLibrary().findSongByID(1)));
     player.addSongToPlayNext(*(player.getLibrary().findSongByID(7)));
 
+}
+
+void testBFS(MusicPlayer& player)
+{
+    PlaybackQueue pb = generateSmartPlaylist(*(player.getLibrary().findSongByID(1)),player.getLibrary(),player.getLibrary().getSongCount());
+    player.setPlaybackQueue(pb);
 }

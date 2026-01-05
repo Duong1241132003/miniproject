@@ -39,6 +39,17 @@ public:
      */
     bool isEmpty() const;
 
+    /*
+     * Construcor default
+     */
+    PlaybackQueue() = default;
+
+    /*
+     * Copy constructor
+     */
+    PlaybackQueue(const PlaybackQueue& other);
+    PlaybackQueue& operator=(const PlaybackQueue& other);
+
 private:
     /*
      * std::list is chosen because:

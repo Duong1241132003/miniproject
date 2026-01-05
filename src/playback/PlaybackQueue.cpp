@@ -93,3 +93,37 @@ void addAlbumToQueue(const std::string& albumName,
         }
     }
 }
+
+PlaybackQueue::PlaybackQueue(const PlaybackQueue& other)
+    : queue(other.queue)
+{
+    if (other.current == other.queue.end())
+    {
+        current = queue.end();
+    }
+    else
+    {
+        current = queue.begin();
+    }
+}
+
+PlaybackQueue& PlaybackQueue::operator=(const PlaybackQueue& other)
+{
+    if (this == &other)
+    {
+        return *this;
+    }
+
+    queue = other.queue;
+
+    if (other.current == other.queue.end())
+    {
+        current = queue.end();
+    }
+    else
+    {
+        current = queue.begin();
+    }
+
+    return *this;
+}

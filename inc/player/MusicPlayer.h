@@ -46,10 +46,15 @@ public:
     void playNext();
 
     /*
-     * get library
+     * Get library
      */
     MusicLibrary& getLibrary();
-    
+
+    /*
+     * Set playbackQueue.
+     */
+    void setPlaybackQueue(PlaybackQueue pb);
+
 private:
     /*
      * Music library containing all songs.
