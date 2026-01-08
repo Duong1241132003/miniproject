@@ -11,7 +11,7 @@
  */
 void printMenu()
 {
-    std::cout << "\n========== MUSIC PLAYER – FULL DEMO ==========\n";
+    std::cout << "\n========== MUSIC PLAYER FULL DEMO ==========\n";
 
     // std::cout << "[CORE PLAYBACK]\n";
     std::cout << " 1. Play song by ID\n";
@@ -44,7 +44,7 @@ void printMenu()
 
     // std::cout << "\n[SYSTEM]\n";
     std::cout << " 0. Pause\n";
-
+    std::cout << " -1. Resume\n";
     std::cout << "=============================================\n";
     std::cout << "Choose: ";
 }
@@ -241,10 +241,16 @@ int main()
             /* ================= SYSTEM ================= */
             case 0:
             {
-                running = false;
+                pauseSong();    
                 break;
             }
 
+            case -1:
+            {
+                resumeSong();
+                break;
+            }
+            
             default:
             {
                 std::cout << "Invalid option.\n";

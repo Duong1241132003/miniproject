@@ -130,6 +130,12 @@ void playSong(const Song& song);
  * pause current song
  */
 void pauseSong();
+
+/*
+ * resume current song
+ */
+void resumeSong();
+
 /*
  * Loads songs from a CSV file into the music library.
  * Expected CSV format

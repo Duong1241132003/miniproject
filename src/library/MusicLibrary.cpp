@@ -1,5 +1,6 @@
 #include "MusicLibrary.h"
 #include <stdexcept>
+#include <iostream>
 
 void MusicLibrary::addSong(const Song& song)
 {

@@ -1,5 +1,32 @@
 #include "MusicPlayer.h"
 #include <stdexcept>
+#include <mutex>
+#include <condition_variable>
+
+static std::mutex audioMutex;
+static std::condition_variable audioCV;
+
+/*
+ * Cờ báo có yêu cầu phát bài mới
+ * (user chọn bài / next / previous)
+ */
+static bool requestNewSong = false;
+
+/*
+ * Cờ báo chương trình đang chạy
+ */
+static bool audioRunning = true;
+
+/*
+ * Bài hát hiện tại mà audio thread sẽ phát
+ */
+static Song audioSong;
+
+static void audioThreadFunc(MusicPlayer* player);
+
+static bool requestPause = false;
+
+static bool isPaused = false;
 
 MusicPlayer::MusicPlayer()
 {
@@ -7,14 +34,6 @@ MusicPlayer::MusicPlayer()
      * Load music library from CSV at initialization.
      */
     loadLibraryFromCSV("data/playlist.csv", library);
-    
-    // /*
-    //  * Initialize playqueue
-    //  */
-    // for(Song& i:library.getSongs())
-    // {
-    //     playbackQueue.addSong(i);
-    // }
 
     /*
      * Initialize all indexes for fast lookup.
@@ -24,6 +43,12 @@ MusicPlayer::MusicPlayer()
     library.initializeSongByTitle();
     library.initializeSongByArtist();
     library.initializeSongByAlbum();
+
+    /*
+     * Khởi động audio thread
+     */
+    static std::thread audioThread(audioThreadFunc, this);
+    audioThread.detach();
 }
 
 void MusicPlayer::selectAndPlaySong(int songID)
@@ -56,7 +81,11 @@ void MusicPlayer::selectAndPlaySong(int songID)
     /*
      * play selected song
      */
-    playSong(currentSong);
+    if (!isPaused)
+    {
+        playSong(currentSong);
+    }
+
 }
 
 void MusicPlayer::addSongToPlayNext(int id)
@@ -197,20 +226,21 @@ void MusicPlayer::playNext()
      */
     else if(!playbackQueue.isEmpty())
     {
-        std::cout << "Playing from PlaybackQueue\n";
-        playbackQueue.playNext();
+        std::cout << "Playing from PlaybackQueue\n";      
         currentSong = playbackQueue.getCurrentSong();
+        playbackQueue.playNext();
     }
     else
     {
         throw std::runtime_error("No songs available to play next");
     }
 
+    hasCurrentSong = true;
+
     /*
      * Update playback state.
      */
     playSong(currentSong);
-    hasCurrentSong = true;
 }
 
 void MusicPlayer::playPrevious()
@@ -268,6 +298,90 @@ void MusicPlayer::setPlaybackQueue(PlaybackQueue& pb)
     playbackQueue = pb;
 }
 
+static void audioThreadFunc(MusicPlayer* player)
+{
+    while (audioRunning)
+    {
+        Song songToPlay;
+
+        {
+            /*
+             * Wait for a new play request
+             */
+            std::unique_lock<std::mutex> lock(audioMutex);
+            audioCV.wait(lock, []()
+            {
+                return requestNewSong || !audioRunning;
+            });
+
+            if (!audioRunning)
+            {
+                break;
+            }
+
+            songToPlay = audioSong;
+            requestNewSong = false;
+        }
+
+        /*
+         * Stop and close previous track immediately
+         */
+        mciSendString("stop music", NULL, 0, NULL);
+        mciSendString("close music", NULL, 0, NULL);
+
+        /*
+         * Open and play new track
+         */
+        std::string openCmd =
+            "open \"" + songToPlay.path + "\" type waveaudio alias music";
+        mciSendString(openCmd.c_str(), NULL, 0, NULL);
+        mciSendString("play music", NULL, 0, NULL);
+
+        /*
+         * Monitor playback state
+         */
+        while (true)
+        {
+            char status[128] = {0};
+            mciSendString("status music mode", status, sizeof(status), NULL);
+
+            /*
+             * Immediate pause request
+             */
+            if (requestPause && !isPaused)
+            {
+                mciSendString("pause music", NULL, 0, NULL);
+                isPaused = true;
+                requestPause = false;
+            }
+
+            /*
+             * User requested another song → switch immediately
+             */
+            if (requestNewSong)
+            {
+                break;
+            }
+
+            /*
+             * Song finished naturally
+             */
+            if (std::string(status) == "stopped" && !isPaused)
+            {
+                player->playNext();
+                break;
+            }
+
+            std::this_thread::sleep_for(
+                std::chrono::milliseconds(100)
+            );
+        }
+    }
+
+    mciSendString("close music", NULL, 0, NULL);
+}
+
+
 void playSong(const Song& song)
 {
     std::cout << "Now playing:\n";
@@ -278,26 +392,41 @@ void playSong(const Song& song)
     std::cout << "  Duration: " << song.duration << " s\n";
     std::cout << "  Path    : " << song.path << "\n";
     std::cout << "-----------------------------------\n";
-    PlaySoundA(
-                    song.path.c_str(),
-                    NULL,
-                    SND_FILENAME | SND_SYNC
-                );
+
+    {
+        /*
+         * Cập nhật bài hát mới cho audio thread
+         */
+        std::lock_guard<std::mutex> lock(audioMutex);
+        audioSong = song;
+        requestNewSong = true;
+        requestPause = false;
+    }
+
+    /*
+     * Đánh thức audio thread
+     */
+    audioCV.notify_one();
 }
 
 void pauseSong()
 {
     /*
-     * Stop current playback immediately.
-     * This is a simulation using Windows PlaySound API.
+     * Request immediate pause
      */
-    PlaySound(NULL, 0, 0);
-
-    /*
-     * Inform the user that playback is paused.
-     */
-    std::cout << "Playback paused\n";
+    requestPause = true;
 }
+
+void resumeSong()
+{
+    /*
+     * Resume playback immediately
+     */
+    mciSendString("resume music", NULL, 0, NULL);
+    isPaused = false;
+}
+
+
 
 
 /*
