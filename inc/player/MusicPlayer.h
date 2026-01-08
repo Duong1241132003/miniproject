@@ -7,11 +7,16 @@
 #include <string>
 #include <windows.h>
 #include <mmsystem.h>
+#include <thread>
+#include <atomic>
 
 #include "MusicLibrary.h"
 #include "PlaybackQueue.h"
 #include "PlaybackHistory.h"
 #include "PlayNextQueue.h"
+#include "ShuffleManager.h"
+#include "SmartPlaylist.h"
+// #include "SmartPlaylist.h"
 
 /*
  * MusicPlayer
@@ -23,7 +28,6 @@ class MusicPlayer
 public:
     /*
      * Constructor
-     * Loads the music library from CSV.
      */
     MusicPlayer();
 
@@ -33,17 +37,29 @@ public:
     void selectAndPlaySong(int songID);
 
     /*
-     * Adds a song to the playNextQueue.
-     */
-    void addSongToPlayNext(const Song& song);
-
-    /*
-     * Advances playback to the next song.
-     * Priority order:
-     * 1. PlayNextQueue
-     * 2. Main PlaybackQueue
+     * Play next song.
      */
     void playNext();
+
+    /*
+     * Play previous song (from history).
+     */
+    void playPrevious();
+
+    /*
+     * Add song (by ID) to Play Next queue.
+     */
+    void addSongToPlayNext(int songID);
+
+    /*
+     * Enable shuffle mode.
+     */
+    void enableShuffle();
+
+    /*
+     * Generate smart playlist using BFS.
+     */
+    void BFS(int startSongID, int maxSize);
 
     /*
      * Get library
@@ -51,9 +67,24 @@ public:
     MusicLibrary& getLibrary();
 
     /*
+     * Get playbackQueue.
+     */
+    PlaybackQueue& getPlaybackQueue();
+
+    /*
+     * Get playNextQueue.
+     */
+    PlayNextQueue& getPlayNextQueue();
+
+    /*
+     * Get shuffleManager.
+     */
+    PlaybackHistory& getPlaybackHistory();
+
+    /*
      * Set playbackQueue.
      */
-    void setPlaybackQueue(PlaybackQueue pb);
+    void setPlaybackQueue(PlaybackQueue& pb);
 
 private:
     /*
@@ -76,6 +107,7 @@ private:
      */
     PlaybackHistory playbackHistory;
 
+
     /*
      * Currently playing song.
      */
@@ -85,6 +117,7 @@ private:
      * Indicates whether a song is currently playing.
      */
     bool hasCurrentSong {false};
+
 };
 
 /*
@@ -93,6 +126,10 @@ private:
  */
 void playSong(const Song& song);
 
+/*
+ * pause current song
+ */
+void pauseSong();
 /*
  * Loads songs from a CSV file into the music library.
  * Expected CSV format

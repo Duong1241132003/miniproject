@@ -14,7 +14,7 @@ class MusicLibrary
 {
 public:
     /*
-     * Adds a song to the library and updates all indexes.
+     * Adds a song to the library.
      */
     void addSong(const Song& song);
 
@@ -74,6 +74,12 @@ public:
      * Must be called after loading all songs.
      */
     void initializeSongByAlbum();
+
+    /*
+     * Get all song
+     */
+    std::vector<Song>& getSongs();
+
 
 private:
     /*

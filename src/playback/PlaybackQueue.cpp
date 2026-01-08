@@ -1,5 +1,6 @@
 #include "PlaybackQueue.h"
 #include <stdexcept>
+#include <iostream>
 
 void PlaybackQueue::addSong(const Song& song)
 {
@@ -77,19 +78,15 @@ bool PlaybackQueue::isEmpty() const
  * Iterates through the entire music library and appends
  * all songs that match the given album name to the queue.
  */
-void addAlbumToQueue(const std::string& albumName,
-                     const MusicLibrary& library,
+void addAlbumToQueue(std::string& albumName,
+                     MusicLibrary& library,
                      PlaybackQueue& queue)
 {
-    const size_t songCount = library.getSongCount();
-
-    for (size_t i = 0; i < songCount; ++i)
+    for (Song& i : library.getSongs())
     {
-        const Song& song = library.getSongByIndex(i);
-
-        if (song.album == albumName)
+        if (i.album == albumName)
         {
-            queue.addSong(song);
+            queue.addSong(i);
         }
     }
 }
@@ -126,4 +123,21 @@ PlaybackQueue& PlaybackQueue::operator=(const PlaybackQueue& other)
     }
 
     return *this;
+}
+
+void PlaybackQueue::getAllSongs() const
+{
+    for (const auto& song : queue)
+    {
+        std::cout
+        << "ID: " << song.id
+        << " | Title: " << song.title
+        << " | Artist: " << song.artist
+        << " | Album: " << song.album
+        << " | Duration: " << song.duration << " s"
+        << " | Path: " << song.path
+        << '\n';
+
+        std::cout << "-----------------------------------\n";
+    }
 }

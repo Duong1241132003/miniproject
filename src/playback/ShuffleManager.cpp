@@ -1,4 +1,5 @@
 #include "ShuffleManager.h"
+#include <iostream> 
 #include <algorithm>
 #include <random>
 
@@ -21,24 +22,34 @@ Song* ShuffleManager::getNextSong()
         return nullptr;
     }
 
-    while (currentIndex < shuffledSongs.size())
+    if (currentIndex >= shuffledSongs.size())
     {
-        Song* song = shuffledSongs[currentIndex];
-        ++currentIndex;
-
-        if (playedSongIDs.find(song->id) == playedSongIDs.end())
-        {
-            playedSongIDs.insert(song->id);
-            return song;
-        }
+        return nullptr;   // kết thúc 1 vòng shuffle
     }
 
-    resetCycle();
-    return getNextSong();
+    Song* song = shuffledSongs[currentIndex];
+    ++currentIndex;
+    return song;
 }
+
 
 void ShuffleManager::resetCycle()
 {
     playedSongIDs.clear();
     currentIndex = 0;
+}
+
+void ShuffleManager::getAllSongs() const
+{
+    for (const Song* song : shuffledSongs)
+    {
+       std::cout
+        << "ID: " << song -> id
+        << " | Title: " << song -> title
+        << " | Artist: " << song -> artist
+        << " | Album: " << song -> album
+        << " | Duration: " << song -> duration << " s"
+        << " | Path: " << song -> path
+        << '\n';
+    }
 }

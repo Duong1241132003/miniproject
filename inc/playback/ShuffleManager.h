@@ -24,6 +24,11 @@ public:
      */
     Song* getNextSong();
 
+    /*
+     * Print all songs in the shuffled list
+     */
+    void getAllSongs() const;
+
 private:
     /*
      * Shuffled list of songs.

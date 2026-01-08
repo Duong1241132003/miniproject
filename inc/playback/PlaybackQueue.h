@@ -50,6 +50,10 @@ public:
     PlaybackQueue(const PlaybackQueue& other);
     PlaybackQueue& operator=(const PlaybackQueue& other);
 
+    /*
+     * Print all songs in the queue
+     */
+    void getAllSongs() const;
 private:
     /*
      * std::list is chosen because:
@@ -68,8 +72,8 @@ private:
  * Adds all songs belonging to a specific album
  * from the music library to the playback queue.
  */
-void addAlbumToQueue(const std::string& albumName,
-                     const MusicLibrary& library,
+void addAlbumToQueue(std::string& albumName,
+                     MusicLibrary& library,
                      PlaybackQueue& queue);
 
 #endif

@@ -108,3 +108,8 @@ void MusicLibrary::initializeSongByAlbum()
         songByAlbum[song.album].push_back(&song);
     }
 }
+
+std::vector<Song>& MusicLibrary::getSongs()
+{
+    return songs;
+}

@@ -14,6 +14,8 @@ LDFLAGS  = -lwinmm
 
 all: $(OBJECT)
 	$(CC) $^ -o main.exe $(LDFLAGS)
+
+run:
 	./main.exe
 
 build/%.o: %.cpp $(DEPS)

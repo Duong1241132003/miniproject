@@ -29,6 +29,11 @@ public:
      */
     bool isEmpty() const;
 
+    /*
+     * Print all songs in the queue
+     */
+    void getAllSongs() const;
+
 private:
     /*
      * FIFO queue of upcoming songs.

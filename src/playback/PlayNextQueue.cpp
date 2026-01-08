@@ -9,7 +9,6 @@ void PlayNextQueue::addSong(const Song& song)
 
 Song PlayNextQueue::playNext()
 {
-    std::cout << "Before pop, size = " << queue.size() << "\n";
     if (queue.empty())
     {
         throw std::runtime_error("Playback queue is empty");
@@ -18,7 +17,6 @@ Song PlayNextQueue::playNext()
     Song nextSong = queue.front();
     
     queue.pop();
-    std::cout << "After pop, size = " << queue.size() << "\n";
 
     return nextSong;
 }
@@ -26,4 +24,23 @@ Song PlayNextQueue::playNext()
 bool PlayNextQueue::isEmpty() const
 {
     return queue.empty();
+}
+
+void PlayNextQueue::getAllSongs() const
+{
+    std::queue<Song> tempQueue = queue; // Create a copy to iterate through
+
+    while (!tempQueue.empty())
+    {
+        const Song& song = tempQueue.front();
+        std::cout
+        << "ID: " << song.id
+        << " | Title: " << song.title
+        << " | Artist: " << song.artist
+        << " | Album: " << song.album
+        << " | Duration: " << song.duration << " s"
+        << " | Path: " << song.path
+        << '\n';
+        tempQueue.pop();
+    }
 }

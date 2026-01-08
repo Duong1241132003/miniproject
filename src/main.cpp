@@ -1,297 +1,259 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
 #include <string>
-#include <windows.h>
-#include <mmsystem.h>
+#include <limits>
 
-#include "Song.h"
-#include "MusicLibrary.h"
-#include "PlaybackQueue.h"
-#include "SmartPlaylist.h"
-#include "PlayNextQueue.h"
-#include "ShuffleManager.h"
-#include "PlaybackHistory.h"
+
 #include "MusicPlayer.h"
-
-// /*
-//  * Loads songs from a CSV file into the music library.
-//  * Expected CSV format
-//  * id,title,artist,album,duration,path
-//  */
-// void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
-// {
-//     std::ifstream file(filePath);
-
-//     if (!file.is_open())
-//     {
-//         throw std::runtime_error("Failed to open CSV file");
-//     }
-
-//     std::string line;
-
-//     // Skip header line
-//     std::getline(file, line);
-
-//     while (std::getline(file, line))
-//     {
-//         std::stringstream ss(line);
-//         std::string token;
-
-//         Song song;
-
-//         // id
-//         std::getline(ss, token, ',');
-//         std::cout << "Parsing id = [" << token << "]\n";
-//         song.id = std::stoi(token);
-
-//         // title
-//         std::getline(ss, song.title, ',');
-
-//         // artist
-//         std::getline(ss, song.artist, ',');
-
-//         // album
-//         std::getline(ss, song.album, ',');
-
-//         // duration
-//         std::getline(ss, token, ',');
-//         song.duration = std::stoi(token);
-
-//         // path (last column)
-//         std::getline(ss, song.path);
-
-//         library.addSong(song);
-//     }
-    
-//     // Create an index entry pointing to the stored song
-//     library.initializeSongByID();
-//     library.initializeSongByTitle();
-//     library.initializeSongByArtist();
-// }
+#include "SmartPlaylist.h"
 
 /*
- * Simulates playing a song.
- * This is a placeholder for real audio playback logic.
+ * Show all features required by the assignment
  */
-// void playSong(const Song& song)
-// {
-//     std::cout << "Now playing:\n";
-//     std::cout << "  ID      : " << song.id << "\n";
-//     std::cout << "  Title   : " << song.title << "\n";
-//     std::cout << "  Artist  : " << song.artist << "\n";
-//     std::cout << "  Album   : " << song.album << "\n";
-//     std::cout << "  Duration: " << song.duration << " s\n";
-//     std::cout << "  Path    : " << song.path << "\n";
-//     std::cout << "-----------------------------------\n";
-//     PlaySoundA(
-//                     song.path.c_str(),
-//                     NULL,
-//                     SND_FILENAME | SND_SYNC
-//                 );
-// }
+void printMenu()
+{
+    std::cout << "\n========== MUSIC PLAYER – FULL DEMO ==========\n";
 
-// test function for require 1.1, 1.2
-int testMusicLibrary();
-int testSmartPlaylist();
-void testFindSongByID(MusicLibrary& library, int songID);
-void testFindSongByTitle(MusicLibrary& library, const std::string& title);
-void testFindSongByArtist(MusicLibrary& library, const std::string& artist);
-void testPlayNextQueue(MusicLibrary& library);
-void testShuffleManager(MusicLibrary& library);
-void testPlaybackHistory(MusicLibrary& library);
-void testMusicPlayer(MusicPlayer& player);
-void testBFS(MusicPlayer& player);
+    // std::cout << "[CORE PLAYBACK]\n";
+    std::cout << " 1. Play song by ID\n";
+    std::cout << " 2. Play next song\n";
+    std::cout << " 3. Play previous song (Back)\n";
 
-MusicLibrary library;
-PlaybackQueue queue;
+    // std::cout << "\n[PLAY NEXT QUEUE - std::queue]\n";
+    std::cout << " 4. Add song to Play Next queue\n";
 
+    // std::cout << "\n[PLAYBACK QUEUE - std::list]\n";
+    std::cout << " 5. Add all songs from an album to playback queue\n";
+    std::cout << " 6. Remove song from playback queue\n";
+
+    // std::cout << "\n[SEARCH & INDEXING]\n";
+    std::cout << " 7. Find song by ID\n";
+    std::cout << " 8. Find song by title\n";
+    std::cout << " 9. List songs by artist\n";
+    std::cout << "10. List songs by album\n";
+
+    // std::cout << "\n[SHUFFLE]\n";
+    std::cout << "11. Enable shuffle (no repeat)\n";
+
+    // std::cout << "\n[ADVANCED ALGORITHM]\n";
+    std::cout << "12. Generate Smart Playlist (BFS)\n";
+
+    // std::cout << "\n[DEBUGGING TOOLS]\n";
+    std::cout << "13 List all songs in playback queue\n";
+    std::cout << "14 List all songs in playNext queue\n";
+    std::cout << "15 List all songs in playback history\n";
+
+    // std::cout << "\n[SYSTEM]\n";
+    std::cout << " 0. Pause\n";
+
+    std::cout << "=============================================\n";
+    std::cout << "Choose: ";
+}
 
 int main()
 {
     MusicPlayer player;
-    // Load music library from CSV
-    loadLibraryFromCSV("data/playlist.csv", library);
 
-    std::cout << "Loaded "
-            << library.getSongCount()
-            << " songs into the library.\n\n";
-    // player.library = library;
-    testBFS(player);
-    while(1)
+    // /*
+    //  * Load music library (Part 1 - vector)
+    //  */
+    // loadLibraryFromCSV("data/playlist.csv", player.getLibrary());
+
+    // /*
+    //  * Initialize all indexes (Part 2)
+    //  */
+    // MusicLibrary& library = player.getLibrary();
+    // library.initializeSongByID();
+    // library.initializeSongByTitle();
+    // library.initializeSongByArtist();
+    // library.initializeSongByAlbum();
+
+    // std::cout << "Library loaded and indexed successfully.\n";
+
+    bool running = true;
+    while (running)
     {
-        player.playNext();
-    }
-    return 0;
-}
+        printMenu();
 
-int testMusicLibrary()
-{
-    try
+        int choice;
+        std::cin >> choice;
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        switch (choice)
         {
-            // Add some songs to the playback queue
-            queue.addSong(library.getSongByIndex(1));
-            queue.addSong(library.getSongByIndex(4));
-            queue.addSong(library.getSongByIndex(8));
-
-            // Simulate playback
-            for (int i = 0; i < 3; ++i)
+            /* ================= CORE PLAYBACK ================= */
+            case 1:
             {
-                Song current = queue.getCurrentSong();
-                playSong(current);
-                queue.playNext();
+                int id;
+                std::cout << "Song ID: ";
+                std::cin >> id;
+                player.selectAndPlaySong(id);
+                break;
+            }
+
+            case 2:
+            {
+                player.playNext();
+                break;
+            }
+
+            case 3:
+            {
+                player.playPrevious();
+                break;
+            }
+
+            /* ================= PLAY NEXT QUEUE ================= */
+            case 4:
+            {
+                int id;
+                std::cout << "Song ID to Play Next: ";
+                std::cin >> id;
+                player.addSongToPlayNext(id);
+                break;
+            }
+
+            /* ================= PLAYBACK QUEUE ================= */
+            case 5:
+            {
+               std::string album;
+                std::cout << "Album name: ";
+                std::getline(std::cin, album);
+
+                addAlbumToQueue(album, player.getLibrary(), player.getPlaybackQueue());
+                break;
+            }
+
+            case 6:
+            {
+                int id;
+                std::cout << "Song ID to remove from queue: ";
+                std::cin >> id;
+                player.getPlaybackQueue().removeSongById(id);
+                break;
+            }
+
+            /* ================= SEARCH & INDEX ================= */
+            case 7:
+            {
+                int id;
+                std::cout << "Song ID: ";
+                std::cin >> id;
+
+                Song* song = player.getLibrary().findSongByID(id);
+                if (song)
+                {
+                    std::cout << "Found: " << song->id << " | " << song->title << "\n";
+                }
+                else
+                {
+                    std::cout << "Song not found.\n";
+                }
+                break;
+            }
+
+            case 8:
+            {
+                std::string title;
+                std::cout << "Song title: ";
+                std::getline(std::cin, title);
+
+                Song* song = player.getLibrary().findSongByTitle(title);
+                if (song)
+                {
+                    std::cout << "Found: " << song->id << " | " << song->title << "\n";
+                }
+                else
+                {
+                    std::cout << "Song not found.\n";
+                }
+                break;
+            }
+
+            case 9:
+            {
+                std::string artist;
+                std::cout << "Artist name: ";
+                std::getline(std::cin, artist);
+
+                auto songs = player.getLibrary().findSongsByArtist(artist);
+                std::cout << "Songs by " << artist << ":\n";
+                for (auto* s : songs)
+                {
+                    std::cout << " - " << s->id << " | " << s->title << "\n";
+                }
+                break;
+            }
+
+            case 10:
+            {
+                std::string album;
+                std::cout << "Album name: ";             
+                std::getline(std::cin, album);
+
+                std::vector<Song*> s = player.getLibrary().findSongsByAlbum(album);
+                std::cout << "Songs in album " << album << ":\n";
+                for (auto* s : s)
+                {
+                    std::cout << " - " << s->title << "\n";
+                }
+                break;
+            }
+
+            /* ================= SHUFFLE ================= */
+            case 11:
+            {
+                player.enableShuffle();
+                break;
+            }
+
+            /* ================= ADVANCED ================= */
+            case 12:
+            {
+                int startID;
+                int maxSize;
+
+                std::cout << "Start song ID: ";
+                std::cin >> startID;
+                std::cout << "Max playlist size: ";
+                std::cin >> maxSize;
+
+                player.BFS(startID, maxSize);
+                break;
+            }
+
+            /* ================= DEBUGGING TOOLS ================= */
+            case 13:
+            {
+                player.getPlaybackQueue().getAllSongs();
+                break;
+            }
+            case 14:
+            {
+                player.getPlayNextQueue().getAllSongs();
+                break;
+            }
+            case 15:
+            {
+                player.getPlaybackHistory().getHistory();
+                break;
+            }
+
+            /* ================= SYSTEM ================= */
+            case 0:
+            {
+                running = false;
+                break;
+            }
+
+            default:
+            {
+                std::cout << "Invalid option.\n";
+                break;
             }
         }
-    catch (const std::exception& ex)
-    {
-        std::cerr << "Error: " << ex.what() << std::endl;
-        return 1;
     }
+
     return 0;
 }
 
-int testSmartPlaylist()
-{
-    try
-        {
-            // Add some songs to the playback queue
-            addAlbumToQueue("album3", library, queue);
 
-            // Simulate playback
-            for (int i = 0; i < 3; ++i)
-            {
-                Song current = queue.getCurrentSong();
-                playSong(current);
-                queue.playNext();
-            }
-        }
-    catch (const std::exception& ex)
-    {
-        std::cerr << "Error: " << ex.what() << std::endl;
-        return 1;
-    }
-    return 0;
-}
-
-void testFindSongByID(MusicLibrary& library, int songID)
-{
-    Song* song = library.findSongByID(songID);
-
-    if (song != nullptr)
-    {
-        std::cout << "Found song: " << song->title << std::endl;
-    }
-    else
-    {
-        std::cout << "Song not found\n";
-    }
-
-}
-
-void testFindSongByTitle(MusicLibrary& library, const std::string& title)
-{
-    Song* song = library.findSongByTitle(title);
-
-    if (song != nullptr)
-    {
-        std::cout << "Found song: " << song->id << std::endl;
-    }
-    else
-    {
-        std::cout << "Song not found\n";
-    }
-
-}
-
-void testFindSongByArtist(MusicLibrary& library, const std::string& artist)
-{
-    std::vector<Song*> songs = library.findSongsByArtist(artist);
-
-    if (!songs.empty())
-    {
-        std::cout << "Found songs by artist: " << artist << std::endl;
-        for (const Song* song : songs)
-        {
-            playSong(*song);
-        }
-    }
-    else
-    {
-        std::cout << "No songs found for artist: " << artist << std::endl;
-    }
-}
-
-void testPlayNextQueue(MusicLibrary& library)
-{
-    PlayNextQueue playNextQueue;
-
-    // Add songs to PlayNextQueue
-    playNextQueue.addSong(library.getSongByIndex(1));
-    playNextQueue.addSong(library.getSongByIndex(4));
-    playNextQueue.addSong(library.getSongByIndex(6));
-
-    // Simulate playing songs from PlayNextQueue
-    while (!playNextQueue.isEmpty())
-    {
-        Song nextSong = playNextQueue.playNext();
-        playSong(nextSong);
-    }
-}
-void testShuffleManager(MusicLibrary& library)
-{
-    ShuffleManager shuffleManager;
-
-    // Initialize shuffle with all songs in the library
-    std::vector<Song*> allSongs;
-    for (size_t i = 0; i < library.getSongCount(); ++i)
-    {
-        allSongs.push_back(const_cast<Song*>(&library.getSongByIndex(i)));
-    }
-    shuffleManager.initialize(allSongs);
-
-    // Simulate playing shuffled songs
-    for (size_t i = 0; i < library.getSongCount(); ++i)
-    {
-        Song* nextSong = shuffleManager.getNextSong();
-        if (nextSong != nullptr)
-        {
-            playSong(*nextSong);
-        }
-    }
-}
-void testPlaybackHistory(MusicLibrary& library)
-{
-    PlaybackHistory playbackHistory;
-
-    // Simulate playing some songs and recording history
-    for (size_t i = 0; i < 10; i+=2)
-    {
-        Song currentSong = library.getSongByIndex(i);
-        playSong(currentSong);
-        playbackHistory.pushSong(currentSong);
-    }
-
-    // Simulate going back in playback history
-    while (!playbackHistory.isEmpty())
-    {
-        Song previousSong = playbackHistory.playPreviousSong();
-        std::cout << "Replaying previous song from history:\n";
-        playSong(previousSong);
-    }
-}
-
-void testMusicPlayer(MusicPlayer& player)
-{
-    player.selectAndPlaySong(3);
-    player.selectAndPlaySong(5);
-
-    player.addSongToPlayNext(*(player.getLibrary().findSongByID(1)));
-    player.addSongToPlayNext(*(player.getLibrary().findSongByID(7)));
-
-}
-
-void testBFS(MusicPlayer& player)
-{
-    PlaybackQueue pb = generateSmartPlaylist(*(player.getLibrary().findSongByID(1)),player.getLibrary(),player.getLibrary().getSongCount());
-    player.setPlaybackQueue(pb);
-}

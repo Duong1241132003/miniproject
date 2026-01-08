@@ -31,6 +31,11 @@ public:
      */
     bool isEmpty() const;
 
+    /*
+     * Print all songs in the history
+     */
+    void getHistory() const;
+
 private:
     /*
      * Stack storing played songs.

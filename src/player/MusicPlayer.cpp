@@ -7,10 +7,19 @@ MusicPlayer::MusicPlayer()
      * Load music library from CSV at initialization.
      */
     loadLibraryFromCSV("data/playlist.csv", library);
+    
+    // /*
+    //  * Initialize playqueue
+    //  */
+    // for(Song& i:library.getSongs())
+    // {
+    //     playbackQueue.addSong(i);
+    // }
 
     /*
      * Initialize all indexes for fast lookup.
      */
+
     library.initializeSongByID();
     library.initializeSongByTitle();
     library.initializeSongByArtist();
@@ -45,18 +54,122 @@ void MusicPlayer::selectAndPlaySong(int songID)
     hasCurrentSong = true;
 
     /*
-     * Add the selected song.
+     * play selected song
      */
-    playbackQueue.addSong(currentSong);
+    playSong(currentSong);
 }
 
-void MusicPlayer::addSongToPlayNext(const Song& song)
+void MusicPlayer::addSongToPlayNext(int id)
 {
     /*
-     * Add the song to the PlayNextQueue.
+     * Find song by ID.
      */
-    playNextQueue.addSong(song);
+    Song* song = library.findSongByID(id);
+
+    if (song == nullptr)
+    {
+        throw std::runtime_error("Song not found");
+    }
+
+    /*
+     * Add song to playNextQueue
+     */
+    playNextQueue.addSong(*song);
 }
+
+void MusicPlayer::enableShuffle()
+{
+    /*
+     * Create a local ShuffleManager instance.
+     * No persistent shuffle state is required.
+     */
+    ShuffleManager shuffleManager;
+
+    /*
+     * Prepare a list of pointers to all songs in the library.
+     * ShuffleManager operates on Song* instead of Song objects.
+     */
+    std::vector<Song*> playlist;
+
+    for (Song& song : library.getSongs())
+    {
+        playlist.push_back(&song);
+    }
+
+    /*
+     * Initialize shuffle order using ShuffleManager.
+     * This randomizes the song order internally.
+     */
+    shuffleManager.initialize(playlist);
+
+    /*
+     * Create a new playback queue that will store
+     * the shuffled playback order.
+     */
+    PlaybackQueue shuffledQueue;
+
+    /*
+     * Retrieve shuffled songs one by one
+     * and add them to the playback queue.
+     */
+    while (true)
+    {
+        Song* nextSong = shuffleManager.getNextSong();
+
+        /*
+         * When nullptr is returned,
+         * all songs have been consumed.
+         */
+        if (nextSong == nullptr)
+        {
+            break;
+        }
+
+        shuffledQueue.addSong(*nextSong);
+    }
+
+    /*
+     * Replace the current playback queue
+     * with the shuffled playback queue.
+     */
+    playbackQueue = shuffledQueue;
+
+    /*
+     * Notify user that shuffle mode has been applied.
+     */
+    std::cout << "Shuffle enabled: playback queue updated\n";
+}
+
+
+void MusicPlayer::BFS(int startSongID, int maxSize)
+{
+    /*
+     * Find the starting song by its ID.
+     */
+    Song* startSong = library.findSongByID(startSongID);
+
+    if (startSong == nullptr)
+    {
+        throw std::runtime_error("Start song not found");
+    }
+
+    /*
+     * Generate a smart playlist using BFS traversal.
+     */
+    PlaybackQueue smartQueue =
+        generateSmartPlaylist(*startSong, library, maxSize);
+
+    /*
+     * Replace the current playback queue with the generated one.
+     */
+    playbackQueue = smartQueue;
+
+    /*
+     * Notify user that smart playlist has been generated.
+     */
+    std::cout << "Smart playlist generated using BFS\n";
+}
+
 
 void MusicPlayer::playNext()
 {
@@ -100,12 +213,57 @@ void MusicPlayer::playNext()
     hasCurrentSong = true;
 }
 
+void MusicPlayer::playPrevious()
+{
+    /*
+     * Check whether playback history is empty.
+     * If empty, there is no previous song to return to.
+     */
+    if (playbackHistory.isEmpty())
+    {
+        throw std::runtime_error("No previous song in history");
+    }
+
+    /*
+     * Retrieve the most recently played song from history.
+     * This operation removes the song from the stack (LIFO).
+     */
+    currentSong = playbackHistory.playPreviousSong();
+
+    /*
+     * Update playback state to indicate a song is active.
+     */
+    hasCurrentSong = true;
+
+    /*
+     * Start playing the retrieved song.
+     */
+    playSong(currentSong);
+}
+
+
 MusicLibrary& MusicPlayer::getLibrary()
 {
     return library;
 }
 
-void MusicPlayer::setPlaybackQueue(PlaybackQueue pb)
+PlaybackQueue& MusicPlayer::getPlaybackQueue()
+{
+    return playbackQueue;
+}
+
+PlayNextQueue& MusicPlayer::getPlayNextQueue()
+{
+    return playNextQueue;
+}
+
+PlaybackHistory& MusicPlayer::getPlaybackHistory()
+{
+    return playbackHistory;
+}
+
+
+void MusicPlayer::setPlaybackQueue(PlaybackQueue& pb)
 {
     playbackQueue = pb;
 }
@@ -126,6 +284,21 @@ void playSong(const Song& song)
                     SND_FILENAME | SND_SYNC
                 );
 }
+
+void pauseSong()
+{
+    /*
+     * Stop current playback immediately.
+     * This is a simulation using Windows PlaySound API.
+     */
+    PlaySound(NULL, 0, 0);
+
+    /*
+     * Inform the user that playback is paused.
+     */
+    std::cout << "Playback paused\n";
+}
+
 
 /*
  * Loads songs from a CSV file into the music library.
@@ -177,3 +350,4 @@ void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
         library.addSong(song);
     }
 }
+
