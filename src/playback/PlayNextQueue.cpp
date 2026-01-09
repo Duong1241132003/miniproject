@@ -1,5 +1,4 @@
 #include "PlayNextQueue.h"
-#include <stdexcept>
 #include <iostream>
 
 void PlayNextQueue::addSong(const Song& song)
@@ -11,7 +10,7 @@ Song PlayNextQueue::playNext()
 {
     if (queue.empty())
     {
-        throw std::runtime_error("Playback queue is empty");
+        std::cout << "Playback queue is empty";
     }
 
     Song nextSong = queue.front();

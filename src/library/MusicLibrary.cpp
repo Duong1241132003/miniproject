@@ -1,5 +1,4 @@
 #include "MusicLibrary.h"
-#include <stdexcept>
 #include <iostream>
 
 void MusicLibrary::addSong(const Song& song)
@@ -12,7 +11,7 @@ const Song& MusicLibrary::getSongByIndex(size_t index) const
 {
     if (index >= songs.size())
     {
-        throw std::out_of_range("MusicLibrary: index out of range");
+        std::cout << "MusicLibrary: index out of range";
     }
 
     return songs[index];

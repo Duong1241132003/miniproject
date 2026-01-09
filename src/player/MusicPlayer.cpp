@@ -1,276 +1,208 @@
 #include "MusicPlayer.h"
-#include <stdexcept>
 #include <mutex>
 #include <condition_variable>
+#include <chrono>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+
+/* =============================================================
+ * GLOBAL STATE & SYNCHRONIZATION
+ * ============================================================= */
 
 static std::mutex audioMutex;
 static std::condition_variable audioCV;
 
-/*
- * Cờ báo có yêu cầu phát bài mới
- * (user chọn bài / next / previous)
- */
-static bool requestNewSong = false;
+/* Thread control flags */
+static bool audioRunning = true;       /* Is the audio thread alive? */
+static bool requestNewSong = false;    /* User requested a track change */
+static bool requestPause = false;      /* User requested pause */
+static bool requestResume = false;     /* User requested resume */
 
-/*
- * Cờ báo chương trình đang chạy
- */
-static bool audioRunning = true;
+/* Playback state */
+static bool isPaused = false;
+static Song audioSong;                 /* The song object currently held by the thread */
 
-/*
- * Bài hát hiện tại mà audio thread sẽ phát
- */
-static Song audioSong;
+/* Constants for timing */
+static constexpr int LOOP_DELAY_MS = 100;
+static constexpr int RESUME_DELAY_MS = 50;
 
+/* Forward declaration */
 static void audioThreadFunc(MusicPlayer* player);
 
-static bool requestPause = false;
-
-static bool isPaused = false;
+/* =============================================================
+ * CLASS IMPLEMENTATION
+ * ============================================================= */
 
 MusicPlayer::MusicPlayer()
 {
-    /*
-     * Load music library from CSV at initialization.
-     */
+    /* Load music library from CSV at initialization. */
     loadLibraryFromCSV("data/playlist.csv", library);
 
-    /*
-     * Initialize all indexes for fast lookup.
-     */
-
+    /* Initialize all indexes for fast lookup. */
     library.initializeSongByID();
     library.initializeSongByTitle();
     library.initializeSongByArtist();
     library.initializeSongByAlbum();
 
-    /*
-     * Khởi động audio thread
-     */
+    /* Start the background audio processing thread. */
     static std::thread audioThread(audioThreadFunc, this);
     audioThread.detach();
 }
 
 void MusicPlayer::selectAndPlaySong(int songID)
 {
-    /*
-     * Find the requested song in the library.
-     */
+    /* Find the requested song in the library. */
     Song* song = library.findSongByID(songID);
 
+    /* ERROR HANDLING: Return immediately if not found */
     if (song == nullptr)
     {
-        throw std::runtime_error("Song not found");
+        std::cerr << "[Error] Song ID " << songID << " not found in library.\n";
+        return; // <--- IMPORTANT: Must return to avoid crashing below
     }
 
-    /*
-     * If a song is currently playing,
-     * push it to playback history.
-     */
+    /* If a song is currently playing, push it to playback history. */
     if (hasCurrentSong)
     {
         playbackHistory.pushSong(currentSong);
     }
 
-    /*
-     * Set the selected song as current.
-     */
+    /* Update current song state. */
     currentSong = *song;
     hasCurrentSong = true;
+    isPaused = false;
 
-    /*
-     * play selected song
-     */
-    if (!isPaused)
-    {
-        playSong(currentSong);
-    }
-
+    /* Trigger playback. */
+    playSong(currentSong);
 }
 
 void MusicPlayer::addSongToPlayNext(int id)
 {
-    /*
-     * Find song by ID.
-     */
     Song* song = library.findSongByID(id);
 
+    /* ERROR HANDLING */
     if (song == nullptr)
     {
-        throw std::runtime_error("Song not found");
+        std::cerr << "[Error] Cannot add to queue: Song ID " << id << " not found.\n";
+        return; 
     }
 
-    /*
-     * Add song to playNextQueue
-     */
+    /* Add song to the high-priority queue. */
     playNextQueue.addSong(*song);
+    std::cout << "Added '" << song->title << "' to Play Next queue.\n";
 }
 
 void MusicPlayer::enableShuffle()
 {
-    /*
-     * Create a local ShuffleManager instance.
-     * No persistent shuffle state is required.
-     */
     ShuffleManager shuffleManager;
-
-    /*
-     * Prepare a list of pointers to all songs in the library.
-     * ShuffleManager operates on Song* instead of Song objects.
-     */
     std::vector<Song*> playlist;
 
+    /* Add all songs to the playlist before shuffle */
     for (Song& song : library.getSongs())
     {
         playlist.push_back(&song);
     }
 
-    /*
-     * Initialize shuffle order using ShuffleManager.
-     * This randomizes the song order internally.
-     */
+    if (playlist.empty())
+    {
+        std::cerr << "[Warning] Library is empty, cannot shuffle.\n";
+        return;
+    }
+
+    /* Randomize the order. */
     shuffleManager.initialize(playlist);
 
-    /*
-     * Create a new playback queue that will store
-     * the shuffled playback order.
-     */
+    /* Create a new queue for the shuffled order. */
     PlaybackQueue shuffledQueue;
 
-    /*
-     * Retrieve shuffled songs one by one
-     * and add them to the playback queue.
-     */
     while (true)
     {
         Song* nextSong = shuffleManager.getNextSong();
-
-        /*
-         * When nullptr is returned,
-         * all songs have been consumed.
-         */
         if (nextSong == nullptr)
         {
             break;
         }
-
         shuffledQueue.addSong(*nextSong);
     }
 
-    /*
-     * Replace the current playback queue
-     * with the shuffled playback queue.
-     */
+    /* Replace the current queue. */
     playbackQueue = shuffledQueue;
 
-    /*
-     * Notify user that shuffle mode has been applied.
-     */
-    std::cout << "Shuffle enabled: playback queue updated\n";
+    std::cout << "Shuffle enabled: playback queue updated.\n";
 }
-
 
 void MusicPlayer::BFS(int startSongID, int maxSize)
 {
-    /*
-     * Find the starting song by its ID.
-     */
     Song* startSong = library.findSongByID(startSongID);
 
+    /* ERROR HANDLING */
     if (startSong == nullptr)
     {
-        throw std::runtime_error("Start song not found");
+        std::cerr << "[Error] BFS failed: Start song ID " << startSongID << " not found.\n";
+        return;
     }
 
-    /*
-     * Generate a smart playlist using BFS traversal.
-     */
-    PlaybackQueue smartQueue =
-        generateSmartPlaylist(*startSong, library, maxSize);
+    /* Generate a smart playlist based on graph traversal. */
+    PlaybackQueue smartQueue = generateSmartPlaylist(*startSong, library, maxSize);
 
-    /*
-     * Replace the current playback queue with the generated one.
-     */
     playbackQueue = smartQueue;
 
-    /*
-     * Notify user that smart playlist has been generated.
-     */
-    std::cout << "Smart playlist generated using BFS\n";
+    std::cout << "Smart playlist generated using BFS.\n";
 }
-
 
 void MusicPlayer::playNext()
 {
-    /*
-     * Save the current song to playback history
-     * before switching to the next track.
-     */
+    /* Archive current song to history. */
     if (hasCurrentSong)
     {
         playbackHistory.pushSong(currentSong);
     }
 
-    /*
-     * Priority 1:
-     * Play songs explicitly marked as "Play Next".
-     */
+    /* Priority 1: Check the "Play Next" specific queue. */
     if (!playNextQueue.isEmpty())
     {
-        std::cout << "Playing from PlayNextQueue\n";
+        std::cout << "Playing from PlayNextQueue...\n";
         currentSong = playNextQueue.playNext();
     }
-    /*
-     * Priority 2:
-     * Continue normal playback order.
-     */
-    else if(!playbackQueue.isEmpty())
+    /* Priority 2: Continue with the standard playback queue. */
+    else if (!playbackQueue.isEmpty())
     {
-        std::cout << "Playing from PlaybackQueue\n";      
+        std::cout << "Playing from PlaybackQueue...\n";      
         currentSong = playbackQueue.getCurrentSong();
         playbackQueue.playNext();
     }
     else
     {
-        throw std::runtime_error("No songs available to play next");
+        /* ERROR HANDLING: Just print and stop, don't crash */
+        std::cerr << "[Info] End of playlist. No more songs to play.\n";
+        return;
     }
 
     hasCurrentSong = true;
+    isPaused = false;
 
-    /*
-     * Update playback state.
-     */
+    /* Trigger playback. */
     playSong(currentSong);
 }
 
 void MusicPlayer::playPrevious()
 {
-    /*
-     * Check whether playback history is empty.
-     * If empty, there is no previous song to return to.
-     */
+    /* ERROR HANDLING */
     if (playbackHistory.isEmpty())
     {
-        throw std::runtime_error("No previous song in history");
+        std::cerr << "[Warning] No previous song in history.\n";
+        return;
     }
 
-    /*
-     * Retrieve the most recently played song from history.
-     * This operation removes the song from the stack (LIFO).
-     */
+    /* Retrieve last song (LIFO). */
     currentSong = playbackHistory.playPreviousSong();
-
-    /*
-     * Update playback state to indicate a song is active.
-     */
     hasCurrentSong = true;
 
-    /*
-     * Start playing the retrieved song.
-     */
     playSong(currentSong);
 }
 
+/* --- Getters & Setters --- */
 
 MusicLibrary& MusicPlayer::getLibrary()
 {
@@ -292,11 +224,110 @@ PlaybackHistory& MusicPlayer::getPlaybackHistory()
     return playbackHistory;
 }
 
-
 void MusicPlayer::setPlaybackQueue(PlaybackQueue& pb)
 {
     playbackQueue = pb;
 }
+
+/* =============================================================
+ * GLOBAL FUNCTIONS (Main Thread Interface)
+ * ============================================================= */
+
+void playSong(const Song& song)
+{
+    std::cout << "\n-----------------------------------\n";
+    std::cout << " Now playing:\n";
+    std::cout << "   Title   : " << song.title << "\n";
+    std::cout << "   Artist  : " << song.artist << "\n";
+    std::cout << "   Duration: " << song.duration << " s\n";
+    std::cout << "-----------------------------------\n";
+
+    {
+        std::lock_guard<std::mutex> lock(audioMutex);
+        audioSong = song;
+        requestNewSong = true;
+        /* Reset flags when starting a new song */
+        requestPause = false; 
+    }
+
+    /* Notify the audio thread to wake up. */
+    audioCV.notify_one();
+}
+
+void pauseSong()
+{
+    /* Flag the request; the thread will handle the MCI command. */
+    requestPause = true;
+    std::cout << "[Action] Pause requested.\n";
+}
+
+void resumeSong()
+{
+    /*
+     * Flag the request only if currently paused.
+     */
+    if (isPaused)
+    {
+        requestResume = true;
+        std::cout << "[Action] Resume requested.\n";
+    }
+    else 
+    {
+        std::cout << "[Info] Music is already playing or not started.\n";
+    }
+}
+
+void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
+{
+    std::ifstream file(filePath);
+
+    if (!file.is_open())
+    {
+        /* ERROR HANDLING: Print error but allow program to continue (empty library) */
+        std::cerr << "[Critical Error] Failed to open CSV file: " << filePath << "\n";
+        std::cerr << "Please check if 'data/playlist.csv' exists.\n";
+        return;
+    }
+
+    std::string line;
+    /* Skip the CSV header. */
+    std::getline(file, line);
+
+    while (std::getline(file, line))
+    {
+        if (line.empty()) continue; // Skip empty lines
+
+        std::stringstream ss(line);
+        std::string token;
+        Song song;
+
+        try {
+            /* Parse CSV columns */
+            std::getline(ss, token, ',');
+            song.id = std::stoi(token);
+
+            std::getline(ss, song.title, ',');
+            std::getline(ss, song.artist, ',');
+            std::getline(ss, song.album, ',');
+
+            std::getline(ss, token, ',');
+            song.duration = std::stoi(token);
+
+            std::getline(ss, song.path); /* Last column */
+
+            library.addSong(song);
+        }
+        catch (...)
+        {
+            std::cerr << "[Warning] Skipping malformed line in CSV.\n";
+            continue;
+        }
+    }
+}
+
+/* =============================================================
+ * BACKGROUND AUDIO THREAD
+ * ============================================================= */
 
 static void audioThreadFunc(MusicPlayer* player)
 {
@@ -304,50 +335,45 @@ static void audioThreadFunc(MusicPlayer* player)
     {
         Song songToPlay;
 
+        /* -------------------------------------------------
+         * 1. Wait for a new song request
+         * ------------------------------------------------- */
         {
-            /*
-             * Wait for a new play request
-             */
             std::unique_lock<std::mutex> lock(audioMutex);
-            audioCV.wait(lock, []()
-            {
-                return requestNewSong || !audioRunning;
-            });
+            audioCV.wait(lock, []() { return requestNewSong || !audioRunning; });
 
-            if (!audioRunning)
-            {
-                break;
-            }
+            if (!audioRunning) break;
 
             songToPlay = audioSong;
             requestNewSong = false;
         }
 
-        /*
-         * Stop and close previous track immediately
-         */
+        /* -------------------------------------------------
+         * 2. Setup MCI Playback
+         * ------------------------------------------------- */
+        
+        /* Stop any previous track */
         mciSendString("stop music", NULL, 0, NULL);
         mciSendString("close music", NULL, 0, NULL);
 
-        /*
-         * Open and play new track
-         */
-        std::string openCmd =
-            "open \"" + songToPlay.path + "\" type waveaudio alias music";
+        /* Open the new track */
+        std::string openCmd = "open \"" + songToPlay.path + "\" type waveaudio alias music";
         mciSendString(openCmd.c_str(), NULL, 0, NULL);
+        
+        /* Start playing */
         mciSendString("play music", NULL, 0, NULL);
 
-        /*
-         * Monitor playback state
-         */
+        /* Reset state flags for the new track */
+        isPaused = false;
+        requestPause = false;
+        requestResume = false;
+
+        /* -------------------------------------------------
+         * 3. Monitor Playback Loop
+         * ------------------------------------------------- */
         while (true)
         {
-            char status[128] = {0};
-            mciSendString("status music mode", status, sizeof(status), NULL);
-
-            /*
-             * Immediate pause request
-             */
+            /* --- A. Handle Pause Request --- */
             if (requestPause && !isPaused)
             {
                 mciSendString("pause music", NULL, 0, NULL);
@@ -355,128 +381,42 @@ static void audioThreadFunc(MusicPlayer* player)
                 requestPause = false;
             }
 
-            /*
-             * User requested another song → switch immediately
-             */
-            if (requestNewSong)
+            /* --- B. Handle Resume Request --- */
+            if (requestResume)
+            {
+                if (isPaused) 
+                {
+                    mciSendString("resume music", NULL, 0, NULL);
+                    isPaused = false;
+                }
+                requestResume = false;
+
+                /* Wait for hardware and skip the check below */
+                std::this_thread::sleep_for(std::chrono::milliseconds(RESUME_DELAY_MS));
+                continue; 
+            }
+
+            /* --- C. Check Playback Status --- */
+            char status[128] = {0};
+            mciSendString("status music mode", status, sizeof(status), NULL);
+
+            /* Check if user requested to skip/change song */
+            if (requestNewSong) 
             {
                 break;
             }
 
-            /*
-             * Song finished naturally
-             */
+            /* Check if song finished naturally. */
             if (std::string(status) == "stopped" && !isPaused)
             {
-                player->playNext();
+                player->playNext(); 
                 break;
             }
 
-            std::this_thread::sleep_for(
-                std::chrono::milliseconds(100)
-            );
+            std::this_thread::sleep_for(std::chrono::milliseconds(LOOP_DELAY_MS));
         }
     }
 
+    /* Cleanup before thread exit */
     mciSendString("close music", NULL, 0, NULL);
 }
-
-
-void playSong(const Song& song)
-{
-    std::cout << "Now playing:\n";
-    std::cout << "  ID      : " << song.id << "\n";
-    std::cout << "  Title   : " << song.title << "\n";
-    std::cout << "  Artist  : " << song.artist << "\n";
-    std::cout << "  Album   : " << song.album << "\n";
-    std::cout << "  Duration: " << song.duration << " s\n";
-    std::cout << "  Path    : " << song.path << "\n";
-    std::cout << "-----------------------------------\n";
-
-    {
-        /*
-         * Cập nhật bài hát mới cho audio thread
-         */
-        std::lock_guard<std::mutex> lock(audioMutex);
-        audioSong = song;
-        requestNewSong = true;
-        requestPause = false;
-    }
-
-    /*
-     * Đánh thức audio thread
-     */
-    audioCV.notify_one();
-}
-
-void pauseSong()
-{
-    /*
-     * Request immediate pause
-     */
-    requestPause = true;
-}
-
-void resumeSong()
-{
-    /*
-     * Resume playback immediately
-     */
-    mciSendString("resume music", NULL, 0, NULL);
-    isPaused = false;
-}
-
-
-
-
-/*
- * Loads songs from a CSV file into the music library.
- * Expected CSV format
- * id,title,artist,album,duration,path
- */
-void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
-{
-    std::ifstream file(filePath);
-
-    if (!file.is_open())
-    {
-        throw std::runtime_error("Failed to open CSV file");
-    }
-
-    std::string line;
-
-    // Skip header line
-    std::getline(file, line);
-
-    while (std::getline(file, line))
-    {
-        std::stringstream ss(line);
-        std::string token;
-
-        Song song;
-
-        // id
-        std::getline(ss, token, ',');
-        std::cout << "Parsing id = [" << token << "]\n";
-        song.id = std::stoi(token);
-
-        // title
-        std::getline(ss, song.title, ',');
-
-        // artist
-        std::getline(ss, song.artist, ',');
-
-        // album
-        std::getline(ss, song.album, ',');
-
-        // duration
-        std::getline(ss, token, ',');
-        song.duration = std::stoi(token);
-
-        // path (last column)
-        std::getline(ss, song.path);
-
-        library.addSong(song);
-    }
-}
-

@@ -1,5 +1,4 @@
 #include "PlaybackQueue.h"
-#include <stdexcept>
 #include <iostream>
 
 void PlaybackQueue::addSong(const Song& song)
@@ -47,7 +46,7 @@ const Song& PlaybackQueue::getCurrentSong()
 {
     if (queue.empty() || current == queue.end())
     {
-        throw std::runtime_error("PlaybackQueue: no current song");
+        std::cout << "PlaybackQueue: no current song";
     }
 
     return *current;
