@@ -7,12 +7,13 @@ void ShuffleManager::initialize(const std::vector<Song*>& playlist)
 {
     shuffledSongs = playlist;
     playedSongIDs.clear();
-    currentIndex = 0;
 
+     /*
+     * Khởi tạo bộ sinh số ngẫu nhiên Mersenne Twister (mt19937)
+     * với seed từ random_device để tăng tính ngẫu nhiên.
+     */
     std::random_device rd;
-    std::mt19937 gen(rd());
-
-    std::shuffle(shuffledSongs.begin(), shuffledSongs.end(), gen);
+    gen = std::mt19937(rd());
 }
 
 Song* ShuffleManager::getNextSong()
@@ -22,21 +23,42 @@ Song* ShuffleManager::getNextSong()
         return nullptr;
     }
 
-    if (currentIndex >= shuffledSongs.size())
+    if (playedSongIDs.size() == shuffledSongs.size())
     {
-        return nullptr;   // kết thúc 1 vòng shuffle
+        return nullptr;   /* kết thúc 1 vòng shuffle */
     }
 
-    Song* song = shuffledSongs[currentIndex];
-    ++currentIndex;
-    return song;
-}
+    /*
+     * Tạo bộ phân bố đều để sinh chỉ số ngẫu nhiên hợp lệ
+     * trong phạm vi [0, shuffledSongs.size() - 1].
+     */
+    std::uniform_int_distribution<> dist(0, shuffledSongs.size() - 1);
 
+    /*
+     * Lặp cho đến khi tìm được một bài hát chưa phát trong chu kỳ hiện tại.
+     */
+    while (true)
+    {
+        /*
+         * Sinh một chỉ số ngẫu nhiên để chọn bài hát.
+         */
+        int idx = dist(gen);
 
-void ShuffleManager::resetCycle()
-{
-    playedSongIDs.clear();
-    currentIndex = 0;
+         /*
+         * Lấy ID của bài hát được chọn.
+         * ID được dùng để kiểm tra trùng lặp thông qua set.
+         */
+        int id = shuffledSongs[idx]->id;
+
+        /*
+         * Kiểm tra xem bài hát này đã được phát trong chu kỳ hiện tại chưa.
+         */
+        if (playedSongIDs.find(id) == playedSongIDs.end())
+        {
+            playedSongIDs.insert(id);  
+            return shuffledSongs[idx];
+        }
+    }
 }
 
 void ShuffleManager::getAllSongs() const

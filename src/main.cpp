@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 #include <limits>
-#include <iomanip> // Used for formatted output (std::setw)
+#include <iomanip> 
 
 #include "MusicPlayer.h"
-#include "SmartPlaylist.h"
+
 
 /*
  * Helper function: Print full song details in a table format
@@ -145,10 +145,14 @@ int main()
             case 9: // Add Entire Library to Queue
             {
                 auto& allSongs = player.getLibrary().getSongs();
-                if (allSongs.empty()) {
+                if (allSongs.empty()) 
+                {
                     std::cout << "Library is empty.\n";
-                } else {
-                    for (Song& s : allSongs) {
+                } 
+                else 
+                {
+                    for (Song& s : allSongs) 
+                    {
                         player.getPlaybackQueue().addSong(s);
                     }
                     std::cout << "Added " << allSongs.size() << " songs to queue.\n";

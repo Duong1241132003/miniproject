@@ -5,7 +5,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-
+#include <thread>      
+#include <windows.h>
 /* =============================================================
  * GLOBAL STATE & SYNCHRONIZATION
  * ============================================================= */
@@ -55,11 +56,11 @@ void MusicPlayer::selectAndPlaySong(int songID)
     /* Find the requested song in the library. */
     Song* song = library.findSongByID(songID);
 
-    /* ERROR HANDLING: Return immediately if not found */
+    /* Return immediately if not found */
     if (song == nullptr)
     {
         std::cerr << "[Error] Song ID " << songID << " not found in library.\n";
-        return; // <--- IMPORTANT: Must return to avoid crashing below
+        return; 
     }
 
     /* If a song is currently playing, push it to playback history. */
@@ -73,6 +74,9 @@ void MusicPlayer::selectAndPlaySong(int songID)
     hasCurrentSong = true;
     isPaused = false;
 
+    /* Add selected song to the playback queue. */
+    playbackQueue.addSong(currentSong);
+    playbackHistory.pushSong(currentSong);
     /* Trigger playback. */
     playSong(currentSong);
 }

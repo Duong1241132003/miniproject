@@ -3,14 +3,25 @@
 
 void PlaybackQueue::addSong(const Song& song)
 {
+    /* Check if the song already exists in the queue (by ID) */
+    for (const auto& s : queue)
+    {
+        if (s.id == song.id)
+        {
+            /* Song already exists, do not add duplicate */
+            return;
+        }
+    }
+
     queue.push_back(song);
 
-    // If this is the first song, it becomes the current one
+    /* If this is the first song, it becomes the current one */
     if (queue.size() == 1)
     {
         current = queue.begin();
     }
 }
+
 
 void PlaybackQueue::removeSongById(int songId)
 {

@@ -1,91 +1,236 @@
-CC = g++
+# # CC = g++
 
-INC_DIR := ./inc/model ./inc/library ./inc/playback ./inc/algorithm ./inc/player
-SRC_DIR := ./src/model ./src/library ./src/playback ./src/algorithm ./src/player ./src
+# # INC_DIR := ./inc/model ./inc/library ./inc/playback ./inc/algorithm ./inc/player
+# # SRC_DIR := ./src/model ./src/library ./src/playback ./src/algorithm ./src/player ./src
 
-DEPS = $(wildcard $(foreach dir, $(INC_DIR), $(dir)/*.h))
+# # DEPS = $(wildcard $(foreach dir, $(INC_DIR), $(dir)/*.h))
 
-CFLAGS = -std=c++17 -Wall -Wextra -Wpedantic $(foreach inc, $(INC_DIR),-I$(inc))
-VPATH = $(foreach source, $(SRC_DIR),$(source))
+# # CFLAGS = -std=c++17 -Wall -Wextra -Wpedantic $(foreach inc, $(INC_DIR),-I$(inc))
+# # VPATH = $(foreach source, $(SRC_DIR),$(source))
 
-OBJECT = build/main.o build/MusicLibrary.o build/Song.o build/PlaybackQueue.o build/SmartPlaylist.o build/PlayNextQueue.o build/ShuffleManager.o build/PlaybackHistory.o build/MusicPlayer.o
+# # OBJECT = build/main.o build/MusicLibrary.o build/Song.o build/PlaybackQueue.o build/SmartPlaylist.o build/PlayNextQueue.o build/ShuffleManager.o build/PlaybackHistory.o build/MusicPlayer.o
 
-LDFLAGS  = -lwinmm
+# # LDFLAGS  = -lwinmm
 
-all: $(OBJECT)
-	$(CC) $^ -o main.exe $(LDFLAGS)
+# # all: $(OBJECT)
+# # 	$(CC) $^ -o main.exe $(LDFLAGS)
 
-run:
-	./main.exe
+# # run:
+# # 	./main.exe
 
-build/%.o: %.cpp $(DEPS)
-	$(CC) -c $< -o $@ $(CFLAGS) 
+# # build/%.o: %.cpp $(DEPS)
+# # 	$(CC) -c $< -o $@ $(CFLAGS) 
 
-.PHONY: clean
+# # .PHONY: clean
+# # clean:
+# # 	rm -f build/*.o main.exe 
+
+
+# 	# 1. Cấu hình Trình biên dịch
+# 	CXX      := g++
+# 	CXXFLAGS := -std=c++17 -Wall -Wextra -Wpedantic
+# 	LDFLAGS  := -lwinmm
+
+# 	# Cờ tạo dependencies tự động (Dependency Tracking)
+# 	# -MMD: Tạo file .d (dependencies)
+# 	# -MP:  Tạo target giả cho header để tránh lỗi nếu xóa header
+# 	DEPFLAGS := -MMD -MP
+
+# 	# 2. Cấu hình Thư mục
+# 	BUILD_DIR := build
+# 	TARGET    := main.exe
+
+# 	# Liệt kê các thư mục chứa Source code (.cpp)
+# 	SRC_DIRS  := ./src/model \
+# 				./src/library \
+# 				./src/playback \
+# 				./src/algorithm \
+# 				./src/player \
+# 				./src
+
+# 	# Liệt kê các thư mục chứa Header (.h)
+# 	INC_DIRS  := ./inc/model \
+# 				./inc/library \
+# 				./inc/playback \
+# 				./inc/algorithm \
+# 				./inc/player
+
+# 	# Tạo flag -I cho trình biên dịch (VD: -I./inc/model -I./inc/library...)
+# 	INCLUDES  := $(foreach dir, $(INC_DIRS), -I$(dir))
+
+# 	# 3. Tự động tìm Source và tạo Object
+# 	# Tìm tất cả file .cpp trong các thư mục SRC_DIRS
+# 	SRCS := $(foreach dir,$(SRC_DIRS),$(wildcard $(dir)/*.cpp))
+
+# 	# Tạo danh sách file object tương ứng trong folder build
+# 	# notdir: bỏ phần đường dẫn (src/model/Song.cpp -> Song.cpp) để flatten vào folder build
+# 	OBJS := $(patsubst %.cpp, $(BUILD_DIR)/%.o, $(notdir $(SRCS)))
+
+# 	# File dependencies (.d) tương ứng với object
+# 	DEPS := $(OBJS:.o=.d)
+
+# 	# Chỉ dẫn cho Make biết nơi tìm file .cpp (vì ta đã làm phẳng file object)
+# 	VPATH := $(SRC_DIRS)
+
+# 	# 4. Các Rules
+
+# 	# Target mặc định
+# 	all: $(BUILD_DIR) $(TARGET)
+
+# 	# Linker: Tạo file exe
+# 	$(TARGET): $(OBJS)
+# 		$(CXX) $(OBJS) -o $@ $(LDFLAGS)
+# 		@echo "Build successful: $@"
+
+# 	# Compiler: Tạo file object từ cpp
+# 	# $| đảm bảo thư mục build tồn tại
+# 	$(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
+# 		$(CXX) $(CXXFLAGS) $(DEPFLAGS) $(INCLUDES) -c $< -o $@
+
+# 	# Tạo thư mục build nếu chưa có
+# 	$(BUILD_DIR):
+# 		mkdir -p $(BUILD_DIR)
+
+# 	# Run
+# 	run: $(TARGET)
+# 		./$(TARGET)
+
+# 	# Clean
+# 	.PHONY: clean
+# 	clean:
+# 		rm -rf $(BUILD_DIR) $(TARGET)
+
+# 	rebuild: clean all
+# 	# 5. Include các file dependencies đã tạo tự động
+# 	-include $(DEPS)
+
+# ==========================================
+# 1. Compiler & Flags Configuration
+# ==========================================
+CXX      := g++
+AR       := ar
+CXXFLAGS := -std=c++17 -Wall -Wextra -Wpedantic
+LDFLAGS  := -lwinmm
+
+# Dependency tracking flags
+DEPFLAGS := -MMD -MP
+
+# Directories
+BUILD_DIR := build
+SRC_ROOT  := src
+INC_ROOT  := inc
+
+# ==========================================
+# 2. Module Separation
+# ==========================================
+
+# --- CORE (Static Library) ---
+# Contains basic data structures and algorithms.
+# These function are self-contained.
+STATIC_LIB_NAME := libcore.a
+STATIC_DIRS     := $(SRC_ROOT)/model \
+                   $(SRC_ROOT)/algorithm
+
+# --- ENGINE (Shared/Dynamic Library) ---
+# Contains business logic and player control.
+# IMPORTANT: This layer DEPENDS on the CORE layer.
+SHARED_LIB_NAME := libengine.dll
+SHARED_DIRS     := $(SRC_ROOT)/player \
+                   $(SRC_ROOT)/playback \
+                   $(SRC_ROOT)/library
+
+# --- APP (Executable) ---
+# Entry point
+APP_DIRS        := $(SRC_ROOT)
+APP_SRCS        := $(SRC_ROOT)/main.cpp
+
+# Include paths
+INC_DIRS := $(INC_ROOT)/model \
+            $(INC_ROOT)/library \
+            $(INC_ROOT)/playback \
+            $(INC_ROOT)/algorithm \
+            $(INC_ROOT)/player
+
+INCLUDES := $(foreach dir, $(INC_DIRS), -I$(dir))
+
+# ==========================================
+# 3. Object Discovery
+# ==========================================
+
+# Helper: Find sources and map to objects
+get_srcs = $(foreach dir,$(1),$(wildcard $(dir)/*.cpp))
+get_objs = $(patsubst %.cpp, $(BUILD_DIR)/%.o, $(notdir $(1)))
+
+# Core Objects
+STATIC_SRCS := $(call get_srcs, $(STATIC_DIRS))
+STATIC_OBJS := $(call get_objs, $(STATIC_SRCS))
+
+# Engine Objects
+SHARED_SRCS := $(call get_srcs, $(SHARED_DIRS))
+SHARED_OBJS := $(call get_objs, $(SHARED_SRCS))
+
+# App Objects
+APP_OBJS    := $(call get_objs, $(APP_SRCS))
+
+# All Objects & Dependencies
+ALL_OBJS := $(STATIC_OBJS) $(SHARED_OBJS) $(APP_OBJS)
+DEPS     := $(ALL_OBJS:.o=.d)
+
+# VPATH for make to find source files
+VPATH := $(STATIC_DIRS) $(SHARED_DIRS) $(APP_DIRS)
+
+# ==========================================
+# 4. Build Rules
+# ==========================================
+
+.PHONY: all run clean rebuild
+
+# Order is important here implies logic flow, though Make handles parallel execution.
+all: $(BUILD_DIR) \
+     $(BUILD_DIR)/$(STATIC_LIB_NAME) \
+     $(BUILD_DIR)/$(SHARED_LIB_NAME) \
+     $(BUILD_DIR)/main.exe
+
+# --- Rule 1: Build Static Library (Core) ---
+$(BUILD_DIR)/$(STATIC_LIB_NAME): $(STATIC_OBJS)
+	@echo "[BUILD] Creating Static Library: $@"
+	$(AR) rcs $@ $^
+
+# --- Rule 2: Build Shared Library (Engine) ---
+# FIX: Added dependency on $(STATIC_LIB_NAME)
+# FIX: Added -L$(BUILD_DIR) -lcore to link the static lib INTO the dll
+$(BUILD_DIR)/$(SHARED_LIB_NAME): $(SHARED_OBJS) $(BUILD_DIR)/$(STATIC_LIB_NAME)
+	@echo "[BUILD] Creating Dynamic Library: $@"
+	$(CXX) -shared -o $@ $(SHARED_OBJS) \
+		-L$(BUILD_DIR) -lcore \
+		-Wl,--out-implib,$(BUILD_DIR)/libengine.dll.a \
+		-Wl,--export-all-symbols \
+		$(LDFLAGS)
+
+# --- Rule 3: Build Executable (Main) ---
+# Links against both libraries.
+$(BUILD_DIR)/main.exe: $(APP_OBJS) $(BUILD_DIR)/$(SHARED_LIB_NAME)
+	@echo "[BUILD] Linking Executable: $@"
+	$(CXX) $(APP_OBJS) -o $@ \
+		-L$(BUILD_DIR) -lengine -lcore \
+		$(LDFLAGS)
+
+# --- Compiler Rule ---
+$(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
+	@echo "[COMPILE] $<"
+	$(CXX) $(CXXFLAGS) $(DEPFLAGS) $(INCLUDES) -c $< -o $@
+
+# --- Helpers ---
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+
+run: all
+	@echo "[RUN] Starting application..."
+	./$(BUILD_DIR)/main.exe
+
 clean:
-	rm -f build/*.o main.exe 
+	rm -rf $(BUILD_DIR)
 
+rebuild: clean all
 
-
-
-# # ==============================
-# # Compiler configuration
-# # ==============================
-# CXX := g++
-# CXXFLAGS := -std=c++17 -Wall -Wextra -Wpedantic \
-#             -Iinc \
-#             -Iinc/model \
-#             -Iinc/library \
-#             -Iinc/playback 
-# #             -Iinc/player \
-# #             -Iinc/algorithm
-
-# # ==============================
-# # Project configuration
-# # ==============================
-# TARGET := main
-
-# # ==============================
-# # Source files
-# # ==============================
-# SRCS := \
-#     src/main.cpp \
-#     src/model/Song.cpp \
-#     src/library/MusicLibrary.cpp \
-#     src/playback/PlaybackQueue.cpp 
-# #     src/playback/PlaybackHistory.cpp \
-# #     src/playback/ShuffleManager.cpp \
-# #     src/player/MusicPlayer.cpp \
-# #     src/algorithm/SmartPlaylist.cpp
-
-# # ==============================
-# # Object files
-# # ==============================
-# OBJS := $(SRCS:.cpp=.o)
-
-# # ==============================
-# # Build rules
-# # ==============================
-
-# all: $(TARGET)
-
-# $(TARGET): $(OBJS)
-# 	$(CXX) $(OBJS) -o $(TARGET)
-
-# # Compile each .cpp into .o
-# %.o: %.cpp
-# 	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-# # ==============================
-# # Utility targets
-# # ==============================
-
-# run: $(TARGET)
-# 	./$(TARGET)
-
-# clean:
-# 	rm -f $(OBJS) $(TARGET)
-
-# rebuild: clean all
-
-# .PHONY: all run clean rebuild
+-include $(DEPS)

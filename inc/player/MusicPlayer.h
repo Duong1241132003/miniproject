@@ -1,14 +1,8 @@
 #ifndef MUSIC_PLAYER_H
 #define MUSIC_PLAYER_H
 
-#include <iostream>
-#include <fstream>
-#include <sstream>
 #include <string>
-#include <windows.h>
-#include <mmsystem.h>
-#include <thread>
-#include <atomic>
+#include <iostream>
 
 #include "MusicLibrary.h"
 #include "PlaybackQueue.h"
@@ -16,131 +10,141 @@
 #include "PlayNextQueue.h"
 #include "ShuffleManager.h"
 #include "SmartPlaylist.h"
-// #include "SmartPlaylist.h"
 
 /*
- * MusicPlayer
- * -----------
- * Central controller
+ * Class: MusicPlayer
+ * ------------------
+ * Acts as the central controller for the application.
+ * Manages the logic between the Music Library, Playback Queues,
+ * History, and the Audio Thread.
  */
 class MusicPlayer
 {
+private:
+    /* The central repository of all loaded songs. */
+    MusicLibrary library;
+
+    /* The standard list of songs to be played. */
+    PlaybackQueue playbackQueue;
+
+    /* High-priority queue for user-selected "Play Next" songs. */
+    PlayNextQueue playNextQueue;
+
+    /* Stack storing previously played songs for "Back" functionality. */
+    PlaybackHistory playbackHistory;
+
+    /* The song object currently active in the player. */
+    Song currentSong;
+
+    /* Flag indicating if a song is currently loaded (playing or paused). */
+    bool hasCurrentSong = false;
+    
 public:
     /*
-     * Constructor
+     * Constructor: Initializes the library and starts the audio thread.
      */
     MusicPlayer();
 
+    /* =============================================================
+     * CORE PLAYBACK LOGIC
+     * ============================================================= */
+
     /*
-     * Selects a song by ID and starts playback.
+     * Selects a song by its unique ID and begins playback immediately.
+     * Clears paused state and updates history if necessary.
      */
     void selectAndPlaySong(int songID);
 
     /*
-     * Play next song.
+     * Plays the next song based on priority:
+     * 1. 'Play Next' Queue
+     * 2. Standard Playback Queue
      */
     void playNext();
 
     /*
-     * Play previous song (from history).
+     * Returns to the previously played song from history (LIFO).
      */
     void playPrevious();
 
+    /* =============================================================
+     * QUEUE MANAGEMENT
+     * ============================================================= */
+
     /*
-     * Add song (by ID) to Play Next queue.
+     * Adds a specific song to the high-priority "Play Next" queue.
      */
     void addSongToPlayNext(int songID);
 
     /*
-     * Enable shuffle mode.
+     * Randomizes the current playback order using the ShuffleManager.
+     * Replaces the current playback queue with the shuffled version.
      */
     void enableShuffle();
 
     /*
-     * Generate smart playlist using BFS.
+     * Generates a "Smart Playlist" using Breadth-First Search (BFS)
+     * starting from a seed song.
      */
     void BFS(int startSongID, int maxSize);
 
-    /*
-     * Get library
-     */
+    /* =============================================================
+     * DATA ACCESSORS (Getters & Setters)
+     * ============================================================= */
+
+    /* Retrieves the main music library. */
     MusicLibrary& getLibrary();
 
-    /*
-     * Get playbackQueue.
-     */
+    /* Retrieves the standard playback queue. */
     PlaybackQueue& getPlaybackQueue();
 
-    /*
-     * Get playNextQueue.
-     */
+    /* Retrieves the priority playback queue. */
     PlayNextQueue& getPlayNextQueue();
 
-    /*
-     * Get shuffleManager.
-     */
+    /* Retrieves the playback history stack. */
     PlaybackHistory& getPlaybackHistory();
 
-    /*
-     * Set playbackQueue.
-     */
+    /* Overwrites the current playback queue with a new one. */
     void setPlaybackQueue(PlaybackQueue& pb);
 
-private:
     /*
-     * Music library containing all songs.
+     * Friend Declaration:
+     * Allows the global playSong function to access private members
+     * (specifically the audio thread synchronization primitives).
      */
-    MusicLibrary library;
-
-    /*
-     * Main playback queue.
-     */
-    PlaybackQueue playbackQueue;
-
-    /*
-     * Priority queue for managing next songs.
-     */
-    PlayNextQueue playNextQueue;
-
-    /*
-     * Playback history for "Back" functionality.
-     */
-    PlaybackHistory playbackHistory;
-
-
-    /*
-     * Currently playing song.
-     */
-    Song currentSong;
-
-    /*
-     * Indicates whether a song is currently playing.
-     */
-    bool hasCurrentSong {false};
-
+    friend void playSong(const Song& song);
 };
 
+/* =============================================================
+ * GLOBAL AUDIO INTERFACE
+ * These functions interact with the Audio Thread and MCI.
+ * ============================================================= */
+
 /*
- * Simulates playing a song.
- * This is a placeholder for real audio playback logic.
+ * Signals the audio thread to load and play a specific song.
  */
 void playSong(const Song& song);
 
 /*
- * pause current song
+ * Signals the audio thread to pause playback.
  */
 void pauseSong();
 
 /*
- * resume current song
+ * Signals the audio thread to resume playback if paused.
+ * Handles thread synchronization to prevent state conflicts.
  */
 void resumeSong();
 
 /*
- * Loads songs from a CSV file into the music library.
- * Expected CSV format
- * id,title,artist,album,duration,path
+ * Helper function used in main.cpp to stop playback completely.
+ */
+void stopSong();
+
+/*
+ * Utility: Loads song metadata from a CSV file into the library.
+ * Format: id,title,artist,album,duration,path
  */
 void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library);
 
-#endif
+#endif // MUSIC_PLAYER_H

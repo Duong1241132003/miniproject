@@ -12,6 +12,36 @@
  */
 class MusicLibrary
 {
+private:
+    /*
+     * Main storage: owns all Song objects.
+     */
+    std::vector<Song> songs;
+
+    /*
+     * Key   : song ID
+     * Value : song stored in vector
+     */
+    std::unordered_map<int, Song*> songByID;
+
+    /*
+     * Key   : song title
+     * Value : song stored in vector
+     */
+    std::map<std::string, Song*> songByTitle;
+
+    /*
+     * Key   : artist name
+     * Value : list of songs by that artist
+     */
+    std::unordered_map<std::string, std::vector<Song*>> songByArtist;
+
+    /*
+     * Key   : album name
+     * Value : list of songs in that album
+     */
+    std::unordered_map<std::string, std::vector<Song*>> songByAlbum;
+
 public:
     /*
      * Adds a song to the library.
@@ -79,37 +109,6 @@ public:
      * Get all song
      */
     std::vector<Song>& getSongs();
-
-
-private:
-    /*
-     * Main storage: owns all Song objects.
-     */
-    std::vector<Song> songs;
-
-    /*
-     * Key   : song ID
-     * Value : song stored in vector
-     */
-    std::unordered_map<int, Song*> songByID;
-
-    /*
-     * Key   : song title
-     * Value : song stored in vector
-     */
-    std::map<std::string, Song*> songByTitle;
-
-    /*
-     * Key   : artist name
-     * Value : list of songs by that artist
-     */
-    std::unordered_map<std::string, std::vector<Song*>> songByArtist;
-
-    /*
-     * Key   : album name
-     * Value : list of songs in that album
-     */
-    std::unordered_map<std::string, std::vector<Song*>> songByAlbum;
 
 };
 

@@ -11,6 +11,12 @@
  */
 class PlayNextQueue
 {
+private:
+    /*
+    * FIFO queue of upcoming songs.
+    */
+    std::queue<Song> queue;
+
 public:
     /*
      * Adds a song to the end of the queue.
@@ -20,7 +26,6 @@ public:
     /*
      * Returns the next song to be played.
      * Removes it from the queue.
-     * Throws std::runtime_error if queue is empty.
      */
     Song playNext();
 
@@ -34,11 +39,6 @@ public:
      */
     void getAllSongs() const;
 
-private:
-    /*
-     * FIFO queue of upcoming songs.
-     */
-    std::queue<Song> queue;
 };
 
 #endif

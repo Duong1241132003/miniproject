@@ -12,6 +12,19 @@
  */
 class PlaybackQueue
 {
+private:
+    /*
+     * std::list is chosen because:
+     *  - insert/remove operations are O(1)
+     *  - iterators remain valid after modifications
+     */
+    std::list<Song> queue;
+
+    /*
+     * Iterator pointing to the currently playing song.
+     */
+    std::list<Song>::iterator current = queue.end();
+    
 public:
     /*
      * Adds a song to the end of the playback queue.
@@ -26,7 +39,6 @@ public:
 
     /*
      * Returns the currently playing song.
-     * Throws an exception if the queue is empty.
      */
     const Song& getCurrentSong();
     /*
@@ -54,18 +66,6 @@ public:
      * Print all songs in the queue
      */
     void getAllSongs() const;
-private:
-    /*
-     * std::list is chosen because:
-     *  - insert/remove operations are O(1)
-     *  - iterators remain valid after modifications
-     */
-    std::list<Song> queue;
-
-    /*
-     * Iterator pointing to the currently playing song.
-     */
-    std::list<Song>::iterator current = queue.end();
 };
 
 /*

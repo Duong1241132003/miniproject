@@ -12,6 +12,13 @@
  */
 class PlaybackHistory
 {
+private:
+    /*
+     * Stack storing played songs.
+     * Top of stack = most recently played song.
+     */
+    std::stack<Song> history;
+    
 public:
     /*
      * Adds a song to playback history.
@@ -22,7 +29,6 @@ public:
     /*
      * Returns the previously played song.
      * Removes the song from history.
-     * Throws std::runtime_error if history is empty.
      */
     Song playPreviousSong();
 
@@ -36,12 +42,6 @@ public:
      */
     void getHistory() const;
 
-private:
-    /*
-     * Stack storing played songs.
-     * Top of stack = most recently played song.
-     */
-    std::stack<Song> history;
 };
 
 #endif

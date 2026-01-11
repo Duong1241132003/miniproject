@@ -1,11 +1,1108 @@
 id,title,artist,album,duration,path
-1,ahem,artist1,album1,1,D:\\hocCpp\\Playlist\\ahem_x.wav
-2,airplane_beep_chime,artist2,album2,4,D:\\hocCpp\\Playlist\\airplane_chime_x.wav
-3,alarm_beep,artist3,album3,3,D:\\hocCpp\\Playlist\\alarm_beep.wav
-4,applause,artist1,album2,2,D:\\hocCpp\\Playlist\\applause_y.wav
-5,baby,artist2,album3,1,D:\\hocCpp\\Playlist\\baby_x.wav
-6,blip,artist1,album1,1,D:\\hocCpp\\Playlist\\blip.wav
-7,blurp,artist3,album3,1,D:\\hocCpp\\Playlist\\blurp_x.wav
-8,bomb,artist3,album1,2,D:\\hocCpp\\Playlist\\bomb_x.wav
-9,burp,artist1,album2,1,D:\\hocCpp\\Playlist\\burp_x.wav
-10,car,artist2,album3,5,D:\\hocCpp\\Playlist\\car_x.wav
+1,90_C#m_FatChordsElGuitar_02_577,artist1,album5,10,D:\\hocCpp\\Playlist\\90_C#m_FatChordsElGuitar_02_577.wav
+2,100_C_ElecGuitar_01_724,artist4,album2,19,D:\\hocCpp\\Playlist\\100_C_ElecGuitar_01_724.wav
+3,100_D_ElecGuitar_01_724,artist2,album8,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_01_724.wav
+4,100_D_ElecGuitar_02_724,artist7,album1,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_02_724.wav
+5,111_D#_QuackElGuitar_01_577,artist3,album9,8,D:\\hocCpp\\Playlist\\111_D#_QuackElGuitar_01_577.wav
+6,111_F#m_RiffElGuitar_01_577,artist9,album3,17,D:\\hocCpp\\Playlist\\111_F#m_RiffElGuitar_01_577.wav
+7,127_D#m_LeadEffectedElGuitar_02_577,artist5,album4,15,D:\\hocCpp\\Playlist\\127_D#m_LeadEffectedElGuitar_02_577.wav
+8,130_A#m_RhythmDreamyElGuitar_01_577,artist1,album7,14,D:\\hocCpp\\Playlist\\130_A#m_RhythmDreamyElGuitar_01_577.wav
+9,130_B_TremChordsElGuitar_01_577,artist6,album2,14,D:\\hocCpp\\Playlist\\130_B_TremChordsElGuitar_01_577.wav
+10,140_F#_MelodyElGuitar_02_577,artist8,album6,6,D:\\hocCpp\\Playlist\\140_F#_MelodyElGuitar_02_577.wav
+11,140_F#_RiffStonesElGuitar_02_577,artist2,album10,6,D:\\hocCpp\\Playlist\\140_F#_RiffStonesElGuitar_02_577.wav
+12,ahem_x,artist4,album1,1,D:\\hocCpp\\Playlist\\ahem_x.wav
+13,airplane_chime_x,artist10,album3,4,D:\\hocCpp\\Playlist\\airplane_chime_x.wav
+14,alarm_beep,artist5,album8,3,D:\\hocCpp\\Playlist\\alarm_beep.wav
+15,Alesis-S4-Plus-Dyna-Roadz-C3,artist3,album5,6,D:\\hocCpp\\Playlist\\Alesis-S4-Plus-Dyna-Roadz-C3.wav
+16,applause_y,artist7,album2,2,D:\\hocCpp\\Playlist\\applause_y.wav
+17,baby_x,artist9,album4,1,D:\\hocCpp\\Playlist\\baby_x.wav
+18,blip,artist1,album6,0,D:\\hocCpp\\Playlist\\blip.wav
+19,blurp_x,artist2,album7,0,D:\\hocCpp\\Playlist\\blurp_x.wav
+20,bomb_x,artist6,album9,2,D:\\hocCpp\\Playlist\\bomb_x.wav
+21,burp_x,artist8,album1,0,D:\\hocCpp\\Playlist\\burp_x.wav
+22,car_x,artist10,album10,5,D:\\hocCpp\\Playlist\\car_x.wav
+23,FL_FMT_Kit01_108_Bass_Loop_EbMaj,artist4,album3,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Bass_Loop_EbMaj.wav
+24,FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj,artist3,album2,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj.wav
+25,FL_FMT_Kit02_120_Bass_Loop_02_Amin,artist5,album5,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Bass_Loop_02_Amin.wav
+26,FL_FMT_Kit02_120_Drum_Loop_Full,artist1,album8,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Drum_Loop_Full.wav
+27,FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin,artist9,album4,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin.wav
+28,FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry,artist2,album5,21,D:\\hocCpp\\Playlist\\FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry.wav
+29,FL_JHHC_Keys_Loop_09_90_G,artist8,album3,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_09_90_G.wav
+30,FL_JHHC_Keys_Loop_15_90_A,artist4,album9,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_15_90_A.wav
+31,FL_NDF_110_C_RGUITAR 01,artist1,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 01.wav
+32,FL_NDF_110_C_RGUITAR 02,artist7,album6,8,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 02.wav
+33,FL_NDF_110_D#_RGUITAR 01,artist5,album2,4,D:\\hocCpp\\Playlist\\FL_NDF_110_D#_RGUITAR 01.wav
+34,FL_NDF_KIT03_110_F_Full Drum Loop,artist3,album8,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Full Drum Loop.wav
+35,FL_NDF_KIT03_110_F_Guitar 02,artist10,album4,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Guitar 02.wav
+36,FL_NDF_KIT03_110_F_Old Keys Chord,artist6,album7,17,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Old Keys Chord.wav
+37,FL_NDF_KIT03_110_F_Percussion,artist9,album10,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Percussion.wav
+38,FL_NDF_KIT04_115_F_Fill 02,artist2,album5,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 02.wav
+39,FL_NDF_KIT04_115_F_Fill 03,artist8,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 03.wav
+40,FL_NDF_KIT04_115_F_Full Drum Loop,artist4,album3,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Full Drum Loop.wav
+41,FL_NDF_KIT04_115_F_Guitar 01,artist1,album9,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Guitar 01.wav
+42,FL_NDF_KIT04_115_F_Live Bass,artist7,album2,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Live Bass.wav
+43,FL_PST_Kit03_145_Bass_Stem_Drop_1,artist3,album6,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_1.wav
+44,FL_PST_Kit03_145_Bass_Stem_Drop_2,artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_2.wav
+45,FL_PST_Kit03_145_Demo,artist10,album4,92,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Demo.wav
+46,FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop,artist6,album7,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop.wav
+47,FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop,artist9,album10,11,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop.wav
+48,FL_PST_Kit03_145_Drum_Loop_Snare_Drop,artist2,album5,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Drop.wav
+49,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1,artist8,album1,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1.wav
+50,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2,artist4,album3,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2.wav
+51,FL_PST_Kit03_145_Drum_Stem_Kick_Drop,artist1,album9,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Kick_Drop.wav
+52,FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop,artist7,album2,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop.wav
+53,FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop,artist3,album6,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop.wav
+54,FL_PST_Kit03_145_Fx_Loop_Zap_Drop,artist5,album8,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Zap_Drop.wav
+55,FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break,artist7,album2,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break.wav
+56,FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop,artist3,album9,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop.wav
+57,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break,artist1,album4,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break.wav
+58,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop,artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop.wav
+59,FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop,artist9,album1,87,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop.wav
+60,FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop,artist2,album6,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop.wav
+61,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop,artist8,album3,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop.wav
+62,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop,artist4,album10,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop.wav
+63,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break,artist6,album5,28,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break.wav
+64,FL_RSC_Kit02_Drum_Loop_Full_107,artist10,album7,8,D:\\hocCpp\\Playlist\\FL_RSC_Kit02_Drum_Loop_Full_107.wav
+65,FL_RSC_Kit03_Drum_Loop_Full_104,artist3,album2,9,D:\\hocCpp\\Playlist\\FL_RSC_Kit03_Drum_Loop_Full_104.wav
+66,FL_RSC_Kit04_Bass_Loop_91_D,artist7,album8,21,D:\\hocCpp\\Playlist\\FL_RSC_Kit04_Bass_Loop_91_D.wav
+67,FL_RSC_Kit05_Bass_Loop_84_C#,artist1,album4,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Bass_Loop_84_C#.wav
+68,FL_RSC_Kit05_Drum_Loop_Hat_84,artist5,album9,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Drum_Loop_Hat_84.wav
+69,FS_LS_115_Instrument_Loop_09_Fm,artist2,album1,16,D:\\hocCpp\\Playlist\\FS_LS_115_Instrument_Loop_09_Fm.wav
+70,FS_LS_130_Keys_Loop_Piano_01_Cmaj,artist9,album6,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_01_Cmaj.wav
+71,FS_LS_130_Keys_Loop_Piano_09_Bbm,artist4,album3,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_09_Bbm.wav
+72,SH_STH_Flow_140_Pad_Loop_F#min,artist8,album5,13,D:\\hocCpp\\Playlist\\SH_STH_Flow_140_Pad_Loop_F#min.wav
+73,SH_STH_Gotic_120_Drum_Loop_01,artist6,album10,16,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Drum_Loop_01.wav
+74,SH_STH_Gotic_120_Synth2_Loop_Bmin,artist10,album7,8,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Synth2_Loop_Bmin.wav
+75,SH_STH_Now_90_Pluck_Loop_Cmin,artist3,album2,10,D:\\hocCpp\\Playlist\\SH_STH_Now_90_Pluck_Loop_Cmin.wav
+76,SHARP_PAL_138_Bass_Loop_C#_1,artist7,album8,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_C#_1.wav
+77,SHARP_PAL_138_Bass_Loop_D#_2,artist1,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_D#_2.wav
+78,SHARP_PAL_138_Bass_Loop_E_(Layer),artist5,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_(Layer).wav
+79,SHARP_PAL_138_Bass_Loop_E_1,artist2,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_1.wav
+80,SHARP_PAL_138_Bass_Loop_E_2,artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_2.wav
+81,SHARP_PAL_138_Bass_Loop_F#_1,artist4,album3,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_1.wav
+82,SHARP_PAL_138_Bass_Loop_F#_3,artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_3.wav
+83,SHARP_PAL_138_Drum_Loop_Cinematic,artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic.wav
+84,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1,artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1.wav
+85,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2,artist10,album3,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2.wav
+86,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3,artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3.wav
+87,SHARP_PAL_138_Drum_Loop_Hat_Closed_1,artist3,album2,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_1.wav
+88,SHARP_PAL_138_Drum_Loop_Hat_Closed_2,artist9,album6,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_2.wav
+89,SHARP_PAL_138_Drum_Loop_Hat_Closed_3,artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_3.wav
+90,SHARP_PAL_138_Drum_Loop_Hat_Open_1,artist7,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_1.wav
+91,SHARP_PAL_138_Drum_Loop_Hat_Open_2,artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_2.wav
+92,SHARP_PAL_138_Drum_Loop_Perc_2,artist2,album5,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_2.wav
+93,SHARP_PAL_138_Drum_Loop_Perc_6,artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_6.wav
+94,SHARP_PAL_138_Drum_Loop_Perc_8,artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_8.wav
+95,SHARP_PAL_138_Drum_Loop_Perc_Ethnic,artist10,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_Ethnic.wav
+96,SHARP_PAL_138_Drum_Loop_Snare_2,artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Snare_2.wav
+97,SHARP_PAL_138_Drum_Loop_Tambourine_1,artist3,album2,3,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Tambourine_1.wav
+98,SHARP_PAL_138_Fx_Loop_1,artist9,album6,8,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_1.wav
+99,SHARP_PAL_138_Fx_Loop_2,artist1,album10,10,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_2.wav
+100,SHARP_PAL_138_Fx_Loop_3,artist7,album4,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_3.wav
+101,SHARP_PAL_138_Fx_Loop_4,artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_4.wav
+102,SHARP_PAL_138_Fx_Loop_5,artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_5.wav
+103,SHARP_PAL_138_Fx_Loop_6,artist8,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_6.wav
+104,SHARP_PAL_138_Fx_Loop_7,artist4,album9,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_7.wav
+105,SHARP_PAL_138_Fx_Loop_8,artist10,album3,5,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_8.wav
+106,SHARP_PAL_138_Fx_Loop_9,artist6,album7,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_9.wav
+107,SHARP_PAL_138_Fx_Loop_10,artist3,album2,4,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_10.wav
+108,SHARP_PAL_138_Synth_Loop_Melody_C#_1,artist9,album6,43,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_1.wav
+109,SHARP_PAL_138_Synth_Loop_Melody_C#_2,artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_2.wav
+110,SHARP_PAL_138_Synth_Loop_Melody_C#_3,artist4,album3,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_3.wav
+111,SHARP_PAL_138_Synth_Loop_Melody_E_1,artist7,album8,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_1.wav
+112,SHARP_PAL_138_Synth_Loop_Melody_E_2,artist2,album5,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_2.wav
+113,SHARP_PAL_138_Synth_Loop_Melody_E_3,artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_3.wav
+114,SHARP_PAL_138_Synth_Loop_Melody_E_4,artist5,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_4.wav
+115,SHARP_PAL_138_Synth_Loop_Melody_E_5,artist1,album9,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_5.wav
+116,SHARP_PAL_138_Synth_Loop_Melody_E_6,artist8,album2,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_6.wav
+117,SHARP_PAL_138_Synth_Loop_Melody_E_7,artist3,album7,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_7.wav
+118,SHARP_PAL_138_Synth_Loop_Melody_E_8,artist6,album4,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_8.wav
+119,SHARP_PAL_140_Bass_Loop_C#_1,artist10,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_C#_1.wav
+120,SHARP_PAL_140_Bass_Loop_F,artist2,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_F.wav
+121,SHARP_PAL_140_Bass_Loop_G#,artist5,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_G#.wav
+122,SHARP_PAL_140_Drum_Loop_Cinematic_1,artist8,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Cinematic_1.wav
+123,SHARP_PAL_140_Drum_Loop_Fill_2,artist1,album5,1,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Fill_2.wav
+124,90_C#m_FatChordsElGuitar_02_577 - Copy,artist1,album5,10,D:\\hocCpp\\Playlist\\90_C#m_FatChordsElGuitar_02_577 - Copy.wav
+125,100_C_ElecGuitar_01_724 - Copy,artist4,album2,19,D:\\hocCpp\\Playlist\\100_C_ElecGuitar_01_724 - Copy.wav
+126,100_D_ElecGuitar_01_724 - Copy,artist2,album8,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_01_724 - Copy.wav
+127,100_D_ElecGuitar_02_724 - Copy,artist7,album1,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_02_724 - Copy.wav
+128,111_D#_QuackElGuitar_01_577 - Copy,artist3,album9,8,D:\\hocCpp\\Playlist\\111_D#_QuackElGuitar_01_577 - Copy.wav
+129,111_F#m_RiffElGuitar_01_577 - Copy,artist9,album3,17,D:\\hocCpp\\Playlist\\111_F#m_RiffElGuitar_01_577 - Copy.wav
+130,127_D#m_LeadEffectedElGuitar_02_577 - Copy,artist5,album4,15,D:\\hocCpp\\Playlist\\127_D#m_LeadEffectedElGuitar_02_577 - Copy.wav
+131,130_A#m_RhythmDreamyElGuitar_01_577 - Copy,artist1,album7,14,D:\\hocCpp\\Playlist\\130_A#m_RhythmDreamyElGuitar_01_577 - Copy.wav
+132,130_B_TremChordsElGuitar_01_577 - Copy,artist6,album2,14,D:\\hocCpp\\Playlist\\130_B_TremChordsElGuitar_01_577 - Copy.wav
+133,140_F#_MelodyElGuitar_02_577 - Copy,artist8,album6,6,D:\\hocCpp\\Playlist\\140_F#_MelodyElGuitar_02_577 - Copy.wav
+134,140_F#_RiffStonesElGuitar_02_577 - Copy,artist2,album10,6,D:\\hocCpp\\Playlist\\140_F#_RiffStonesElGuitar_02_577 - Copy.wav
+135,ahem_x - Copy,artist4,album1,1,D:\\hocCpp\\Playlist\\ahem_x - Copy.wav
+136,airplane_chime_x - Copy,artist10,album3,4,D:\\hocCpp\\Playlist\\airplane_chime_x - Copy.wav
+137,alarm_beep - Copy,artist5,album8,3,D:\\hocCpp\\Playlist\\alarm_beep - Copy.wav
+138,Alesis-S4-Plus-Dyna-Roadz-C3 - Copy,artist3,album5,6,D:\\hocCpp\\Playlist\\Alesis-S4-Plus-Dyna-Roadz-C3 - Copy.wav
+139,applause_y - Copy,artist7,album2,2,D:\\hocCpp\\Playlist\\applause_y - Copy.wav
+140,baby_x - Copy,artist9,album4,1,D:\\hocCpp\\Playlist\\baby_x - Copy.wav
+141,blip - Copy,artist1,album6,0,D:\\hocCpp\\Playlist\\blip - Copy.wav
+142,blurp_x - Copy,artist2,album7,0,D:\\hocCpp\\Playlist\\blurp_x - Copy.wav
+143,bomb_x - Copy,artist6,album9,2,D:\\hocCpp\\Playlist\\bomb_x - Copy.wav
+144,burp_x - Copy,artist8,album1,0,D:\\hocCpp\\Playlist\\burp_x - Copy.wav
+145,car_x - Copy,artist10,album10,5,D:\\hocCpp\\Playlist\\car_x - Copy.wav
+146,FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy,artist4,album3,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy.wav
+147,FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy,artist3,album2,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy.wav
+148,FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy,artist5,album5,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy.wav
+149,FL_FMT_Kit02_120_Drum_Loop_Full - Copy,artist1,album8,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Drum_Loop_Full - Copy.wav
+150,FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy,artist9,album4,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy.wav
+151,FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy,artist2,album5,21,D:\\hocCpp\\Playlist\\FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy.wav
+152,FL_JHHC_Keys_Loop_09_90_G - Copy,artist8,album3,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_09_90_G - Copy.wav
+153,FL_JHHC_Keys_Loop_15_90_A - Copy,artist4,album9,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_15_90_A - Copy.wav
+154,FL_NDF_110_C_RGUITAR 01 - Copy,artist1,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 01 - Copy.wav
+155,FL_NDF_110_C_RGUITAR 02 - Copy,artist7,album6,8,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 02 - Copy.wav
+156,FL_NDF_110_D#_RGUITAR 01 - Copy,artist5,album2,4,D:\\hocCpp\\Playlist\\FL_NDF_110_D#_RGUITAR 01 - Copy.wav
+157,FL_NDF_KIT03_110_F_Full Drum Loop - Copy,artist3,album8,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Full Drum Loop - Copy.wav
+158,FL_NDF_KIT03_110_F_Guitar 02 - Copy,artist10,album4,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Guitar 02 - Copy.wav
+159,FL_NDF_KIT03_110_F_Old Keys Chord - Copy,artist6,album7,17,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Old Keys Chord - Copy.wav
+160,FL_NDF_KIT03_110_F_Percussion - Copy,artist9,album10,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Percussion - Copy.wav
+161,FL_NDF_KIT04_115_F_Fill 02 - Copy,artist2,album5,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 02 - Copy.wav
+162,FL_NDF_KIT04_115_F_Fill 03 - Copy,artist8,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 03 - Copy.wav
+163,FL_NDF_KIT04_115_F_Full Drum Loop - Copy,artist4,album3,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Full Drum Loop - Copy.wav
+164,FL_NDF_KIT04_115_F_Guitar 01 - Copy,artist1,album9,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Guitar 01 - Copy.wav
+165,FL_NDF_KIT04_115_F_Live Bass - Copy,artist7,album2,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Live Bass - Copy.wav
+166,FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy,artist3,album6,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy.wav
+167,FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy,artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy.wav
+168,FL_PST_Kit03_145_Demo - Copy,artist10,album4,92,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Demo - Copy.wav
+169,FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy,artist6,album7,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy.wav
+170,FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy,artist9,album10,11,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy.wav
+171,FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy,artist2,album5,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy.wav
+172,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy,artist8,album1,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy.wav
+173,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy,artist4,album3,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy.wav
+174,FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy,artist1,album9,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy.wav
+175,FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy,artist7,album2,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy.wav
+176,FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy,artist3,album6,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy.wav
+177,FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy,artist5,album8,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy.wav
+178,FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy,artist7,album2,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy.wav
+179,FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy,artist3,album9,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy.wav
+180,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy,artist1,album4,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy.wav
+181,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy,artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy.wav
+182,FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy,artist9,album1,87,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy.wav
+183,FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy,artist2,album6,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy.wav
+184,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy,artist8,album3,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy.wav
+185,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy,artist4,album10,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy.wav
+186,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy,artist6,album5,28,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy.wav
+187,FL_RSC_Kit02_Drum_Loop_Full_107 - Copy,artist10,album7,8,D:\\hocCpp\\Playlist\\FL_RSC_Kit02_Drum_Loop_Full_107 - Copy.wav
+188,FL_RSC_Kit03_Drum_Loop_Full_104 - Copy,artist3,album2,9,D:\\hocCpp\\Playlist\\FL_RSC_Kit03_Drum_Loop_Full_104 - Copy.wav
+189,FL_RSC_Kit04_Bass_Loop_91_D - Copy,artist7,album8,21,D:\\hocCpp\\Playlist\\FL_RSC_Kit04_Bass_Loop_91_D - Copy.wav
+190,FL_RSC_Kit05_Bass_Loop_84_C# - Copy,artist1,album4,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Bass_Loop_84_C# - Copy.wav
+191,FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy,artist5,album9,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy.wav
+192,FS_LS_115_Instrument_Loop_09_Fm - Copy,artist2,album1,16,D:\\hocCpp\\Playlist\\FS_LS_115_Instrument_Loop_09_Fm - Copy.wav
+193,FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy,artist9,album6,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy.wav
+194,FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy,artist4,album3,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy.wav
+195,SH_STH_Flow_140_Pad_Loop_F#min - Copy,artist8,album5,13,D:\\hocCpp\\Playlist\\SH_STH_Flow_140_Pad_Loop_F#min - Copy.wav
+196,SH_STH_Gotic_120_Drum_Loop_01 - Copy,artist6,album10,16,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Drum_Loop_01 - Copy.wav
+197,SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy,artist10,album7,8,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy.wav
+198,SH_STH_Now_90_Pluck_Loop_Cmin - Copy,artist3,album2,10,D:\\hocCpp\\Playlist\\SH_STH_Now_90_Pluck_Loop_Cmin - Copy.wav
+199,SHARP_PAL_138_Bass_Loop_C#_1 - Copy,artist7,album8,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_C#_1 - Copy.wav
+200,SHARP_PAL_138_Bass_Loop_D#_2 - Copy,artist1,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_D#_2 - Copy.wav
+201,SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy,artist5,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy.wav
+202,SHARP_PAL_138_Bass_Loop_E_1 - Copy,artist2,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_1 - Copy.wav
+203,SHARP_PAL_138_Bass_Loop_E_2 - Copy,artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_2 - Copy.wav
+204,SHARP_PAL_138_Bass_Loop_F#_1 - Copy,artist4,album3,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_1 - Copy.wav
+205,SHARP_PAL_138_Bass_Loop_F#_3 - Copy,artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_3 - Copy.wav
+206,SHARP_PAL_138_Drum_Loop_Cinematic - Copy,artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic - Copy.wav
+207,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy,artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy.wav
+208,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy,artist10,album3,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy.wav
+209,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy,artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy.wav
+210,SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy,artist3,album2,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy.wav
+211,SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy,artist9,album6,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy.wav
+212,SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy,artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy.wav
+213,SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy,artist7,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy.wav
+214,SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy,artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy.wav
+215,SHARP_PAL_138_Drum_Loop_Perc_2 - Copy,artist2,album5,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_2 - Copy.wav
+216,SHARP_PAL_138_Drum_Loop_Perc_6 - Copy,artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_6 - Copy.wav
+217,SHARP_PAL_138_Drum_Loop_Perc_8 - Copy,artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_8 - Copy.wav
+218,SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy,artist10,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy.wav
+219,SHARP_PAL_138_Drum_Loop_Snare_2 - Copy,artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Snare_2 - Copy.wav
+220,SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy,artist3,album2,3,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy.wav
+221,SHARP_PAL_138_Fx_Loop_1 - Copy,artist9,album6,8,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_1 - Copy.wav
+222,SHARP_PAL_138_Fx_Loop_2 - Copy,artist1,album10,10,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_2 - Copy.wav
+223,SHARP_PAL_138_Fx_Loop_3 - Copy,artist7,album4,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_3 - Copy.wav
+224,SHARP_PAL_138_Fx_Loop_4 - Copy,artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_4 - Copy.wav
+225,SHARP_PAL_138_Fx_Loop_5 - Copy,artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_5 - Copy.wav
+226,SHARP_PAL_138_Fx_Loop_6 - Copy,artist8,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_6 - Copy.wav
+227,SHARP_PAL_138_Fx_Loop_7 - Copy,artist4,album9,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_7 - Copy.wav
+228,SHARP_PAL_138_Fx_Loop_8 - Copy,artist10,album3,5,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_8 - Copy.wav
+229,SHARP_PAL_138_Fx_Loop_9 - Copy,artist6,album7,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_9 - Copy.wav
+230,SHARP_PAL_138_Fx_Loop_10 - Copy,artist3,album2,4,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_10 - Copy.wav
+231,SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy,artist9,album6,43,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy.wav
+232,SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy,artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy.wav
+233,SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy,artist4,album3,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy.wav
+234,SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy,artist7,album8,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy.wav
+235,SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy,artist2,album5,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy.wav
+236,SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy,artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy.wav
+237,SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy,artist5,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy.wav
+238,SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy,artist1,album9,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy.wav
+239,SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy,artist8,album2,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy.wav
+240,SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy,artist3,album7,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy.wav
+241,SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy,artist6,album4,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy.wav
+242,SHARP_PAL_140_Bass_Loop_C#_1 - Copy,artist10,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_C#_1 - Copy.wav
+243,SHARP_PAL_140_Bass_Loop_F - Copy,artist2,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_F - Copy.wav
+244,SHARP_PAL_140_Bass_Loop_G# - Copy,artist5,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_G# - Copy.wav
+245,SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy,artist8,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy.wav
+246,SHARP_PAL_140_Drum_Loop_Fill_2 - Copy,artist1,album5,1,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Fill_2 - Copy.wav
+247,90_C#m_FatChordsElGuitar_02_577 - Copy (2),artist1,album5,10,D:\\hocCpp\\Playlist\\90_C#m_FatChordsElGuitar_02_577 - Copy (2).wav
+248,100_C_ElecGuitar_01_724 - Copy (2),artist4,album2,19,D:\\hocCpp\\Playlist\\100_C_ElecGuitar_01_724 - Copy (2).wav
+249,100_D_ElecGuitar_01_724 - Copy (2),artist2,album8,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_01_724 - Copy (2).wav
+250,100_D_ElecGuitar_02_724 - Copy (2),artist7,album1,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_02_724 - Copy (2).wav
+251,111_D#_QuackElGuitar_01_577 - Copy (2),artist3,album9,8,D:\\hocCpp\\Playlist\\111_D#_QuackElGuitar_01_577 - Copy (2).wav
+252,111_F#m_RiffElGuitar_01_577 - Copy (2),artist9,album3,17,D:\\hocCpp\\Playlist\\111_F#m_RiffElGuitar_01_577 - Copy (2).wav
+253,127_D#m_LeadEffectedElGuitar_02_577 - Copy (2),artist5,album4,15,D:\\hocCpp\\Playlist\\127_D#m_LeadEffectedElGuitar_02_577 - Copy (2).wav
+254,130_A#m_RhythmDreamyElGuitar_01_577 - Copy (2),artist1,album7,14,D:\\hocCpp\\Playlist\\130_A#m_RhythmDreamyElGuitar_01_577 - Copy (2).wav
+255,130_B_TremChordsElGuitar_01_577 - Copy (2),artist6,album2,14,D:\\hocCpp\\Playlist\\130_B_TremChordsElGuitar_01_577 - Copy (2).wav
+256,140_F#_MelodyElGuitar_02_577 - Copy (2),artist8,album6,6,D:\\hocCpp\\Playlist\\140_F#_MelodyElGuitar_02_577 - Copy (2).wav
+257,140_F#_RiffStonesElGuitar_02_577 - Copy (2),artist2,album10,6,D:\\hocCpp\\Playlist\\140_F#_RiffStonesElGuitar_02_577 - Copy (2).wav
+258,ahem_x - Copy (2),artist4,album1,1,D:\\hocCpp\\Playlist\\ahem_x - Copy (2).wav
+259,airplane_chime_x - Copy (2),artist10,album3,4,D:\\hocCpp\\Playlist\\airplane_chime_x - Copy (2).wav
+260,alarm_beep - Copy (2),artist5,album8,3,D:\\hocCpp\\Playlist\\alarm_beep - Copy (2).wav
+261,Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (2),artist3,album5,6,D:\\hocCpp\\Playlist\\Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (2).wav
+262,applause_y - Copy (2),artist7,album2,2,D:\\hocCpp\\Playlist\\applause_y - Copy (2).wav
+263,baby_x - Copy (2),artist9,album4,1,D:\\hocCpp\\Playlist\\baby_x - Copy (2).wav
+264,blip - Copy (2),artist1,album6,0,D:\\hocCpp\\Playlist\\blip - Copy (2).wav
+265,blurp_x - Copy (2),artist2,album7,0,D:\\hocCpp\\Playlist\\blurp_x - Copy (2).wav
+266,bomb_x - Copy (2),artist6,album9,2,D:\\hocCpp\\Playlist\\bomb_x - Copy (2).wav
+267,burp_x - Copy (2),artist8,album1,0,D:\\hocCpp\\Playlist\\burp_x - Copy (2).wav
+268,car_x - Copy (2),artist10,album10,5,D:\\hocCpp\\Playlist\\car_x - Copy (2).wav
+269,FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (2),artist4,album3,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (2).wav
+270,FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (2),artist3,album2,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (2).wav
+271,FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (2),artist5,album5,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (2).wav
+272,FL_FMT_Kit02_120_Drum_Loop_Full - Copy (2),artist1,album8,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Drum_Loop_Full - Copy (2).wav
+273,FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (2),artist9,album4,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (2).wav
+274,FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (2),artist2,album5,21,D:\\hocCpp\\Playlist\\FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (2).wav
+275,FL_JHHC_Keys_Loop_09_90_G - Copy (2),artist8,album3,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_09_90_G - Copy (2).wav
+276,FL_JHHC_Keys_Loop_15_90_A - Copy (2),artist4,album9,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_15_90_A - Copy (2).wav
+277,FL_NDF_110_C_RGUITAR 01 - Copy (2),artist1,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 01 - Copy (2).wav
+278,FL_NDF_110_C_RGUITAR 02 - Copy (2),artist7,album6,8,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 02 - Copy (2).wav
+279,FL_NDF_110_D#_RGUITAR 01 - Copy (2),artist5,album2,4,D:\\hocCpp\\Playlist\\FL_NDF_110_D#_RGUITAR 01 - Copy (2).wav
+280,FL_NDF_KIT03_110_F_Full Drum Loop - Copy (2),artist3,album8,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Full Drum Loop - Copy (2).wav
+281,FL_NDF_KIT03_110_F_Guitar 02 - Copy (2),artist10,album4,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Guitar 02 - Copy (2).wav
+282,FL_NDF_KIT03_110_F_Old Keys Chord - Copy (2),artist6,album7,17,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Old Keys Chord - Copy (2).wav
+283,FL_NDF_KIT03_110_F_Percussion - Copy (2),artist9,album10,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Percussion - Copy (2).wav
+284,FL_NDF_KIT04_115_F_Fill 02 - Copy (2),artist2,album5,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 02 - Copy (2).wav
+285,FL_NDF_KIT04_115_F_Fill 03 - Copy (2),artist8,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 03 - Copy (2).wav
+286,FL_NDF_KIT04_115_F_Full Drum Loop - Copy (2),artist4,album3,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Full Drum Loop - Copy (2).wav
+287,FL_NDF_KIT04_115_F_Guitar 01 - Copy (2),artist1,album9,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Guitar 01 - Copy (2).wav
+288,FL_NDF_KIT04_115_F_Live Bass - Copy (2),artist7,album2,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Live Bass - Copy (2).wav
+289,FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (2),artist3,album6,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (2).wav
+290,FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (2),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (2).wav
+291,FL_PST_Kit03_145_Demo - Copy (2),artist10,album4,92,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Demo - Copy (2).wav
+292,FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (2),artist6,album7,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (2).wav
+293,FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (2),artist9,album10,11,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (2).wav
+294,FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (2),artist2,album5,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (2).wav
+295,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (2),artist8,album1,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (2).wav
+296,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (2),artist4,album3,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (2).wav
+297,FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (2),artist1,album9,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (2).wav
+298,FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (2),artist7,album2,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (2).wav
+299,FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (2),artist3,album6,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (2).wav
+300,FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (2),artist5,album8,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (2).wav
+301,FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (2),artist7,album2,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (2).wav
+302,FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (2),artist3,album9,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (2).wav
+303,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (2),artist1,album4,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (2).wav
+304,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (2),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (2).wav
+305,FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (2),artist9,album1,87,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (2).wav
+306,FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (2),artist2,album6,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (2).wav
+307,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (2),artist8,album3,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (2).wav
+308,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (2),artist4,album10,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (2).wav
+309,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (2),artist6,album5,28,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (2).wav
+310,FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (2),artist10,album7,8,D:\\hocCpp\\Playlist\\FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (2).wav
+311,FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (2),artist3,album2,9,D:\\hocCpp\\Playlist\\FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (2).wav
+312,FL_RSC_Kit04_Bass_Loop_91_D - Copy (2),artist7,album8,21,D:\\hocCpp\\Playlist\\FL_RSC_Kit04_Bass_Loop_91_D - Copy (2).wav
+313,FL_RSC_Kit05_Bass_Loop_84_C# - Copy (2),artist1,album4,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Bass_Loop_84_C# - Copy (2).wav
+314,FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (2),artist5,album9,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (2).wav
+315,FS_LS_115_Instrument_Loop_09_Fm - Copy (2),artist2,album1,16,D:\\hocCpp\\Playlist\\FS_LS_115_Instrument_Loop_09_Fm - Copy (2).wav
+316,FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (2),artist9,album6,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (2).wav
+317,FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (2),artist4,album3,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (2).wav
+318,SH_STH_Flow_140_Pad_Loop_F#min - Copy (2),artist8,album5,13,D:\\hocCpp\\Playlist\\SH_STH_Flow_140_Pad_Loop_F#min - Copy (2).wav
+319,SH_STH_Gotic_120_Drum_Loop_01 - Copy (2),artist6,album10,16,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Drum_Loop_01 - Copy (2).wav
+320,SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (2),artist10,album7,8,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (2).wav
+321,SH_STH_Now_90_Pluck_Loop_Cmin - Copy (2),artist3,album2,10,D:\\hocCpp\\Playlist\\SH_STH_Now_90_Pluck_Loop_Cmin - Copy (2).wav
+322,SHARP_PAL_138_Bass_Loop_C#_1 - Copy (2),artist7,album8,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_C#_1 - Copy (2).wav
+323,SHARP_PAL_138_Bass_Loop_D#_2 - Copy (2),artist1,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_D#_2 - Copy (2).wav
+324,SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (2),artist5,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (2).wav
+325,SHARP_PAL_138_Bass_Loop_E_1 - Copy (2),artist2,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_1 - Copy (2).wav
+326,SHARP_PAL_138_Bass_Loop_E_2 - Copy (2),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_2 - Copy (2).wav
+327,SHARP_PAL_138_Bass_Loop_F#_1 - Copy (2),artist4,album3,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_1 - Copy (2).wav
+328,SHARP_PAL_138_Bass_Loop_F#_3 - Copy (2),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_3 - Copy (2).wav
+329,SHARP_PAL_138_Drum_Loop_Cinematic - Copy (2),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic - Copy (2).wav
+330,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (2),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (2).wav
+331,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (2),artist10,album3,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (2).wav
+332,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (2),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (2).wav
+333,SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (2),artist3,album2,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (2).wav
+334,SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (2),artist9,album6,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (2).wav
+335,SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (2),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (2).wav
+336,SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (2),artist7,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (2).wav
+337,SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (2),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (2).wav
+338,SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (2),artist2,album5,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (2).wav
+339,SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (2),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (2).wav
+340,SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (2),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (2).wav
+341,SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (2),artist10,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (2).wav
+342,SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (2),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (2).wav
+343,SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (2),artist3,album2,3,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (2).wav
+344,SHARP_PAL_138_Fx_Loop_1 - Copy (2),artist9,album6,8,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_1 - Copy (2).wav
+345,SHARP_PAL_138_Fx_Loop_2 - Copy (2),artist1,album10,10,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_2 - Copy (2).wav
+346,SHARP_PAL_138_Fx_Loop_3 - Copy (2),artist7,album4,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_3 - Copy (2).wav
+347,SHARP_PAL_138_Fx_Loop_4 - Copy (2),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_4 - Copy (2).wav
+348,SHARP_PAL_138_Fx_Loop_5 - Copy (2),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_5 - Copy (2).wav
+349,SHARP_PAL_138_Fx_Loop_6 - Copy (2),artist8,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_6 - Copy (2).wav
+350,SHARP_PAL_138_Fx_Loop_7 - Copy (2),artist4,album9,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_7 - Copy (2).wav
+351,SHARP_PAL_138_Fx_Loop_8 - Copy (2),artist10,album3,5,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_8 - Copy (2).wav
+352,SHARP_PAL_138_Fx_Loop_9 - Copy (2),artist6,album7,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_9 - Copy (2).wav
+353,SHARP_PAL_138_Fx_Loop_10 - Copy (2),artist3,album2,4,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_10 - Copy (2).wav
+354,SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (2),artist9,album6,43,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (2).wav
+355,SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (2),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (2).wav
+356,SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (2),artist4,album3,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (2).wav
+357,SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (2),artist7,album8,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (2).wav
+358,SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (2),artist2,album5,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (2).wav
+359,SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (2),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (2).wav
+360,SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (2),artist5,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (2).wav
+361,SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (2),artist1,album9,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (2).wav
+362,SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (2),artist8,album2,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (2).wav
+363,SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (2),artist3,album7,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (2).wav
+364,SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (2),artist6,album4,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (2).wav
+365,SHARP_PAL_140_Bass_Loop_C#_1 - Copy (2),artist10,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_C#_1 - Copy (2).wav
+366,SHARP_PAL_140_Bass_Loop_F - Copy (2),artist2,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_F - Copy (2).wav
+367,SHARP_PAL_140_Bass_Loop_G# - Copy (2),artist5,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_G# - Copy (2).wav
+368,SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (2),artist8,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (2).wav
+369,SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (2),artist1,album5,1,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (2).wav
+370,90_C#m_FatChordsElGuitar_02_577 - Copy (3),artist1,album5,10,D:\\hocCpp\\Playlist\\90_C#m_FatChordsElGuitar_02_577 - Copy (3).wav
+371,100_C_ElecGuitar_01_724 - Copy (3),artist4,album2,19,D:\\hocCpp\\Playlist\\100_C_ElecGuitar_01_724 - Copy (3).wav
+372,100_D_ElecGuitar_01_724 - Copy (3),artist2,album8,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_01_724 - Copy (3).wav
+373,100_D_ElecGuitar_02_724 - Copy (3),artist7,album1,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_02_724 - Copy (3).wav
+374,111_D#_QuackElGuitar_01_577 - Copy (3),artist3,album9,8,D:\\hocCpp\\Playlist\\111_D#_QuackElGuitar_01_577 - Copy (3).wav
+375,111_F#m_RiffElGuitar_01_577 - Copy (3),artist9,album3,17,D:\\hocCpp\\Playlist\\111_F#m_RiffElGuitar_01_577 - Copy (3).wav
+376,127_D#m_LeadEffectedElGuitar_02_577 - Copy (3),artist5,album4,15,D:\\hocCpp\\Playlist\\127_D#m_LeadEffectedElGuitar_02_577 - Copy (3).wav
+377,130_A#m_RhythmDreamyElGuitar_01_577 - Copy (3),artist1,album7,14,D:\\hocCpp\\Playlist\\130_A#m_RhythmDreamyElGuitar_01_577 - Copy (3).wav
+378,130_B_TremChordsElGuitar_01_577 - Copy (3),artist6,album2,14,D:\\hocCpp\\Playlist\\130_B_TremChordsElGuitar_01_577 - Copy (3).wav
+379,140_F#_MelodyElGuitar_02_577 - Copy (3),artist8,album6,6,D:\\hocCpp\\Playlist\\140_F#_MelodyElGuitar_02_577 - Copy (3).wav
+380,140_F#_RiffStonesElGuitar_02_577 - Copy (3),artist2,album10,6,D:\\hocCpp\\Playlist\\140_F#_RiffStonesElGuitar_02_577 - Copy (3).wav
+381,ahem_x - Copy (3),artist4,album1,1,D:\\hocCpp\\Playlist\\ahem_x - Copy (3).wav
+382,airplane_chime_x - Copy (3),artist10,album3,4,D:\\hocCpp\\Playlist\\airplane_chime_x - Copy (3).wav
+383,alarm_beep - Copy (3),artist5,album8,3,D:\\hocCpp\\Playlist\\alarm_beep - Copy (3).wav
+384,Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (3),artist3,album5,6,D:\\hocCpp\\Playlist\\Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (3).wav
+385,applause_y - Copy (3),artist7,album2,2,D:\\hocCpp\\Playlist\\applause_y - Copy (3).wav
+386,baby_x - Copy (3),artist9,album4,1,D:\\hocCpp\\Playlist\\baby_x - Copy (3).wav
+387,blip - Copy (3),artist1,album6,0,D:\\hocCpp\\Playlist\\blip - Copy (3).wav
+388,blurp_x - Copy (3),artist2,album7,0,D:\\hocCpp\\Playlist\\blurp_x - Copy (3).wav
+389,bomb_x - Copy (3),artist6,album9,2,D:\\hocCpp\\Playlist\\bomb_x - Copy (3).wav
+390,burp_x - Copy (3),artist8,album1,0,D:\\hocCpp\\Playlist\\burp_x - Copy (3).wav
+391,car_x - Copy (3),artist10,album10,5,D:\\hocCpp\\Playlist\\car_x - Copy (3).wav
+392,FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (3),artist4,album3,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (3).wav
+393,FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (3),artist3,album2,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (3).wav
+394,FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (3),artist5,album5,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (3).wav
+395,FL_FMT_Kit02_120_Drum_Loop_Full - Copy (3),artist1,album8,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Drum_Loop_Full - Copy (3).wav
+396,FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (3),artist9,album4,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (3).wav
+397,FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (3),artist2,album5,21,D:\\hocCpp\\Playlist\\FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (3).wav
+398,FL_JHHC_Keys_Loop_09_90_G - Copy (3),artist8,album3,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_09_90_G - Copy (3).wav
+399,FL_JHHC_Keys_Loop_15_90_A - Copy (3),artist4,album9,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_15_90_A - Copy (3).wav
+400,FL_NDF_110_C_RGUITAR 01 - Copy (3),artist1,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 01 - Copy (3).wav
+401,FL_NDF_110_C_RGUITAR 02 - Copy (3),artist7,album6,8,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 02 - Copy (3).wav
+402,FL_NDF_110_D#_RGUITAR 01 - Copy (3),artist5,album2,4,D:\\hocCpp\\Playlist\\FL_NDF_110_D#_RGUITAR 01 - Copy (3).wav
+403,FL_NDF_KIT03_110_F_Full Drum Loop - Copy (3),artist3,album8,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Full Drum Loop - Copy (3).wav
+404,FL_NDF_KIT03_110_F_Guitar 02 - Copy (3),artist10,album4,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Guitar 02 - Copy (3).wav
+405,FL_NDF_KIT03_110_F_Old Keys Chord - Copy (3),artist6,album7,17,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Old Keys Chord - Copy (3).wav
+406,FL_NDF_KIT03_110_F_Percussion - Copy (3),artist9,album10,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Percussion - Copy (3).wav
+407,FL_NDF_KIT04_115_F_Fill 02 - Copy (3),artist2,album5,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 02 - Copy (3).wav
+408,FL_NDF_KIT04_115_F_Fill 03 - Copy (3),artist8,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 03 - Copy (3).wav
+409,FL_NDF_KIT04_115_F_Full Drum Loop - Copy (3),artist4,album3,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Full Drum Loop - Copy (3).wav
+410,FL_NDF_KIT04_115_F_Guitar 01 - Copy (3),artist1,album9,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Guitar 01 - Copy (3).wav
+411,FL_NDF_KIT04_115_F_Live Bass - Copy (3),artist7,album2,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Live Bass - Copy (3).wav
+412,FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (3),artist3,album6,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (3).wav
+413,FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (3),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (3).wav
+414,FL_PST_Kit03_145_Demo - Copy (3),artist10,album4,92,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Demo - Copy (3).wav
+415,FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (3),artist6,album7,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (3).wav
+416,FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (3),artist9,album10,11,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (3).wav
+417,FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (3),artist2,album5,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (3).wav
+418,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (3),artist8,album1,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (3).wav
+419,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (3),artist4,album3,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (3).wav
+420,FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (3),artist1,album9,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (3).wav
+421,FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (3),artist7,album2,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (3).wav
+422,FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (3),artist3,album6,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (3).wav
+423,FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (3),artist5,album8,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (3).wav
+424,FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (3),artist7,album2,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (3).wav
+425,FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (3),artist3,album9,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (3).wav
+426,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (3),artist1,album4,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (3).wav
+427,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (3),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (3).wav
+428,FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (3),artist9,album1,87,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (3).wav
+429,FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (3),artist2,album6,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (3).wav
+430,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (3),artist8,album3,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (3).wav
+431,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (3),artist4,album10,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (3).wav
+432,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (3),artist6,album5,28,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (3).wav
+433,FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (3),artist10,album7,8,D:\\hocCpp\\Playlist\\FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (3).wav
+434,FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (3),artist3,album2,9,D:\\hocCpp\\Playlist\\FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (3).wav
+435,FL_RSC_Kit04_Bass_Loop_91_D - Copy (3),artist7,album8,21,D:\\hocCpp\\Playlist\\FL_RSC_Kit04_Bass_Loop_91_D - Copy (3).wav
+436,FL_RSC_Kit05_Bass_Loop_84_C# - Copy (3),artist1,album4,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Bass_Loop_84_C# - Copy (3).wav
+437,FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (3),artist5,album9,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (3).wav
+438,FS_LS_115_Instrument_Loop_09_Fm - Copy (3),artist2,album1,16,D:\\hocCpp\\Playlist\\FS_LS_115_Instrument_Loop_09_Fm - Copy (3).wav
+439,FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (3),artist9,album6,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (3).wav
+440,FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (3),artist4,album3,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (3).wav
+441,SH_STH_Flow_140_Pad_Loop_F#min - Copy (3),artist8,album5,13,D:\\hocCpp\\Playlist\\SH_STH_Flow_140_Pad_Loop_F#min - Copy (3).wav
+442,SH_STH_Gotic_120_Drum_Loop_01 - Copy (3),artist6,album10,16,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Drum_Loop_01 - Copy (3).wav
+443,SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (3),artist10,album7,8,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (3).wav
+444,SH_STH_Now_90_Pluck_Loop_Cmin - Copy (3),artist3,album2,10,D:\\hocCpp\\Playlist\\SH_STH_Now_90_Pluck_Loop_Cmin - Copy (3).wav
+445,SHARP_PAL_138_Bass_Loop_C#_1 - Copy (3),artist7,album8,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_C#_1 - Copy (3).wav
+446,SHARP_PAL_138_Bass_Loop_D#_2 - Copy (3),artist1,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_D#_2 - Copy (3).wav
+447,SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (3),artist5,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (3).wav
+448,SHARP_PAL_138_Bass_Loop_E_1 - Copy (3),artist2,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_1 - Copy (3).wav
+449,SHARP_PAL_138_Bass_Loop_E_2 - Copy (3),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_2 - Copy (3).wav
+450,SHARP_PAL_138_Bass_Loop_F#_1 - Copy (3),artist4,album3,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_1 - Copy (3).wav
+451,SHARP_PAL_138_Bass_Loop_F#_3 - Copy (3),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_3 - Copy (3).wav
+452,SHARP_PAL_138_Drum_Loop_Cinematic - Copy (3),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic - Copy (3).wav
+453,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (3),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (3).wav
+454,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (3),artist10,album3,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (3).wav
+455,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (3),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (3).wav
+456,SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (3),artist3,album2,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (3).wav
+457,SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (3),artist9,album6,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (3).wav
+458,SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (3),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (3).wav
+459,SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (3),artist7,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (3).wav
+460,SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (3),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (3).wav
+461,SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (3),artist2,album5,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (3).wav
+462,SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (3),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (3).wav
+463,SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (3),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (3).wav
+464,SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (3),artist10,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (3).wav
+465,SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (3),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (3).wav
+466,SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (3),artist3,album2,3,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (3).wav
+467,SHARP_PAL_138_Fx_Loop_1 - Copy (3),artist9,album6,8,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_1 - Copy (3).wav
+468,SHARP_PAL_138_Fx_Loop_2 - Copy (3),artist1,album10,10,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_2 - Copy (3).wav
+469,SHARP_PAL_138_Fx_Loop_3 - Copy (3),artist7,album4,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_3 - Copy (3).wav
+470,SHARP_PAL_138_Fx_Loop_4 - Copy (3),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_4 - Copy (3).wav
+471,SHARP_PAL_138_Fx_Loop_5 - Copy (3),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_5 - Copy (3).wav
+472,SHARP_PAL_138_Fx_Loop_6 - Copy (3),artist8,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_6 - Copy (3).wav
+473,SHARP_PAL_138_Fx_Loop_7 - Copy (3),artist4,album9,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_7 - Copy (3).wav
+474,SHARP_PAL_138_Fx_Loop_8 - Copy (3),artist10,album3,5,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_8 - Copy (3).wav
+475,SHARP_PAL_138_Fx_Loop_9 - Copy (3),artist6,album7,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_9 - Copy (3).wav
+476,SHARP_PAL_138_Fx_Loop_10 - Copy (3),artist3,album2,4,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_10 - Copy (3).wav
+477,SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (3),artist9,album6,43,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (3).wav
+478,SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (3),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (3).wav
+479,SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (3),artist4,album3,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (3).wav
+480,SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (3),artist7,album8,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (3).wav
+481,SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (3),artist2,album5,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (3).wav
+482,SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (3),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (3).wav
+483,SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (3),artist5,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (3).wav
+484,SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (3),artist1,album9,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (3).wav
+485,SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (3),artist8,album2,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (3).wav
+486,SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (3),artist3,album7,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (3).wav
+487,SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (3),artist6,album4,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (3).wav
+488,SHARP_PAL_140_Bass_Loop_C#_1 - Copy (3),artist10,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_C#_1 - Copy (3).wav
+489,SHARP_PAL_140_Bass_Loop_F - Copy (3),artist2,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_F - Copy (3).wav
+490,SHARP_PAL_140_Bass_Loop_G# - Copy (3),artist5,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_G# - Copy (3).wav
+491,SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (3),artist8,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (3).wav
+492,SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (3),artist1,album5,1,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (3).wav
+493,90_C#m_FatChordsElGuitar_02_577 - Copy (4),artist1,album5,10,D:\\hocCpp\\Playlist\\90_C#m_FatChordsElGuitar_02_577 - Copy (4).wav
+494,100_C_ElecGuitar_01_724 - Copy (4),artist4,album2,19,D:\\hocCpp\\Playlist\\100_C_ElecGuitar_01_724 - Copy (4).wav
+495,100_D_ElecGuitar_01_724 - Copy (4),artist2,album8,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_01_724 - Copy (4).wav
+496,100_D_ElecGuitar_02_724 - Copy (4),artist7,album1,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_02_724 - Copy (4).wav
+497,111_D#_QuackElGuitar_01_577 - Copy (4),artist3,album9,8,D:\\hocCpp\\Playlist\\111_D#_QuackElGuitar_01_577 - Copy (4).wav
+498,111_F#m_RiffElGuitar_01_577 - Copy (4),artist9,album3,17,D:\\hocCpp\\Playlist\\111_F#m_RiffElGuitar_01_577 - Copy (4).wav
+499,127_D#m_LeadEffectedElGuitar_02_577 - Copy (4),artist5,album4,15,D:\\hocCpp\\Playlist\\127_D#m_LeadEffectedElGuitar_02_577 - Copy (4).wav
+500,130_A#m_RhythmDreamyElGuitar_01_577 - Copy (4),artist1,album7,14,D:\\hocCpp\\Playlist\\130_A#m_RhythmDreamyElGuitar_01_577 - Copy (4).wav
+501,130_B_TremChordsElGuitar_01_577 - Copy (4),artist6,album2,14,D:\\hocCpp\\Playlist\\130_B_TremChordsElGuitar_01_577 - Copy (4).wav
+502,140_F#_MelodyElGuitar_02_577 - Copy (4),artist8,album6,6,D:\\hocCpp\\Playlist\\140_F#_MelodyElGuitar_02_577 - Copy (4).wav
+503,140_F#_RiffStonesElGuitar_02_577 - Copy (4),artist2,album10,6,D:\\hocCpp\\Playlist\\140_F#_RiffStonesElGuitar_02_577 - Copy (4).wav
+504,ahem_x - Copy (4),artist4,album1,1,D:\\hocCpp\\Playlist\\ahem_x - Copy (4).wav
+505,airplane_chime_x - Copy (4),artist10,album3,4,D:\\hocCpp\\Playlist\\airplane_chime_x - Copy (4).wav
+506,alarm_beep - Copy (4),artist5,album8,3,D:\\hocCpp\\Playlist\\alarm_beep - Copy (4).wav
+507,Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (4),artist3,album5,6,D:\\hocCpp\\Playlist\\Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (4).wav
+508,applause_y - Copy (4),artist7,album2,2,D:\\hocCpp\\Playlist\\applause_y - Copy (4).wav
+509,baby_x - Copy (4),artist9,album4,1,D:\\hocCpp\\Playlist\\baby_x - Copy (4).wav
+510,blip - Copy (4),artist1,album6,0,D:\\hocCpp\\Playlist\\blip - Copy (4).wav
+511,blurp_x - Copy (4),artist2,album7,0,D:\\hocCpp\\Playlist\\blurp_x - Copy (4).wav
+512,bomb_x - Copy (4),artist6,album9,2,D:\\hocCpp\\Playlist\\bomb_x - Copy (4).wav
+513,burp_x - Copy (4),artist8,album1,0,D:\\hocCpp\\Playlist\\burp_x - Copy (4).wav
+514,car_x - Copy (4),artist10,album10,5,D:\\hocCpp\\Playlist\\car_x - Copy (4).wav
+515,FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (4),artist4,album3,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (4).wav
+516,FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (4),artist3,album2,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (4).wav
+517,FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (4),artist5,album5,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (4).wav
+518,FL_FMT_Kit02_120_Drum_Loop_Full - Copy (4),artist1,album8,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Drum_Loop_Full - Copy (4).wav
+519,FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (4),artist9,album4,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (4).wav
+520,FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (4),artist2,album5,21,D:\\hocCpp\\Playlist\\FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (4).wav
+521,FL_JHHC_Keys_Loop_09_90_G - Copy (4),artist8,album3,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_09_90_G - Copy (4).wav
+522,FL_JHHC_Keys_Loop_15_90_A - Copy (4),artist4,album9,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_15_90_A - Copy (4).wav
+523,FL_NDF_110_C_RGUITAR 01 - Copy (4),artist1,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 01 - Copy (4).wav
+524,FL_NDF_110_C_RGUITAR 02 - Copy (4),artist7,album6,8,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 02 - Copy (4).wav
+525,FL_NDF_110_D#_RGUITAR 01 - Copy (4),artist5,album2,4,D:\\hocCpp\\Playlist\\FL_NDF_110_D#_RGUITAR 01 - Copy (4).wav
+526,FL_NDF_KIT03_110_F_Full Drum Loop - Copy (4),artist3,album8,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Full Drum Loop - Copy (4).wav
+527,FL_NDF_KIT03_110_F_Guitar 02 - Copy (4),artist10,album4,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Guitar 02 - Copy (4).wav
+528,FL_NDF_KIT03_110_F_Old Keys Chord - Copy (4),artist6,album7,17,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Old Keys Chord - Copy (4).wav
+529,FL_NDF_KIT03_110_F_Percussion - Copy (4),artist9,album10,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Percussion - Copy (4).wav
+530,FL_NDF_KIT04_115_F_Fill 02 - Copy (4),artist2,album5,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 02 - Copy (4).wav
+531,FL_NDF_KIT04_115_F_Fill 03 - Copy (4),artist8,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 03 - Copy (4).wav
+532,FL_NDF_KIT04_115_F_Full Drum Loop - Copy (4),artist4,album3,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Full Drum Loop - Copy (4).wav
+533,FL_NDF_KIT04_115_F_Guitar 01 - Copy (4),artist1,album9,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Guitar 01 - Copy (4).wav
+534,FL_NDF_KIT04_115_F_Live Bass - Copy (4),artist7,album2,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Live Bass - Copy (4).wav
+535,FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (4),artist3,album6,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (4).wav
+536,FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (4),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (4).wav
+537,FL_PST_Kit03_145_Demo - Copy (4),artist10,album4,92,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Demo - Copy (4).wav
+538,FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (4),artist6,album7,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (4).wav
+539,FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (4),artist9,album10,11,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (4).wav
+540,FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (4),artist2,album5,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (4).wav
+541,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (4),artist8,album1,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (4).wav
+542,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (4),artist4,album3,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (4).wav
+543,FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (4),artist1,album9,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (4).wav
+544,FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (4),artist7,album2,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (4).wav
+545,FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (4),artist3,album6,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (4).wav
+546,FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (4),artist5,album8,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (4).wav
+547,FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (4),artist7,album2,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (4).wav
+548,FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (4),artist3,album9,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (4).wav
+549,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (4),artist1,album4,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (4).wav
+550,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (4),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (4).wav
+551,FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (4),artist9,album1,87,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (4).wav
+552,FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (4),artist2,album6,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (4).wav
+553,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (4),artist8,album3,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (4).wav
+554,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (4),artist4,album10,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (4).wav
+555,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (4),artist6,album5,28,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (4).wav
+556,FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (4),artist10,album7,8,D:\\hocCpp\\Playlist\\FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (4).wav
+557,FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (4),artist3,album2,9,D:\\hocCpp\\Playlist\\FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (4).wav
+558,FL_RSC_Kit04_Bass_Loop_91_D - Copy (4),artist7,album8,21,D:\\hocCpp\\Playlist\\FL_RSC_Kit04_Bass_Loop_91_D - Copy (4).wav
+559,FL_RSC_Kit05_Bass_Loop_84_C# - Copy (4),artist1,album4,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Bass_Loop_84_C# - Copy (4).wav
+560,FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (4),artist5,album9,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (4).wav
+561,FS_LS_115_Instrument_Loop_09_Fm - Copy (4),artist2,album1,16,D:\\hocCpp\\Playlist\\FS_LS_115_Instrument_Loop_09_Fm - Copy (4).wav
+562,FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (4),artist9,album6,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (4).wav
+563,FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (4),artist4,album3,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (4).wav
+564,SH_STH_Flow_140_Pad_Loop_F#min - Copy (4),artist8,album5,13,D:\\hocCpp\\Playlist\\SH_STH_Flow_140_Pad_Loop_F#min - Copy (4).wav
+565,SH_STH_Gotic_120_Drum_Loop_01 - Copy (4),artist6,album10,16,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Drum_Loop_01 - Copy (4).wav
+566,SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (4),artist10,album7,8,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (4).wav
+567,SH_STH_Now_90_Pluck_Loop_Cmin - Copy (4),artist3,album2,10,D:\\hocCpp\\Playlist\\SH_STH_Now_90_Pluck_Loop_Cmin - Copy (4).wav
+568,SHARP_PAL_138_Bass_Loop_C#_1 - Copy (4),artist7,album8,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_C#_1 - Copy (4).wav
+569,SHARP_PAL_138_Bass_Loop_D#_2 - Copy (4),artist1,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_D#_2 - Copy (4).wav
+570,SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (4),artist5,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (4).wav
+571,SHARP_PAL_138_Bass_Loop_E_1 - Copy (4),artist2,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_1 - Copy (4).wav
+572,SHARP_PAL_138_Bass_Loop_E_2 - Copy (4),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_2 - Copy (4).wav
+573,SHARP_PAL_138_Bass_Loop_F#_1 - Copy (4),artist4,album3,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_1 - Copy (4).wav
+574,SHARP_PAL_138_Bass_Loop_F#_3 - Copy (4),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_3 - Copy (4).wav
+575,SHARP_PAL_138_Drum_Loop_Cinematic - Copy (4),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic - Copy (4).wav
+576,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (4),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (4).wav
+577,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (4),artist10,album3,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (4).wav
+578,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (4),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (4).wav
+579,SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (4),artist3,album2,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (4).wav
+580,SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (4),artist9,album6,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (4).wav
+581,SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (4),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (4).wav
+582,SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (4),artist7,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (4).wav
+583,SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (4),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (4).wav
+584,SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (4),artist2,album5,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (4).wav
+585,SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (4),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (4).wav
+586,SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (4),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (4).wav
+587,SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (4),artist10,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (4).wav
+588,SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (4),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (4).wav
+589,SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (4),artist3,album2,3,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (4).wav
+590,SHARP_PAL_138_Fx_Loop_1 - Copy (4),artist9,album6,8,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_1 - Copy (4).wav
+591,SHARP_PAL_138_Fx_Loop_2 - Copy (4),artist1,album10,10,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_2 - Copy (4).wav
+592,SHARP_PAL_138_Fx_Loop_3 - Copy (4),artist7,album4,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_3 - Copy (4).wav
+593,SHARP_PAL_138_Fx_Loop_4 - Copy (4),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_4 - Copy (4).wav
+594,SHARP_PAL_138_Fx_Loop_5 - Copy (4),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_5 - Copy (4).wav
+595,SHARP_PAL_138_Fx_Loop_6 - Copy (4),artist8,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_6 - Copy (4).wav
+596,SHARP_PAL_138_Fx_Loop_7 - Copy (4),artist4,album9,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_7 - Copy (4).wav
+597,SHARP_PAL_138_Fx_Loop_8 - Copy (4),artist10,album3,5,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_8 - Copy (4).wav
+598,SHARP_PAL_138_Fx_Loop_9 - Copy (4),artist6,album7,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_9 - Copy (4).wav
+599,SHARP_PAL_138_Fx_Loop_10 - Copy (4),artist3,album2,4,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_10 - Copy (4).wav
+600,SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (4),artist9,album6,43,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (4).wav
+601,SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (4),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (4).wav
+602,SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (4),artist4,album3,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (4).wav
+603,SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (4),artist7,album8,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (4).wav
+604,SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (4),artist2,album5,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (4).wav
+605,SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (4),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (4).wav
+606,SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (4),artist5,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (4).wav
+607,SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (4),artist1,album9,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (4).wav
+608,SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (4),artist8,album2,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (4).wav
+609,SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (4),artist3,album7,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (4).wav
+610,SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (4),artist6,album4,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (4).wav
+611,SHARP_PAL_140_Bass_Loop_C#_1 - Copy (4),artist10,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_C#_1 - Copy (4).wav
+612,SHARP_PAL_140_Bass_Loop_F - Copy (4),artist2,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_F - Copy (4).wav
+613,SHARP_PAL_140_Bass_Loop_G# - Copy (4),artist5,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_G# - Copy (4).wav
+614,SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (4),artist8,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (4).wav
+615,SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (4),artist1,album5,1,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (4).wav
+616,90_C#m_FatChordsElGuitar_02_577 - Copy (5),artist1,album5,10,D:\\hocCpp\\Playlist\\90_C#m_FatChordsElGuitar_02_577 - Copy (5).wav
+617,100_C_ElecGuitar_01_724 - Copy (5),artist4,album2,19,D:\\hocCpp\\Playlist\\100_C_ElecGuitar_01_724 - Copy (5).wav
+618,100_D_ElecGuitar_01_724 - Copy (5),artist2,album8,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_01_724 - Copy (5).wav
+619,100_D_ElecGuitar_02_724 - Copy (5),artist7,album1,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_02_724 - Copy (5).wav
+620,111_D#_QuackElGuitar_01_577 - Copy (5),artist3,album9,8,D:\\hocCpp\\Playlist\\111_D#_QuackElGuitar_01_577 - Copy (5).wav
+621,111_F#m_RiffElGuitar_01_577 - Copy (5),artist9,album3,17,D:\\hocCpp\\Playlist\\111_F#m_RiffElGuitar_01_577 - Copy (5).wav
+622,127_D#m_LeadEffectedElGuitar_02_577 - Copy (5),artist5,album4,15,D:\\hocCpp\\Playlist\\127_D#m_LeadEffectedElGuitar_02_577 - Copy (5).wav
+623,130_A#m_RhythmDreamyElGuitar_01_577 - Copy (5),artist1,album7,14,D:\\hocCpp\\Playlist\\130_A#m_RhythmDreamyElGuitar_01_577 - Copy (5).wav
+624,130_B_TremChordsElGuitar_01_577 - Copy (5),artist6,album2,14,D:\\hocCpp\\Playlist\\130_B_TremChordsElGuitar_01_577 - Copy (5).wav
+625,140_F#_MelodyElGuitar_02_577 - Copy (5),artist8,album6,6,D:\\hocCpp\\Playlist\\140_F#_MelodyElGuitar_02_577 - Copy (5).wav
+626,140_F#_RiffStonesElGuitar_02_577 - Copy (5),artist2,album10,6,D:\\hocCpp\\Playlist\\140_F#_RiffStonesElGuitar_02_577 - Copy (5).wav
+627,ahem_x - Copy (5),artist4,album1,1,D:\\hocCpp\\Playlist\\ahem_x - Copy (5).wav
+628,airplane_chime_x - Copy (5),artist10,album3,4,D:\\hocCpp\\Playlist\\airplane_chime_x - Copy (5).wav
+629,alarm_beep - Copy (5),artist5,album8,3,D:\\hocCpp\\Playlist\\alarm_beep - Copy (5).wav
+630,Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (5),artist3,album5,6,D:\\hocCpp\\Playlist\\Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (5).wav
+631,applause_y - Copy (5),artist7,album2,2,D:\\hocCpp\\Playlist\\applause_y - Copy (5).wav
+632,baby_x - Copy (5),artist9,album4,1,D:\\hocCpp\\Playlist\\baby_x - Copy (5).wav
+633,blip - Copy (5),artist1,album6,0,D:\\hocCpp\\Playlist\\blip - Copy (5).wav
+634,blurp_x - Copy (5),artist2,album7,0,D:\\hocCpp\\Playlist\\blurp_x - Copy (5).wav
+635,bomb_x - Copy (5),artist6,album9,2,D:\\hocCpp\\Playlist\\bomb_x - Copy (5).wav
+636,burp_x - Copy (5),artist8,album1,0,D:\\hocCpp\\Playlist\\burp_x - Copy (5).wav
+637,car_x - Copy (5),artist10,album10,5,D:\\hocCpp\\Playlist\\car_x - Copy (5).wav
+638,FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (5),artist4,album3,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (5).wav
+639,FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (5),artist3,album2,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (5).wav
+640,FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (5),artist5,album5,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (5).wav
+641,FL_FMT_Kit02_120_Drum_Loop_Full - Copy (5),artist1,album8,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Drum_Loop_Full - Copy (5).wav
+642,FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (5),artist9,album4,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (5).wav
+643,FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (5),artist2,album5,21,D:\\hocCpp\\Playlist\\FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (5).wav
+644,FL_JHHC_Keys_Loop_09_90_G - Copy (5),artist8,album3,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_09_90_G - Copy (5).wav
+645,FL_JHHC_Keys_Loop_15_90_A - Copy (5),artist4,album9,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_15_90_A - Copy (5).wav
+646,FL_NDF_110_C_RGUITAR 01 - Copy (5),artist1,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 01 - Copy (5).wav
+647,FL_NDF_110_C_RGUITAR 02 - Copy (5),artist7,album6,8,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 02 - Copy (5).wav
+648,FL_NDF_110_D#_RGUITAR 01 - Copy (5),artist5,album2,4,D:\\hocCpp\\Playlist\\FL_NDF_110_D#_RGUITAR 01 - Copy (5).wav
+649,FL_NDF_KIT03_110_F_Full Drum Loop - Copy (5),artist3,album8,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Full Drum Loop - Copy (5).wav
+650,FL_NDF_KIT03_110_F_Guitar 02 - Copy (5),artist10,album4,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Guitar 02 - Copy (5).wav
+651,FL_NDF_KIT03_110_F_Old Keys Chord - Copy (5),artist6,album7,17,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Old Keys Chord - Copy (5).wav
+652,FL_NDF_KIT03_110_F_Percussion - Copy (5),artist9,album10,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Percussion - Copy (5).wav
+653,FL_NDF_KIT04_115_F_Fill 02 - Copy (5),artist2,album5,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 02 - Copy (5).wav
+654,FL_NDF_KIT04_115_F_Fill 03 - Copy (5),artist8,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 03 - Copy (5).wav
+655,FL_NDF_KIT04_115_F_Full Drum Loop - Copy (5),artist4,album3,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Full Drum Loop - Copy (5).wav
+656,FL_NDF_KIT04_115_F_Guitar 01 - Copy (5),artist1,album9,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Guitar 01 - Copy (5).wav
+657,FL_NDF_KIT04_115_F_Live Bass - Copy (5),artist7,album2,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Live Bass - Copy (5).wav
+658,FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (5),artist3,album6,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (5).wav
+659,FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (5),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (5).wav
+660,FL_PST_Kit03_145_Demo - Copy (5),artist10,album4,92,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Demo - Copy (5).wav
+661,FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (5),artist6,album7,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (5).wav
+662,FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (5),artist9,album10,11,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (5).wav
+663,FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (5),artist2,album5,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (5).wav
+664,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (5),artist8,album1,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (5).wav
+665,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (5),artist4,album3,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (5).wav
+666,FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (5),artist1,album9,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (5).wav
+667,FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (5),artist7,album2,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (5).wav
+668,FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (5),artist3,album6,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (5).wav
+669,FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (5),artist5,album8,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (5).wav
+670,FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (5),artist7,album2,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (5).wav
+671,FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (5),artist3,album9,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (5).wav
+672,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (5),artist1,album4,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (5).wav
+673,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (5),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (5).wav
+674,FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (5),artist9,album1,87,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (5).wav
+675,FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (5),artist2,album6,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (5).wav
+676,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (5),artist8,album3,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (5).wav
+677,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (5),artist4,album10,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (5).wav
+678,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (5),artist6,album5,28,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (5).wav
+679,FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (5),artist10,album7,8,D:\\hocCpp\\Playlist\\FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (5).wav
+680,FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (5),artist3,album2,9,D:\\hocCpp\\Playlist\\FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (5).wav
+681,FL_RSC_Kit04_Bass_Loop_91_D - Copy (5),artist7,album8,21,D:\\hocCpp\\Playlist\\FL_RSC_Kit04_Bass_Loop_91_D - Copy (5).wav
+682,FL_RSC_Kit05_Bass_Loop_84_C# - Copy (5),artist1,album4,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Bass_Loop_84_C# - Copy (5).wav
+683,FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (5),artist5,album9,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (5).wav
+684,FS_LS_115_Instrument_Loop_09_Fm - Copy (5),artist2,album1,16,D:\\hocCpp\\Playlist\\FS_LS_115_Instrument_Loop_09_Fm - Copy (5).wav
+685,FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (5),artist9,album6,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (5).wav
+686,FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (5),artist4,album3,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (5).wav
+687,SH_STH_Flow_140_Pad_Loop_F#min - Copy (5),artist8,album5,13,D:\\hocCpp\\Playlist\\SH_STH_Flow_140_Pad_Loop_F#min - Copy (5).wav
+688,SH_STH_Gotic_120_Drum_Loop_01 - Copy (5),artist6,album10,16,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Drum_Loop_01 - Copy (5).wav
+689,SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (5),artist10,album7,8,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (5).wav
+690,SH_STH_Now_90_Pluck_Loop_Cmin - Copy (5),artist3,album2,10,D:\\hocCpp\\Playlist\\SH_STH_Now_90_Pluck_Loop_Cmin - Copy (5).wav
+691,SHARP_PAL_138_Bass_Loop_C#_1 - Copy (5),artist7,album8,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_C#_1 - Copy (5).wav
+692,SHARP_PAL_138_Bass_Loop_D#_2 - Copy (5),artist1,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_D#_2 - Copy (5).wav
+693,SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (5),artist5,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (5).wav
+694,SHARP_PAL_138_Bass_Loop_E_1 - Copy (5),artist2,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_1 - Copy (5).wav
+695,SHARP_PAL_138_Bass_Loop_E_2 - Copy (5),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_2 - Copy (5).wav
+696,SHARP_PAL_138_Bass_Loop_F#_1 - Copy (5),artist4,album3,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_1 - Copy (5).wav
+697,SHARP_PAL_138_Bass_Loop_F#_3 - Copy (5),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_3 - Copy (5).wav
+698,SHARP_PAL_138_Drum_Loop_Cinematic - Copy (5),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic - Copy (5).wav
+699,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (5),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (5).wav
+700,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (5),artist10,album3,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (5).wav
+701,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (5),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (5).wav
+702,SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (5),artist3,album2,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (5).wav
+703,SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (5),artist9,album6,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (5).wav
+704,SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (5),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (5).wav
+705,SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (5),artist7,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (5).wav
+706,SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (5),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (5).wav
+707,SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (5),artist2,album5,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (5).wav
+708,SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (5),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (5).wav
+709,SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (5),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (5).wav
+710,SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (5),artist10,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (5).wav
+711,SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (5),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (5).wav
+712,SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (5),artist3,album2,3,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (5).wav
+713,SHARP_PAL_138_Fx_Loop_1 - Copy (5),artist9,album6,8,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_1 - Copy (5).wav
+714,SHARP_PAL_138_Fx_Loop_2 - Copy (5),artist1,album10,10,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_2 - Copy (5).wav
+715,SHARP_PAL_138_Fx_Loop_3 - Copy (5),artist7,album4,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_3 - Copy (5).wav
+716,SHARP_PAL_138_Fx_Loop_4 - Copy (5),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_4 - Copy (5).wav
+717,SHARP_PAL_138_Fx_Loop_5 - Copy (5),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_5 - Copy (5).wav
+718,SHARP_PAL_138_Fx_Loop_6 - Copy (5),artist8,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_6 - Copy (5).wav
+719,SHARP_PAL_138_Fx_Loop_7 - Copy (5),artist4,album9,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_7 - Copy (5).wav
+720,SHARP_PAL_138_Fx_Loop_8 - Copy (5),artist10,album3,5,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_8 - Copy (5).wav
+721,SHARP_PAL_138_Fx_Loop_9 - Copy (5),artist6,album7,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_9 - Copy (5).wav
+722,SHARP_PAL_138_Fx_Loop_10 - Copy (5),artist3,album2,4,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_10 - Copy (5).wav
+723,SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (5),artist9,album6,43,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (5).wav
+724,SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (5),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (5).wav
+725,SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (5),artist4,album3,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (5).wav
+726,SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (5),artist7,album8,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (5).wav
+727,SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (5),artist2,album5,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (5).wav
+728,SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (5),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (5).wav
+729,SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (5),artist5,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (5).wav
+730,SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (5),artist1,album9,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (5).wav
+731,SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (5),artist8,album2,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (5).wav
+732,SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (5),artist3,album7,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (5).wav
+733,SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (5),artist6,album4,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (5).wav
+734,SHARP_PAL_140_Bass_Loop_C#_1 - Copy (5),artist10,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_C#_1 - Copy (5).wav
+735,SHARP_PAL_140_Bass_Loop_F - Copy (5),artist2,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_F - Copy (5).wav
+736,SHARP_PAL_140_Bass_Loop_G# - Copy (5),artist5,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_G# - Copy (5).wav
+737,SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (5),artist8,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (5).wav
+738,SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (5),artist1,album5,1,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (5).wav
+739,90_C#m_FatChordsElGuitar_02_577 - Copy (6),artist1,album5,10,D:\\hocCpp\\Playlist\\90_C#m_FatChordsElGuitar_02_577 - Copy (6).wav
+740,100_C_ElecGuitar_01_724 - Copy (6),artist4,album2,19,D:\\hocCpp\\Playlist\\100_C_ElecGuitar_01_724 - Copy (6).wav
+741,100_D_ElecGuitar_01_724 - Copy (6),artist2,album8,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_01_724 - Copy (6).wav
+742,100_D_ElecGuitar_02_724 - Copy (6),artist7,album1,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_02_724 - Copy (6).wav
+743,111_D#_QuackElGuitar_01_577 - Copy (6),artist3,album9,8,D:\\hocCpp\\Playlist\\111_D#_QuackElGuitar_01_577 - Copy (6).wav
+744,111_F#m_RiffElGuitar_01_577 - Copy (6),artist9,album3,17,D:\\hocCpp\\Playlist\\111_F#m_RiffElGuitar_01_577 - Copy (6).wav
+745,127_D#m_LeadEffectedElGuitar_02_577 - Copy (6),artist5,album4,15,D:\\hocCpp\\Playlist\\127_D#m_LeadEffectedElGuitar_02_577 - Copy (6).wav
+746,130_A#m_RhythmDreamyElGuitar_01_577 - Copy (6),artist1,album7,14,D:\\hocCpp\\Playlist\\130_A#m_RhythmDreamyElGuitar_01_577 - Copy (6).wav
+747,130_B_TremChordsElGuitar_01_577 - Copy (6),artist6,album2,14,D:\\hocCpp\\Playlist\\130_B_TremChordsElGuitar_01_577 - Copy (6).wav
+748,140_F#_MelodyElGuitar_02_577 - Copy (6),artist8,album6,6,D:\\hocCpp\\Playlist\\140_F#_MelodyElGuitar_02_577 - Copy (6).wav
+749,140_F#_RiffStonesElGuitar_02_577 - Copy (6),artist2,album10,6,D:\\hocCpp\\Playlist\\140_F#_RiffStonesElGuitar_02_577 - Copy (6).wav
+750,ahem_x - Copy (6),artist4,album1,1,D:\\hocCpp\\Playlist\\ahem_x - Copy (6).wav
+751,airplane_chime_x - Copy (6),artist10,album3,4,D:\\hocCpp\\Playlist\\airplane_chime_x - Copy (6).wav
+752,alarm_beep - Copy (6),artist5,album8,3,D:\\hocCpp\\Playlist\\alarm_beep - Copy (6).wav
+753,Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (6),artist3,album5,6,D:\\hocCpp\\Playlist\\Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (6).wav
+754,applause_y - Copy (6),artist7,album2,2,D:\\hocCpp\\Playlist\\applause_y - Copy (6).wav
+755,baby_x - Copy (6),artist9,album4,1,D:\\hocCpp\\Playlist\\baby_x - Copy (6).wav
+756,blip - Copy (6),artist1,album6,0,D:\\hocCpp\\Playlist\\blip - Copy (6).wav
+757,blurp_x - Copy (6),artist2,album7,0,D:\\hocCpp\\Playlist\\blurp_x - Copy (6).wav
+758,bomb_x - Copy (6),artist6,album9,2,D:\\hocCpp\\Playlist\\bomb_x - Copy (6).wav
+759,burp_x - Copy (6),artist8,album1,0,D:\\hocCpp\\Playlist\\burp_x - Copy (6).wav
+760,car_x - Copy (6),artist10,album10,5,D:\\hocCpp\\Playlist\\car_x - Copy (6).wav
+761,FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (6),artist4,album3,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (6).wav
+762,FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (6),artist3,album2,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (6).wav
+763,FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (6),artist5,album5,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (6).wav
+764,FL_FMT_Kit02_120_Drum_Loop_Full - Copy (6),artist1,album8,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Drum_Loop_Full - Copy (6).wav
+765,FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (6),artist9,album4,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (6).wav
+766,FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (6),artist2,album5,21,D:\\hocCpp\\Playlist\\FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (6).wav
+767,FL_JHHC_Keys_Loop_09_90_G - Copy (6),artist8,album3,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_09_90_G - Copy (6).wav
+768,FL_JHHC_Keys_Loop_15_90_A - Copy (6),artist4,album9,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_15_90_A - Copy (6).wav
+769,FL_NDF_110_C_RGUITAR 01 - Copy (6),artist1,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 01 - Copy (6).wav
+770,FL_NDF_110_C_RGUITAR 02 - Copy (6),artist7,album6,8,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 02 - Copy (6).wav
+771,FL_NDF_110_D#_RGUITAR 01 - Copy (6),artist5,album2,4,D:\\hocCpp\\Playlist\\FL_NDF_110_D#_RGUITAR 01 - Copy (6).wav
+772,FL_NDF_KIT03_110_F_Full Drum Loop - Copy (6),artist3,album8,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Full Drum Loop - Copy (6).wav
+773,FL_NDF_KIT03_110_F_Guitar 02 - Copy (6),artist10,album4,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Guitar 02 - Copy (6).wav
+774,FL_NDF_KIT03_110_F_Old Keys Chord - Copy (6),artist6,album7,17,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Old Keys Chord - Copy (6).wav
+775,FL_NDF_KIT03_110_F_Percussion - Copy (6),artist9,album10,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Percussion - Copy (6).wav
+776,FL_NDF_KIT04_115_F_Fill 02 - Copy (6),artist2,album5,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 02 - Copy (6).wav
+777,FL_NDF_KIT04_115_F_Fill 03 - Copy (6),artist8,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 03 - Copy (6).wav
+778,FL_NDF_KIT04_115_F_Full Drum Loop - Copy (6),artist4,album3,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Full Drum Loop - Copy (6).wav
+779,FL_NDF_KIT04_115_F_Guitar 01 - Copy (6),artist1,album9,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Guitar 01 - Copy (6).wav
+780,FL_NDF_KIT04_115_F_Live Bass - Copy (6),artist7,album2,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Live Bass - Copy (6).wav
+781,FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (6),artist3,album6,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (6).wav
+782,FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (6),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (6).wav
+783,FL_PST_Kit03_145_Demo - Copy (6),artist10,album4,92,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Demo - Copy (6).wav
+784,FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (6),artist6,album7,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (6).wav
+785,FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (6),artist9,album10,11,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (6).wav
+786,FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (6),artist2,album5,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (6).wav
+787,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (6),artist8,album1,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (6).wav
+788,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (6),artist4,album3,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (6).wav
+789,FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (6),artist1,album9,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (6).wav
+790,FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (6),artist7,album2,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (6).wav
+791,FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (6),artist3,album6,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (6).wav
+792,FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (6),artist5,album8,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (6).wav
+793,FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (6),artist7,album2,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (6).wav
+794,FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (6),artist3,album9,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (6).wav
+795,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (6),artist1,album4,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (6).wav
+796,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (6),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (6).wav
+797,FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (6),artist9,album1,87,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (6).wav
+798,FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (6),artist2,album6,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (6).wav
+799,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (6),artist8,album3,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (6).wav
+800,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (6),artist4,album10,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (6).wav
+801,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (6),artist6,album5,28,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (6).wav
+802,FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (6),artist10,album7,8,D:\\hocCpp\\Playlist\\FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (6).wav
+803,FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (6),artist3,album2,9,D:\\hocCpp\\Playlist\\FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (6).wav
+804,FL_RSC_Kit04_Bass_Loop_91_D - Copy (6),artist7,album8,21,D:\\hocCpp\\Playlist\\FL_RSC_Kit04_Bass_Loop_91_D - Copy (6).wav
+805,FL_RSC_Kit05_Bass_Loop_84_C# - Copy (6),artist1,album4,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Bass_Loop_84_C# - Copy (6).wav
+806,FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (6),artist5,album9,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (6).wav
+807,FS_LS_115_Instrument_Loop_09_Fm - Copy (6),artist2,album1,16,D:\\hocCpp\\Playlist\\FS_LS_115_Instrument_Loop_09_Fm - Copy (6).wav
+808,FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (6),artist9,album6,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (6).wav
+809,FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (6),artist4,album3,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (6).wav
+810,SH_STH_Flow_140_Pad_Loop_F#min - Copy (6),artist8,album5,13,D:\\hocCpp\\Playlist\\SH_STH_Flow_140_Pad_Loop_F#min - Copy (6).wav
+811,SH_STH_Gotic_120_Drum_Loop_01 - Copy (6),artist6,album10,16,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Drum_Loop_01 - Copy (6).wav
+812,SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (6),artist10,album7,8,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (6).wav
+813,SH_STH_Now_90_Pluck_Loop_Cmin - Copy (6),artist3,album2,10,D:\\hocCpp\\Playlist\\SH_STH_Now_90_Pluck_Loop_Cmin - Copy (6).wav
+814,SHARP_PAL_138_Bass_Loop_C#_1 - Copy (6),artist7,album8,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_C#_1 - Copy (6).wav
+815,SHARP_PAL_138_Bass_Loop_D#_2 - Copy (6),artist1,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_D#_2 - Copy (6).wav
+816,SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (6),artist5,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (6).wav
+817,SHARP_PAL_138_Bass_Loop_E_1 - Copy (6),artist2,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_1 - Copy (6).wav
+818,SHARP_PAL_138_Bass_Loop_E_2 - Copy (6),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_2 - Copy (6).wav
+819,SHARP_PAL_138_Bass_Loop_F#_1 - Copy (6),artist4,album3,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_1 - Copy (6).wav
+820,SHARP_PAL_138_Bass_Loop_F#_3 - Copy (6),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_3 - Copy (6).wav
+821,SHARP_PAL_138_Drum_Loop_Cinematic - Copy (6),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic - Copy (6).wav
+822,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (6),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (6).wav
+823,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (6),artist10,album3,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (6).wav
+824,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (6),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (6).wav
+825,SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (6),artist3,album2,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (6).wav
+826,SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (6),artist9,album6,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (6).wav
+827,SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (6),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (6).wav
+828,SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (6),artist7,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (6).wav
+829,SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (6),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (6).wav
+830,SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (6),artist2,album5,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (6).wav
+831,SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (6),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (6).wav
+832,SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (6),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (6).wav
+833,SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (6),artist10,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (6).wav
+834,SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (6),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (6).wav
+835,SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (6),artist3,album2,3,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (6).wav
+836,SHARP_PAL_138_Fx_Loop_1 - Copy (6),artist9,album6,8,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_1 - Copy (6).wav
+837,SHARP_PAL_138_Fx_Loop_2 - Copy (6),artist1,album10,10,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_2 - Copy (6).wav
+838,SHARP_PAL_138_Fx_Loop_3 - Copy (6),artist7,album4,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_3 - Copy (6).wav
+839,SHARP_PAL_138_Fx_Loop_4 - Copy (6),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_4 - Copy (6).wav
+840,SHARP_PAL_138_Fx_Loop_5 - Copy (6),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_5 - Copy (6).wav
+841,SHARP_PAL_138_Fx_Loop_6 - Copy (6),artist8,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_6 - Copy (6).wav
+842,SHARP_PAL_138_Fx_Loop_7 - Copy (6),artist4,album9,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_7 - Copy (6).wav
+843,SHARP_PAL_138_Fx_Loop_8 - Copy (6),artist10,album3,5,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_8 - Copy (6).wav
+844,SHARP_PAL_138_Fx_Loop_9 - Copy (6),artist6,album7,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_9 - Copy (6).wav
+845,SHARP_PAL_138_Fx_Loop_10 - Copy (6),artist3,album2,4,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_10 - Copy (6).wav
+846,SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (6),artist9,album6,43,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (6).wav
+847,SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (6),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (6).wav
+848,SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (6),artist4,album3,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (6).wav
+849,SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (6),artist7,album8,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (6).wav
+850,SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (6),artist2,album5,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (6).wav
+851,SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (6),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (6).wav
+852,SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (6),artist5,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (6).wav
+853,SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (6),artist1,album9,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (6).wav
+854,SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (6),artist8,album2,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (6).wav
+855,SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (6),artist3,album7,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (6).wav
+856,SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (6),artist6,album4,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (6).wav
+857,SHARP_PAL_140_Bass_Loop_C#_1 - Copy (6),artist10,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_C#_1 - Copy (6).wav
+858,SHARP_PAL_140_Bass_Loop_F - Copy (6),artist2,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_F - Copy (6).wav
+859,SHARP_PAL_140_Bass_Loop_G# - Copy (6),artist5,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_G# - Copy (6).wav
+860,SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (6),artist8,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (6).wav
+861,SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (6),artist1,album5,1,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (6).wav
+862,90_C#m_FatChordsElGuitar_02_577 - Copy (7),artist1,album5,10,D:\\hocCpp\\Playlist\\90_C#m_FatChordsElGuitar_02_577 - Copy (7).wav
+863,100_C_ElecGuitar_01_724 - Copy (7),artist4,album2,19,D:\\hocCpp\\Playlist\\100_C_ElecGuitar_01_724 - Copy (7).wav
+864,100_D_ElecGuitar_01_724 - Copy (7),artist2,album8,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_01_724 - Copy (7).wav
+865,100_D_ElecGuitar_02_724 - Copy (7),artist7,album1,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_02_724 - Copy (7).wav
+866,111_D#_QuackElGuitar_01_577 - Copy (7),artist3,album9,8,D:\\hocCpp\\Playlist\\111_D#_QuackElGuitar_01_577 - Copy (7).wav
+867,111_F#m_RiffElGuitar_01_577 - Copy (7),artist9,album3,17,D:\\hocCpp\\Playlist\\111_F#m_RiffElGuitar_01_577 - Copy (7).wav
+868,127_D#m_LeadEffectedElGuitar_02_577 - Copy (7),artist5,album4,15,D:\\hocCpp\\Playlist\\127_D#m_LeadEffectedElGuitar_02_577 - Copy (7).wav
+869,130_A#m_RhythmDreamyElGuitar_01_577 - Copy (7),artist1,album7,14,D:\\hocCpp\\Playlist\\130_A#m_RhythmDreamyElGuitar_01_577 - Copy (7).wav
+870,130_B_TremChordsElGuitar_01_577 - Copy (7),artist6,album2,14,D:\\hocCpp\\Playlist\\130_B_TremChordsElGuitar_01_577 - Copy (7).wav
+871,140_F#_MelodyElGuitar_02_577 - Copy (7),artist8,album6,6,D:\\hocCpp\\Playlist\\140_F#_MelodyElGuitar_02_577 - Copy (7).wav
+872,140_F#_RiffStonesElGuitar_02_577 - Copy (7),artist2,album10,6,D:\\hocCpp\\Playlist\\140_F#_RiffStonesElGuitar_02_577 - Copy (7).wav
+873,ahem_x - Copy (7),artist4,album1,1,D:\\hocCpp\\Playlist\\ahem_x - Copy (7).wav
+874,airplane_chime_x - Copy (7),artist10,album3,4,D:\\hocCpp\\Playlist\\airplane_chime_x - Copy (7).wav
+875,alarm_beep - Copy (7),artist5,album8,3,D:\\hocCpp\\Playlist\\alarm_beep - Copy (7).wav
+876,Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (7),artist3,album5,6,D:\\hocCpp\\Playlist\\Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (7).wav
+877,applause_y - Copy (7),artist7,album2,2,D:\\hocCpp\\Playlist\\applause_y - Copy (7).wav
+878,baby_x - Copy (7),artist9,album4,1,D:\\hocCpp\\Playlist\\baby_x - Copy (7).wav
+879,blip - Copy (7),artist1,album6,0,D:\\hocCpp\\Playlist\\blip - Copy (7).wav
+880,blurp_x - Copy (7),artist2,album7,0,D:\\hocCpp\\Playlist\\blurp_x - Copy (7).wav
+881,bomb_x - Copy (7),artist6,album9,2,D:\\hocCpp\\Playlist\\bomb_x - Copy (7).wav
+882,burp_x - Copy (7),artist8,album1,0,D:\\hocCpp\\Playlist\\burp_x - Copy (7).wav
+883,car_x - Copy (7),artist10,album10,5,D:\\hocCpp\\Playlist\\car_x - Copy (7).wav
+884,FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (7),artist4,album3,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (7).wav
+885,FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (7),artist3,album2,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (7).wav
+886,FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (7),artist5,album5,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (7).wav
+887,FL_FMT_Kit02_120_Drum_Loop_Full - Copy (7),artist1,album8,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Drum_Loop_Full - Copy (7).wav
+888,FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (7),artist9,album4,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (7).wav
+889,FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (7),artist2,album5,21,D:\\hocCpp\\Playlist\\FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (7).wav
+890,FL_JHHC_Keys_Loop_09_90_G - Copy (7),artist8,album3,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_09_90_G - Copy (7).wav
+891,FL_JHHC_Keys_Loop_15_90_A - Copy (7),artist4,album9,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_15_90_A - Copy (7).wav
+892,FL_NDF_110_C_RGUITAR 01 - Copy (7),artist1,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 01 - Copy (7).wav
+893,FL_NDF_110_C_RGUITAR 02 - Copy (7),artist7,album6,8,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 02 - Copy (7).wav
+894,FL_NDF_110_D#_RGUITAR 01 - Copy (7),artist5,album2,4,D:\\hocCpp\\Playlist\\FL_NDF_110_D#_RGUITAR 01 - Copy (7).wav
+895,FL_NDF_KIT03_110_F_Full Drum Loop - Copy (7),artist3,album8,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Full Drum Loop - Copy (7).wav
+896,FL_NDF_KIT03_110_F_Guitar 02 - Copy (7),artist10,album4,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Guitar 02 - Copy (7).wav
+897,FL_NDF_KIT03_110_F_Old Keys Chord - Copy (7),artist6,album7,17,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Old Keys Chord - Copy (7).wav
+898,FL_NDF_KIT03_110_F_Percussion - Copy (7),artist9,album10,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Percussion - Copy (7).wav
+899,FL_NDF_KIT04_115_F_Fill 02 - Copy (7),artist2,album5,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 02 - Copy (7).wav
+900,FL_NDF_KIT04_115_F_Fill 03 - Copy (7),artist8,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 03 - Copy (7).wav
+901,FL_NDF_KIT04_115_F_Full Drum Loop - Copy (7),artist4,album3,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Full Drum Loop - Copy (7).wav
+902,FL_NDF_KIT04_115_F_Guitar 01 - Copy (7),artist1,album9,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Guitar 01 - Copy (7).wav
+903,FL_NDF_KIT04_115_F_Live Bass - Copy (7),artist7,album2,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Live Bass - Copy (7).wav
+904,FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (7),artist3,album6,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (7).wav
+905,FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (7),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (7).wav
+906,FL_PST_Kit03_145_Demo - Copy (7),artist10,album4,92,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Demo - Copy (7).wav
+907,FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (7),artist6,album7,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (7).wav
+908,FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (7),artist9,album10,11,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (7).wav
+909,FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (7),artist2,album5,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (7).wav
+910,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (7),artist8,album1,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (7).wav
+911,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (7),artist4,album3,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (7).wav
+912,FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (7),artist1,album9,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (7).wav
+913,FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (7),artist7,album2,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (7).wav
+914,FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (7),artist3,album6,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (7).wav
+915,FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (7),artist5,album8,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (7).wav
+916,FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (7),artist7,album2,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (7).wav
+917,FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (7),artist3,album9,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (7).wav
+918,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (7),artist1,album4,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (7).wav
+919,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (7),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (7).wav
+920,FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (7),artist9,album1,87,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (7).wav
+921,FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (7),artist2,album6,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (7).wav
+922,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (7),artist8,album3,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (7).wav
+923,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (7),artist4,album10,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (7).wav
+924,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (7),artist6,album5,28,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (7).wav
+925,FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (7),artist10,album7,8,D:\\hocCpp\\Playlist\\FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (7).wav
+926,FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (7),artist3,album2,9,D:\\hocCpp\\Playlist\\FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (7).wav
+927,FL_RSC_Kit04_Bass_Loop_91_D - Copy (7),artist7,album8,21,D:\\hocCpp\\Playlist\\FL_RSC_Kit04_Bass_Loop_91_D - Copy (7).wav
+928,FL_RSC_Kit05_Bass_Loop_84_C# - Copy (7),artist1,album4,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Bass_Loop_84_C# - Copy (7).wav
+929,FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (7),artist5,album9,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (7).wav
+930,FS_LS_115_Instrument_Loop_09_Fm - Copy (7),artist2,album1,16,D:\\hocCpp\\Playlist\\FS_LS_115_Instrument_Loop_09_Fm - Copy (7).wav
+931,FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (7),artist9,album6,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (7).wav
+932,FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (7),artist4,album3,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (7).wav
+933,SH_STH_Flow_140_Pad_Loop_F#min - Copy (7),artist8,album5,13,D:\\hocCpp\\Playlist\\SH_STH_Flow_140_Pad_Loop_F#min - Copy (7).wav
+934,SH_STH_Gotic_120_Drum_Loop_01 - Copy (7),artist6,album10,16,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Drum_Loop_01 - Copy (7).wav
+935,SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (7),artist10,album7,8,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (7).wav
+936,SH_STH_Now_90_Pluck_Loop_Cmin - Copy (7),artist3,album2,10,D:\\hocCpp\\Playlist\\SH_STH_Now_90_Pluck_Loop_Cmin - Copy (7).wav
+937,SHARP_PAL_138_Bass_Loop_C#_1 - Copy (7),artist7,album8,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_C#_1 - Copy (7).wav
+938,SHARP_PAL_138_Bass_Loop_D#_2 - Copy (7),artist1,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_D#_2 - Copy (7).wav
+939,SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (7),artist5,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (7).wav
+940,SHARP_PAL_138_Bass_Loop_E_1 - Copy (7),artist2,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_1 - Copy (7).wav
+941,SHARP_PAL_138_Bass_Loop_E_2 - Copy (7),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_2 - Copy (7).wav
+942,SHARP_PAL_138_Bass_Loop_F#_1 - Copy (7),artist4,album3,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_1 - Copy (7).wav
+943,SHARP_PAL_138_Bass_Loop_F#_3 - Copy (7),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_3 - Copy (7).wav
+944,SHARP_PAL_138_Drum_Loop_Cinematic - Copy (7),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic - Copy (7).wav
+945,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (7),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (7).wav
+946,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (7),artist10,album3,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (7).wav
+947,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (7),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (7).wav
+948,SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (7),artist3,album2,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (7).wav
+949,SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (7),artist9,album6,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (7).wav
+950,SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (7),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (7).wav
+951,SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (7),artist7,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (7).wav
+952,SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (7),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (7).wav
+953,SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (7),artist2,album5,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (7).wav
+954,SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (7),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (7).wav
+955,SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (7),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (7).wav
+956,SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (7),artist10,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (7).wav
+957,SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (7),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (7).wav
+958,SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (7),artist3,album2,3,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (7).wav
+959,SHARP_PAL_138_Fx_Loop_1 - Copy (7),artist9,album6,8,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_1 - Copy (7).wav
+960,SHARP_PAL_138_Fx_Loop_2 - Copy (7),artist1,album10,10,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_2 - Copy (7).wav
+961,SHARP_PAL_138_Fx_Loop_3 - Copy (7),artist7,album4,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_3 - Copy (7).wav
+962,SHARP_PAL_138_Fx_Loop_4 - Copy (7),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_4 - Copy (7).wav
+963,SHARP_PAL_138_Fx_Loop_5 - Copy (7),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_5 - Copy (7).wav
+964,SHARP_PAL_138_Fx_Loop_6 - Copy (7),artist8,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_6 - Copy (7).wav
+965,SHARP_PAL_138_Fx_Loop_7 - Copy (7),artist4,album9,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_7 - Copy (7).wav
+966,SHARP_PAL_138_Fx_Loop_8 - Copy (7),artist10,album3,5,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_8 - Copy (7).wav
+967,SHARP_PAL_138_Fx_Loop_9 - Copy (7),artist6,album7,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_9 - Copy (7).wav
+968,SHARP_PAL_138_Fx_Loop_10 - Copy (7),artist3,album2,4,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_10 - Copy (7).wav
+969,SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (7),artist9,album6,43,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (7).wav
+970,SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (7),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (7).wav
+971,SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (7),artist4,album3,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (7).wav
+972,SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (7),artist7,album8,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (7).wav
+973,SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (7),artist2,album5,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (7).wav
+974,SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (7),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (7).wav
+975,SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (7),artist5,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (7).wav
+976,SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (7),artist1,album9,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (7).wav
+977,SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (7),artist8,album2,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (7).wav
+978,SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (7),artist3,album7,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (7).wav
+979,SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (7),artist6,album4,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (7).wav
+980,SHARP_PAL_140_Bass_Loop_C#_1 - Copy (7),artist10,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_C#_1 - Copy (7).wav
+981,SHARP_PAL_140_Bass_Loop_F - Copy (7),artist2,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_F - Copy (7).wav
+982,SHARP_PAL_140_Bass_Loop_G# - Copy (7),artist5,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_G# - Copy (7).wav
+983,SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (7),artist8,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (7).wav
+984,SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (7),artist1,album5,1,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (7).wav
+985,90_C#m_FatChordsElGuitar_02_577 - Copy (8),artist1,album5,10,D:\\hocCpp\\Playlist\\90_C#m_FatChordsElGuitar_02_577 - Copy (8).wav
+986,100_C_ElecGuitar_01_724 - Copy (8),artist4,album2,19,D:\\hocCpp\\Playlist\\100_C_ElecGuitar_01_724 - Copy (8).wav
+987,100_D_ElecGuitar_01_724 - Copy (8),artist2,album8,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_01_724 - Copy (8).wav
+988,100_D_ElecGuitar_02_724 - Copy (8),artist7,album1,19,D:\\hocCpp\\Playlist\\100_D_ElecGuitar_02_724 - Copy (8).wav
+989,111_D#_QuackElGuitar_01_577 - Copy (8),artist3,album9,8,D:\\hocCpp\\Playlist\\111_D#_QuackElGuitar_01_577 - Copy (8).wav
+990,111_F#m_RiffElGuitar_01_577 - Copy (8),artist9,album3,17,D:\\hocCpp\\Playlist\\111_F#m_RiffElGuitar_01_577 - Copy (8).wav
+991,127_D#m_LeadEffectedElGuitar_02_577 - Copy (8),artist5,album4,15,D:\\hocCpp\\Playlist\\127_D#m_LeadEffectedElGuitar_02_577 - Copy (8).wav
+992,130_A#m_RhythmDreamyElGuitar_01_577 - Copy (8),artist1,album7,14,D:\\hocCpp\\Playlist\\130_A#m_RhythmDreamyElGuitar_01_577 - Copy (8).wav
+993,130_B_TremChordsElGuitar_01_577 - Copy (8),artist6,album2,14,D:\\hocCpp\\Playlist\\130_B_TremChordsElGuitar_01_577 - Copy (8).wav
+994,140_F#_MelodyElGuitar_02_577 - Copy (8),artist8,album6,6,D:\\hocCpp\\Playlist\\140_F#_MelodyElGuitar_02_577 - Copy (8).wav
+995,140_F#_RiffStonesElGuitar_02_577 - Copy (8),artist2,album10,6,D:\\hocCpp\\Playlist\\140_F#_RiffStonesElGuitar_02_577 - Copy (8).wav
+996,ahem_x - Copy (8),artist4,album1,1,D:\\hocCpp\\Playlist\\ahem_x - Copy (8).wav
+997,airplane_chime_x - Copy (8),artist10,album3,4,D:\\hocCpp\\Playlist\\airplane_chime_x - Copy (8).wav
+998,alarm_beep - Copy (8),artist5,album8,3,D:\\hocCpp\\Playlist\\alarm_beep - Copy (8).wav
+999,Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (8),artist3,album5,6,D:\\hocCpp\\Playlist\\Alesis-S4-Plus-Dyna-Roadz-C3 - Copy (8).wav
+1000,applause_y - Copy (8),artist7,album2,2,D:\\hocCpp\\Playlist\\applause_y - Copy (8).wav
+1001,baby_x - Copy (8),artist9,album4,1,D:\\hocCpp\\Playlist\\baby_x - Copy (8).wav
+1002,blip - Copy (8),artist1,album6,0,D:\\hocCpp\\Playlist\\blip - Copy (8).wav
+1003,blurp_x - Copy (8),artist2,album7,0,D:\\hocCpp\\Playlist\\blurp_x - Copy (8).wav
+1004,bomb_x - Copy (8),artist6,album9,2,D:\\hocCpp\\Playlist\\bomb_x - Copy (8).wav
+1005,burp_x - Copy (8),artist8,album1,0,D:\\hocCpp\\Playlist\\burp_x - Copy (8).wav
+1006,car_x - Copy (8),artist10,album10,5,D:\\hocCpp\\Playlist\\car_x - Copy (8).wav
+1007,FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (8),artist4,album3,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Bass_Loop_EbMaj - Copy (8).wav
+1008,FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (8),artist3,album2,17,D:\\hocCpp\\Playlist\\FL_FMT_Kit01_108_Keys_Loop_Electric_EbMaj - Copy (8).wav
+1009,FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (8),artist5,album5,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Bass_Loop_02_Amin - Copy (8).wav
+1010,FL_FMT_Kit02_120_Drum_Loop_Full - Copy (8),artist1,album8,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Drum_Loop_Full - Copy (8).wav
+1011,FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (8),artist9,album4,16,D:\\hocCpp\\Playlist\\FL_FMT_Kit02_120_Vocal_Loop_Chop_Amin - Copy (8).wav
+1012,FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (8),artist2,album5,21,D:\\hocCpp\\Playlist\\FL_JHHC_Guitar_Loop_Chords_08_90_D#_Dry - Copy (8).wav
+1013,FL_JHHC_Keys_Loop_09_90_G - Copy (8),artist8,album3,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_09_90_G - Copy (8).wav
+1014,FL_JHHC_Keys_Loop_15_90_A - Copy (8),artist4,album9,21,D:\\hocCpp\\Playlist\\FL_JHHC_Keys_Loop_15_90_A - Copy (8).wav
+1015,FL_NDF_110_C_RGUITAR 01 - Copy (8),artist1,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 01 - Copy (8).wav
+1016,FL_NDF_110_C_RGUITAR 02 - Copy (8),artist7,album6,8,D:\\hocCpp\\Playlist\\FL_NDF_110_C_RGUITAR 02 - Copy (8).wav
+1017,FL_NDF_110_D#_RGUITAR 01 - Copy (8),artist5,album2,4,D:\\hocCpp\\Playlist\\FL_NDF_110_D#_RGUITAR 01 - Copy (8).wav
+1018,FL_NDF_KIT03_110_F_Full Drum Loop - Copy (8),artist3,album8,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Full Drum Loop - Copy (8).wav
+1019,FL_NDF_KIT03_110_F_Guitar 02 - Copy (8),artist10,album4,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Guitar 02 - Copy (8).wav
+1020,FL_NDF_KIT03_110_F_Old Keys Chord - Copy (8),artist6,album7,17,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Old Keys Chord - Copy (8).wav
+1021,FL_NDF_KIT03_110_F_Percussion - Copy (8),artist9,album10,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT03_110_F_Percussion - Copy (8).wav
+1022,FL_NDF_KIT04_115_F_Fill 02 - Copy (8),artist2,album5,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 02 - Copy (8).wav
+1023,FL_NDF_KIT04_115_F_Fill 03 - Copy (8),artist8,album1,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Fill 03 - Copy (8).wav
+1024,FL_NDF_KIT04_115_F_Full Drum Loop - Copy (8),artist4,album3,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Full Drum Loop - Copy (8).wav
+1025,FL_NDF_KIT04_115_F_Guitar 01 - Copy (8),artist1,album9,4,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Guitar 01 - Copy (8).wav
+1026,FL_NDF_KIT04_115_F_Live Bass - Copy (8),artist7,album2,8,D:\\hocCpp\\Playlist\\FL_NDF_KIT04_115_F_Live Bass - Copy (8).wav
+1027,FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (8),artist3,album6,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_1 - Copy (8).wav
+1028,FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (8),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Bass_Stem_Drop_2 - Copy (8).wav
+1029,FL_PST_Kit03_145_Demo - Copy (8),artist10,album4,92,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Demo - Copy (8).wav
+1030,FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (8),artist6,album7,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Open_Hats_Drop - Copy (8).wav
+1031,FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (8),artist9,album10,11,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Buildup_Break_Drop - Copy (8).wav
+1032,FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (8),artist2,album5,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Loop_Snare_Drop - Copy (8).wav
+1033,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (8),artist8,album1,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_1 - Copy (8).wav
+1034,FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (8),artist4,album3,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Closed_Hat_Drop_2 - Copy (8).wav
+1035,FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (8),artist1,album9,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Drum_Stem_Kick_Drop - Copy (8).wav
+1036,FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (8),artist7,album2,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Short_Sweep_Drop - Copy (8).wav
+1037,FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (8),artist3,album6,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Upfilter_Break_Drop - Copy (8).wav
+1038,FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (8),artist5,album8,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Fx_Loop_Zap_Drop - Copy (8).wav
+1039,FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (8),artist7,album2,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Kick_Bass_Stem_Mixed_Break - Copy (8).wav
+1040,FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (8),artist3,album9,13,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_FM_Meat_Shot_Drop - Copy (8).wav
+1041,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (8),artist1,album4,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Break - Copy (8).wav
+1042,FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (8),artist5,album8,26,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Loop_Saiko_Lead_Drop - Copy (8).wav
+1043,FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (8),artist9,album1,87,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Acid_Lead_Break_Drop - Copy (8).wav
+1044,FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (8),artist2,album6,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Lead_Extra_Drop - Copy (8).wav
+1045,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (8),artist8,album3,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Drop - Copy (8).wav
+1046,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (8),artist4,album10,29,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Extra_Layer_Drop - Copy (8).wav
+1047,FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (8),artist6,album5,28,D:\\hocCpp\\Playlist\\FL_PST_Kit03_145_Synth_Stem_Main_Lead_Layer_Break - Copy (8).wav
+1048,FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (8),artist10,album7,8,D:\\hocCpp\\Playlist\\FL_RSC_Kit02_Drum_Loop_Full_107 - Copy (8).wav
+1049,FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (8),artist3,album2,9,D:\\hocCpp\\Playlist\\FL_RSC_Kit03_Drum_Loop_Full_104 - Copy (8).wav
+1050,FL_RSC_Kit04_Bass_Loop_91_D - Copy (8),artist7,album8,21,D:\\hocCpp\\Playlist\\FL_RSC_Kit04_Bass_Loop_91_D - Copy (8).wav
+1051,FL_RSC_Kit05_Bass_Loop_84_C# - Copy (8),artist1,album4,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Bass_Loop_84_C# - Copy (8).wav
+1052,FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (8),artist5,album9,11,D:\\hocCpp\\Playlist\\FL_RSC_Kit05_Drum_Loop_Hat_84 - Copy (8).wav
+1053,FS_LS_115_Instrument_Loop_09_Fm - Copy (8),artist2,album1,16,D:\\hocCpp\\Playlist\\FS_LS_115_Instrument_Loop_09_Fm - Copy (8).wav
+1054,FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (8),artist9,album6,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_01_Cmaj - Copy (8).wav
+1055,FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (8),artist4,album3,14,D:\\hocCpp\\Playlist\\FS_LS_130_Keys_Loop_Piano_09_Bbm - Copy (8).wav
+1056,SH_STH_Flow_140_Pad_Loop_F#min - Copy (8),artist8,album5,13,D:\\hocCpp\\Playlist\\SH_STH_Flow_140_Pad_Loop_F#min - Copy (8).wav
+1057,SH_STH_Gotic_120_Drum_Loop_01 - Copy (8),artist6,album10,16,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Drum_Loop_01 - Copy (8).wav
+1058,SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (8),artist10,album7,8,D:\\hocCpp\\Playlist\\SH_STH_Gotic_120_Synth2_Loop_Bmin - Copy (8).wav
+1059,SH_STH_Now_90_Pluck_Loop_Cmin - Copy (8),artist3,album2,10,D:\\hocCpp\\Playlist\\SH_STH_Now_90_Pluck_Loop_Cmin - Copy (8).wav
+1060,SHARP_PAL_138_Bass_Loop_C#_1 - Copy (8),artist7,album8,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_C#_1 - Copy (8).wav
+1061,SHARP_PAL_138_Bass_Loop_D#_2 - Copy (8),artist1,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_D#_2 - Copy (8).wav
+1062,SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (8),artist5,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_(Layer) - Copy (8).wav
+1063,SHARP_PAL_138_Bass_Loop_E_1 - Copy (8),artist2,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_1 - Copy (8).wav
+1064,SHARP_PAL_138_Bass_Loop_E_2 - Copy (8),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_E_2 - Copy (8).wav
+1065,SHARP_PAL_138_Bass_Loop_F#_1 - Copy (8),artist4,album3,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_1 - Copy (8).wav
+1066,SHARP_PAL_138_Bass_Loop_F#_3 - Copy (8),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Bass_Loop_F#_3 - Copy (8).wav
+1067,SHARP_PAL_138_Drum_Loop_Cinematic - Copy (8),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic - Copy (8).wav
+1068,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (8),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_1 - Copy (8).wav
+1069,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (8),artist10,album3,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_2 - Copy (8).wav
+1070,SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (8),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Cinematic_Perc_3 - Copy (8).wav
+1071,SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (8),artist3,album2,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_1 - Copy (8).wav
+1072,SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (8),artist9,album6,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_2 - Copy (8).wav
+1073,SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (8),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Closed_3 - Copy (8).wav
+1074,SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (8),artist7,album4,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_1 - Copy (8).wav
+1075,SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (8),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Hat_Open_2 - Copy (8).wav
+1076,SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (8),artist2,album5,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_2 - Copy (8).wav
+1077,SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (8),artist8,album1,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_6 - Copy (8).wav
+1078,SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (8),artist4,album9,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_8 - Copy (8).wav
+1079,SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (8),artist10,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Perc_Ethnic - Copy (8).wav
+1080,SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (8),artist6,album7,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Snare_2 - Copy (8).wav
+1081,SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (8),artist3,album2,3,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Drum_Loop_Tambourine_1 - Copy (8).wav
+1082,SHARP_PAL_138_Fx_Loop_1 - Copy (8),artist9,album6,8,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_1 - Copy (8).wav
+1083,SHARP_PAL_138_Fx_Loop_2 - Copy (8),artist1,album10,10,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_2 - Copy (8).wav
+1084,SHARP_PAL_138_Fx_Loop_3 - Copy (8),artist7,album4,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_3 - Copy (8).wav
+1085,SHARP_PAL_138_Fx_Loop_4 - Copy (8),artist5,album8,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_4 - Copy (8).wav
+1086,SHARP_PAL_138_Fx_Loop_5 - Copy (8),artist2,album5,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_5 - Copy (8).wav
+1087,SHARP_PAL_138_Fx_Loop_6 - Copy (8),artist8,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_6 - Copy (8).wav
+1088,SHARP_PAL_138_Fx_Loop_7 - Copy (8),artist4,album9,12,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_7 - Copy (8).wav
+1089,SHARP_PAL_138_Fx_Loop_8 - Copy (8),artist10,album3,5,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_8 - Copy (8).wav
+1090,SHARP_PAL_138_Fx_Loop_9 - Copy (8),artist6,album7,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_9 - Copy (8).wav
+1091,SHARP_PAL_138_Fx_Loop_10 - Copy (8),artist3,album2,4,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Fx_Loop_10 - Copy (8).wav
+1092,SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (8),artist9,album6,43,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_1 - Copy (8).wav
+1093,SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (8),artist1,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_2 - Copy (8).wav
+1094,SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (8),artist4,album3,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_C#_3 - Copy (8).wav
+1095,SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (8),artist7,album8,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_1 - Copy (8).wav
+1096,SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (8),artist2,album5,40,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_2 - Copy (8).wav
+1097,SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (8),artist9,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_3 - Copy (8).wav
+1098,SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (8),artist5,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_4 - Copy (8).wav
+1099,SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (8),artist1,album9,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_5 - Copy (8).wav
+1100,SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (8),artist8,album2,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_6 - Copy (8).wav
+1101,SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (8),artist3,album7,27,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_7 - Copy (8).wav
+1102,SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (8),artist6,album4,13,D:\\hocCpp\\Playlist\\SHARP_PAL_138_Synth_Loop_Melody_E_8 - Copy (8).wav
+1103,SHARP_PAL_140_Bass_Loop_C#_1 - Copy (8),artist10,album10,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_C#_1 - Copy (8).wav
+1104,SHARP_PAL_140_Bass_Loop_F - Copy (8),artist2,album1,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_F - Copy (8).wav
+1105,SHARP_PAL_140_Bass_Loop_G# - Copy (8),artist5,album3,6,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Bass_Loop_G# - Copy (8).wav
+1106,SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (8),artist8,album6,13,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Cinematic_1 - Copy (8).wav
+1107,SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (8),artist1,album5,1,D:\\hocCpp\\Playlist\\SHARP_PAL_140_Drum_Loop_Fill_2 - Copy (8).wav

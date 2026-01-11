@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <set>
+#include <random>
 #include "Song.h"
 
 /*
@@ -12,6 +13,22 @@
  */
 class ShuffleManager
 {
+private:
+    /*
+     * Shuffled list of songs.
+     */
+    std::vector<Song*> shuffledSongs;
+
+    /*
+     * IDs of songs already played in current shuffle cycle.
+     */
+    std::set<int> playedSongIDs;
+
+    /*
+    * Random number generator for shuffle.
+    */
+    std::mt19937 gen;
+    
 public:
     /*
      * Initializes shuffle with a list of songs.
@@ -29,26 +46,7 @@ public:
      */
     void getAllSongs() const;
 
-private:
-    /*
-     * Shuffled list of songs.
-     */
-    std::vector<Song*> shuffledSongs;
 
-    /*
-     * IDs of songs already played in current shuffle cycle.
-     */
-    std::set<int> playedSongIDs;
-
-    /*
-     * Current index in shuffled list.
-     */
-    size_t currentIndex {0};
-
-    /*
-     * Resets shuffle cycle.
-     */
-    void resetCycle();
 };
 
 #endif
