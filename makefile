@@ -26,86 +26,8 @@
 # # 	rm -f build/*.o main.exe 
 
 
-# 	# 1. Cấu hình Trình biên dịch
-# 	CXX      := g++
-# 	CXXFLAGS := -std=c++17 -Wall -Wextra -Wpedantic
-# 	LDFLAGS  := -lwinmm
-
-# 	# Cờ tạo dependencies tự động (Dependency Tracking)
-# 	# -MMD: Tạo file .d (dependencies)
-# 	# -MP:  Tạo target giả cho header để tránh lỗi nếu xóa header
-# 	DEPFLAGS := -MMD -MP
-
-# 	# 2. Cấu hình Thư mục
-# 	BUILD_DIR := build
-# 	TARGET    := main.exe
-
-# 	# Liệt kê các thư mục chứa Source code (.cpp)
-# 	SRC_DIRS  := ./src/model \
-# 				./src/library \
-# 				./src/playback \
-# 				./src/algorithm \
-# 				./src/player \
-# 				./src
-
-# 	# Liệt kê các thư mục chứa Header (.h)
-# 	INC_DIRS  := ./inc/model \
-# 				./inc/library \
-# 				./inc/playback \
-# 				./inc/algorithm \
-# 				./inc/player
-
-# 	# Tạo flag -I cho trình biên dịch (VD: -I./inc/model -I./inc/library...)
-# 	INCLUDES  := $(foreach dir, $(INC_DIRS), -I$(dir))
-
-# 	# 3. Tự động tìm Source và tạo Object
-# 	# Tìm tất cả file .cpp trong các thư mục SRC_DIRS
-# 	SRCS := $(foreach dir,$(SRC_DIRS),$(wildcard $(dir)/*.cpp))
-
-# 	# Tạo danh sách file object tương ứng trong folder build
-# 	# notdir: bỏ phần đường dẫn (src/model/Song.cpp -> Song.cpp) để flatten vào folder build
-# 	OBJS := $(patsubst %.cpp, $(BUILD_DIR)/%.o, $(notdir $(SRCS)))
-
-# 	# File dependencies (.d) tương ứng với object
-# 	DEPS := $(OBJS:.o=.d)
-
-# 	# Chỉ dẫn cho Make biết nơi tìm file .cpp (vì ta đã làm phẳng file object)
-# 	VPATH := $(SRC_DIRS)
-
-# 	# 4. Các Rules
-
-# 	# Target mặc định
-# 	all: $(BUILD_DIR) $(TARGET)
-
-# 	# Linker: Tạo file exe
-# 	$(TARGET): $(OBJS)
-# 		$(CXX) $(OBJS) -o $@ $(LDFLAGS)
-# 		@echo "Build successful: $@"
-
-# 	# Compiler: Tạo file object từ cpp
-# 	# $| đảm bảo thư mục build tồn tại
-# 	$(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
-# 		$(CXX) $(CXXFLAGS) $(DEPFLAGS) $(INCLUDES) -c $< -o $@
-
-# 	# Tạo thư mục build nếu chưa có
-# 	$(BUILD_DIR):
-# 		mkdir -p $(BUILD_DIR)
-
-# 	# Run
-# 	run: $(TARGET)
-# 		./$(TARGET)
-
-# 	# Clean
-# 	.PHONY: clean
-# 	clean:
-# 		rm -rf $(BUILD_DIR) $(TARGET)
-
-# 	rebuild: clean all
-# 	# 5. Include các file dependencies đã tạo tự động
-# 	-include $(DEPS)
-
 # ==========================================
-# 1. Compiler & Flags Configuration
+# Compiler & Flags Configuration
 # ==========================================
 CXX      := g++
 AR       := ar
@@ -121,7 +43,7 @@ SRC_ROOT  := src
 INC_ROOT  := inc
 
 # ==========================================
-# 2. Module Separation
+# Module Separation
 # ==========================================
 
 # --- CORE (Static Library) ---
@@ -154,7 +76,7 @@ INC_DIRS := $(INC_ROOT)/model \
 INCLUDES := $(foreach dir, $(INC_DIRS), -I$(dir))
 
 # ==========================================
-# 3. Object Discovery
+# Object Discovery
 # ==========================================
 
 # Helper: Find sources and map to objects
@@ -180,7 +102,7 @@ DEPS     := $(ALL_OBJS:.o=.d)
 VPATH := $(STATIC_DIRS) $(SHARED_DIRS) $(APP_DIRS)
 
 # ==========================================
-# 4. Build Rules
+# Build Rules
 # ==========================================
 
 .PHONY: all run clean rebuild
@@ -197,8 +119,6 @@ $(BUILD_DIR)/$(STATIC_LIB_NAME): $(STATIC_OBJS)
 	$(AR) rcs $@ $^
 
 # --- Rule 2: Build Shared Library (Engine) ---
-# FIX: Added dependency on $(STATIC_LIB_NAME)
-# FIX: Added -L$(BUILD_DIR) -lcore to link the static lib INTO the dll
 $(BUILD_DIR)/$(SHARED_LIB_NAME): $(SHARED_OBJS) $(BUILD_DIR)/$(STATIC_LIB_NAME)
 	@echo "[BUILD] Creating Dynamic Library: $@"
 	$(CXX) -shared -o $@ $(SHARED_OBJS) \

@@ -1,5 +1,6 @@
 #include "MusicPlayer.h"
 #include <mutex>
+#include <atomic>
 #include <condition_variable>
 #include <chrono>
 #include <iostream>
@@ -7,6 +8,7 @@
 #include <sstream>
 #include <thread>      
 #include <windows.h>
+
 /* =============================================================
  * GLOBAL STATE & SYNCHRONIZATION
  * ============================================================= */
@@ -15,13 +17,12 @@ static std::mutex audioMutex;
 static std::condition_variable audioCV;
 
 /* Thread control flags */
-static bool audioRunning = true;       /* Is the audio thread alive? */
-static bool requestNewSong = false;    /* User requested a track change */
-static bool requestPause = false;      /* User requested pause */
-static bool requestResume = false;     /* User requested resume */
+static std::atomic<bool> audioRunning = true;       /* Is the audio thread alive? */
+static std::atomic<bool> requestNewSong = false;    /* User requested a track change */
+static std::atomic<bool> requestPause = false;      /* User requested pause */
 
 /* Playback state */
-static bool isPaused = false;
+static std::atomic<bool> isPaused = false;
 static Song audioSong;                 /* The song object currently held by the thread */
 
 /* Constants for timing */
@@ -76,7 +77,7 @@ void MusicPlayer::selectAndPlaySong(int songID)
 
     /* Add selected song to the playback queue. */
     playbackQueue.addSong(currentSong);
-    playbackHistory.pushSong(currentSong);
+
     /* Trigger playback. */
     playSong(currentSong);
 }
@@ -241,6 +242,7 @@ void playSong(const Song& song)
 {
     std::cout << "\n-----------------------------------\n";
     std::cout << " Now playing:\n";
+    std::cout << "   ID      : " << song.id << "\n";
     std::cout << "   Title   : " << song.title << "\n";
     std::cout << "   Artist  : " << song.artist << "\n";
     std::cout << "   Duration: " << song.duration << " s\n";
@@ -267,18 +269,9 @@ void pauseSong()
 
 void resumeSong()
 {
-    /*
-     * Flag the request only if currently paused.
-     */
-    if (isPaused)
-    {
-        requestResume = true;
-        std::cout << "[Action] Resume requested.\n";
-    }
-    else 
-    {
-        std::cout << "[Info] Music is already playing or not started.\n";
-    }
+    /* Flag the request only if currently paused. */
+    requestPause = false;
+    std::cout << "[Action] Resume requested.\n";
 }
 
 void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
@@ -287,7 +280,7 @@ void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
 
     if (!file.is_open())
     {
-        /* ERROR HANDLING: Print error but allow program to continue (empty library) */
+        /* ERROR HANDLING*/
         std::cerr << "[Critical Error] Failed to open CSV file: " << filePath << "\n";
         std::cerr << "Please check if 'data/playlist.csv' exists.\n";
         return;
@@ -339,9 +332,7 @@ static void audioThreadFunc(MusicPlayer* player)
     {
         Song songToPlay;
 
-        /* -------------------------------------------------
-         * 1. Wait for a new song request
-         * ------------------------------------------------- */
+        /* Wait for a new song request */
         {
             std::unique_lock<std::mutex> lock(audioMutex);
             audioCV.wait(lock, []() { return requestNewSong || !audioRunning; });
@@ -351,10 +342,6 @@ static void audioThreadFunc(MusicPlayer* player)
             songToPlay = audioSong;
             requestNewSong = false;
         }
-
-        /* -------------------------------------------------
-         * 2. Setup MCI Playback
-         * ------------------------------------------------- */
         
         /* Stop any previous track */
         mciSendString("stop music", NULL, 0, NULL);
@@ -370,37 +357,25 @@ static void audioThreadFunc(MusicPlayer* player)
         /* Reset state flags for the new track */
         isPaused = false;
         requestPause = false;
-        requestResume = false;
 
-        /* -------------------------------------------------
-         * 3. Monitor Playback Loop
-         * ------------------------------------------------- */
+        /* Monitor Playback Loop */
         while (true)
         {
-            /* --- A. Handle Pause Request --- */
+            //* Handle Pause / Resume */
             if (requestPause && !isPaused)
             {
                 mciSendString("pause music", NULL, 0, NULL);
                 isPaused = true;
-                requestPause = false;
             }
-
-            /* --- B. Handle Resume Request --- */
-            if (requestResume)
+            else if (!requestPause && isPaused)
             {
-                if (isPaused) 
-                {
-                    mciSendString("resume music", NULL, 0, NULL);
-                    isPaused = false;
-                }
-                requestResume = false;
+                mciSendString("resume music", NULL, 0, NULL);
+                isPaused = false;
 
-                /* Wait for hardware and skip the check below */
                 std::this_thread::sleep_for(std::chrono::milliseconds(RESUME_DELAY_MS));
-                continue; 
             }
 
-            /* --- C. Check Playback Status --- */
+            /* Check Playback Status */
             char status[128] = {0};
             mciSendString("status music mode", status, sizeof(status), NULL);
 
