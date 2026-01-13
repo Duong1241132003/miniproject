@@ -8,70 +8,56 @@ void ShuffleManager::initialize(const std::vector<Song*>& playlist)
     shuffledSongs = playlist;
     playedSongIDs.clear();
 
-     /*
-     * Khởi tạo bộ sinh số ngẫu nhiên Mersenne Twister (mt19937)
-     * với seed từ random_device để tăng tính ngẫu nhiên.
-     */
+    /* Initialize Mersenne Twister engine with a hardware random seed */
     std::random_device rd;
     gen = std::mt19937(rd());
 }
 
 Song* ShuffleManager::getNextSong()
 {
+    /* Return nullptr if the source playlist is empty */
     if (shuffledSongs.empty())
     {
         return nullptr;
     }
 
+    /* Return nullptr if all songs in the current cycle have been played */
     if (playedSongIDs.size() == shuffledSongs.size())
     {
-        return nullptr;   /* kết thúc 1 vòng shuffle */
+        return nullptr;
     }
 
-    /*
-     * Tạo bộ phân bố đều để sinh chỉ số ngẫu nhiên hợp lệ
-     * trong phạm vi [0, shuffledSongs.size() - 1].
-     */
+    /* Define a uniform distribution for valid index range */
     std::uniform_int_distribution<> dist(0, shuffledSongs.size() - 1);
 
-    /*
-     * Lặp cho đến khi tìm được một bài hát chưa phát trong chu kỳ hiện tại.
-     */
     while (true)
     {
-        /*
-         * Sinh một chỉ số ngẫu nhiên để chọn bài hát.
-         */
+        /* Generate a random index to pick a candidate song */
         int idx = dist(gen);
 
-         /*
-         * Lấy ID của bài hát được chọn.
-         * ID được dùng để kiểm tra trùng lặp thông qua set.
-         */
+        /* Extract ID for uniqueness check using the played set */
         int id = shuffledSongs[idx]->id;
 
-        /*
-         * Kiểm tra xem bài hát này đã được phát trong chu kỳ hiện tại chưa.
-         */
+        /* Check if the song has already been played in this cycle */
         if (playedSongIDs.find(id) == playedSongIDs.end())
         {
+            /* Mark as played and return the song pointer */
             playedSongIDs.insert(id);  
             return shuffledSongs[idx];
         }
     }
 }
 
-void ShuffleManager::getAllSongs() const
+void ShuffleManager::printAllSongs() const
 {
+    /* Iterate and print details for all songs in the shuffle list */
     for (const Song* song : shuffledSongs)
     {
-       std::cout
-        << "ID: " << song -> id
-        << " | Title: " << song -> title
-        << " | Artist: " << song -> artist
-        << " | Album: " << song -> album
-        << " | Duration: " << song -> duration << " s"
-        << " | Path: " << song -> path
-        << '\n';
+       std::cout << "ID: " << song->id
+                 << " | Title: " << song->title
+                 << " | Artist: " << song->artist
+                 << " | Album: " << song->album
+                 << " | Duration: " << song->duration << " s"
+                 << '\n';
     }
 }

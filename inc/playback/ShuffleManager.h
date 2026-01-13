@@ -44,9 +44,7 @@ public:
     /*
      * Print all songs in the shuffled list
      */
-    void getAllSongs() const;
-
-
+    void printAllSongs() const;
 };
 
 #endif

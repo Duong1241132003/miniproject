@@ -9,12 +9,12 @@
  */
 struct Song
 {
-    int id {};                  // identifier for the song
-    std::string title;          // song title
-    std::string artist;         // artist name
-    std::string album;          // album name
-    int duration {};            // in seconds
-    std::string path;           // file path
+    int id {};                  /* identifier for the song */
+    std::string title;          /* song title */
+    std::string artist;         /* artist name */
+    std::string album;          /* album name */
+    int duration {};            /* in seconds */
+    std::string path;           /* file path */
 };
 
 #endif

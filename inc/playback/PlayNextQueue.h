@@ -13,8 +13,8 @@ class PlayNextQueue
 {
 private:
     /*
-    * FIFO queue of upcoming songs.
-    */
+     * FIFO queue of upcoming songs.
+     */
     std::queue<Song> queue;
 
 public:
@@ -37,7 +37,7 @@ public:
     /*
      * Print all songs in the queue
      */
-    void getAllSongs() const;
+    void printAllSongs() const;
 
 };
 

@@ -44,6 +44,11 @@ private:
 
 public:
     /*
+     * Loads the music library from a CSV file.
+     */
+    void loadLibraryFromCSV(const std::string& filePath);
+
+    /*
      * Adds a song to the library.
      */
     void addSong(const Song& song);

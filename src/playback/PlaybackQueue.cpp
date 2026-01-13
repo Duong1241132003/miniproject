@@ -3,25 +3,24 @@
 
 void PlaybackQueue::addSong(const Song& song)
 {
-    /* Check if the song already exists in the queue (by ID) */
+    /* Avoid duplicates by checking if the song ID already exists in queue */
     for (const auto& s : queue)
     {
         if (s.id == song.id)
         {
-            /* Song already exists, do not add duplicate */
+            /* Exit if song is already present */
             return;
         }
     }
 
     queue.push_back(song);
 
-    /* If this is the first song, it becomes the current one */
+    /* Set the first added song as the current playback entry */
     if (queue.size() == 1)
     {
         current = queue.begin();
     }
 }
-
 
 void PlaybackQueue::removeSongById(int songId)
 {
@@ -29,16 +28,18 @@ void PlaybackQueue::removeSongById(int songId)
     {
         if (it->id == songId)
         {
-            // Move current iterator safely if the current song is removed
+            /* Safeguard current iterator if it points to the song being removed */
             if (it == current)
             {
                 auto next = std::next(it);
                 queue.erase(it);
 
+                /* Point to next available song or wrap around to the beginning */
                 current = (next != queue.end()) ? next : queue.begin();
             }
             else
             {
+                /* Remove non-active song without affecting current pointer */
                 queue.erase(it);
             }
 
@@ -46,7 +47,7 @@ void PlaybackQueue::removeSongById(int songId)
         }
     }
 
-    // Reset current if the queue becomes empty
+    /* Invalidate current iterator if the queue is now empty */
     if (queue.empty())
     {
         current = queue.end();
@@ -55,6 +56,7 @@ void PlaybackQueue::removeSongById(int songId)
 
 const Song& PlaybackQueue::getCurrentSong()
 {
+    /* Warning message if current song is accessed on empty queue */
     if (queue.empty() || current == queue.end())
     {
         std::cout << "PlaybackQueue: no current song";
@@ -65,6 +67,7 @@ const Song& PlaybackQueue::getCurrentSong()
 
 void PlaybackQueue::playNext()
 {
+    /* Safety check for empty queue or invalid iterator */
     if (queue.empty() || current == queue.end())
     {
         return;
@@ -72,7 +75,7 @@ void PlaybackQueue::playNext()
 
     ++current;
 
-    // Optional behavior: loop back to the beginning
+    /* Loop back to start if current reaches the end of queue */
     if (current == queue.end())
     {
         current = queue.begin();
@@ -81,13 +84,11 @@ void PlaybackQueue::playNext()
 
 bool PlaybackQueue::isEmpty() const
 {
+    /* Return queue empty state */
     return queue.empty();
 }
 
-/*
- * Iterates through the entire music library and appends
- * all songs that match the given album name to the queue.
- */
+/* Batch add all songs from a specific album to the queue */
 void addAlbumToQueue(std::string& albumName,
                      MusicLibrary& library,
                      PlaybackQueue& queue)
@@ -101,21 +102,34 @@ void addAlbumToQueue(std::string& albumName,
     }
 }
 
-PlaybackQueue::PlaybackQueue(const PlaybackQueue& other)
-    : queue(other.queue)
+PlaybackQueue::PlaybackQueue(const PlaybackQueue& other) : queue(other.queue)
 {
+    /* Preserve playback position by copying iterator offset */
     if (other.current == other.queue.end())
     {
         current = queue.end();
     }
     else
     {
+        size_t offset = 0;
+
+        for (auto it = other.queue.begin(); it != other.current; ++it)
+        {
+            ++offset;
+        }
+
         current = queue.begin();
+        for (size_t i = 0; i < offset; ++i)
+        {
+            ++current;
+        }
     }
 }
 
+
 PlaybackQueue& PlaybackQueue::operator=(const PlaybackQueue& other)
 {
+    /* Protect against self-assignment */
     if (this == &other)
     {
         return *this;
@@ -123,30 +137,47 @@ PlaybackQueue& PlaybackQueue::operator=(const PlaybackQueue& other)
 
     queue = other.queue;
 
+    /* Preserve playback position by copying iterator offset */
     if (other.current == other.queue.end())
     {
         current = queue.end();
     }
     else
     {
+        size_t offset = 0;
+
+        for (auto it = other.queue.begin(); it != other.current; ++it)
+        {
+            ++offset;
+        }
+
         current = queue.begin();
+        for (size_t i = 0; i < offset; ++i)
+        {
+            ++current;
+        }
     }
 
     return *this;
 }
 
-void PlaybackQueue::getAllSongs() const
+
+std::list<Song>& PlaybackQueue::getQueue()
 {
+    return queue;
+}
+
+void PlaybackQueue::printAllSongs() const
+{
+    /* Iterate and display each song detail in the current queue */
     for (const auto& song : queue)
     {
-        std::cout
-        << "ID: " << song.id
-        << " | Title: " << song.title
-        << " | Artist: " << song.artist
-        << " | Album: " << song.album
-        << " | Duration: " << song.duration << " s"
-        << " | Path: " << song.path
-        << '\n';
+        std::cout << "ID: " << song.id
+                  << " | Title: " << song.title
+                  << " | Artist: " << song.artist
+                  << " | Album: " << song.album
+                  << " | Duration: " << song.duration << " s"
+                  << '\n';
 
         std::cout << "-----------------------------------\n";
     }

@@ -40,7 +40,7 @@ public:
     /*
      * Print all songs in the history
      */
-    void getHistory() const;
+    void printHistory() const;
 
 };
 

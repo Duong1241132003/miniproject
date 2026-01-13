@@ -12,8 +12,6 @@
 #include "SmartPlaylist.h"
 
 /*
- * Class: MusicPlayer
- * ------------------
  * Acts as the central controller for the application.
  * Manages the logic between the Music Library, Playback Queues,
  * History, and the Audio Thread.
@@ -27,6 +25,15 @@ private:
     /* The standard list of songs to be played. */
     PlaybackQueue playbackQueue;
 
+    /* Queue for backup*/
+    PlaybackQueue baseQueue;        
+
+    /* Queue for smart playlist */
+    PlaybackQueue smartQueue;
+
+    /* Queue for shuffle */
+    PlaybackQueue shuffleQueue; 
+
     /* High-priority queue for user-selected "Play Next" songs. */
     PlayNextQueue playNextQueue;
 
@@ -35,6 +42,13 @@ private:
 
     /* The song object currently active in the player. */
     Song currentSong;
+
+    /* Flags for backup of the original playback queue */
+    bool baseQueueSaved = false;
+
+    /* Flag for modes */
+    bool smartPlaylistEnabled = false;
+    bool shuffleEnabled = false;
 
     /* Flag indicating if a song is currently loaded (playing or paused). */
     bool hasCurrentSong = false;
@@ -76,6 +90,9 @@ public:
      */
     void addSongToPlayNext(int songID);
 
+    /* Print Play Next queue */
+    void printPlayNextQueue() const;
+
     /*
      * Randomizes the current playback order using the ShuffleManager.
      * Replaces the current playback queue with the shuffled version.
@@ -83,10 +100,36 @@ public:
     void enableShuffle();
 
     /*
+     * Restore playbackQueue to original
+     */
+    void disableShuffle();
+
+    /*
      * Generates a "Smart Playlist" using Breadth-First Search (BFS)
      * starting from a seed song.
      */
-    void BFS(int startSongID, int maxSize);
+    void enableSmartPlaylist(int startSongID, int maxSize);
+
+
+    /*
+     * Restore playbackQueue to original
+     */
+    void disableSmartPlaylist();
+
+    /*
+     * Applies shuffle to a given playback queue and returns the shuffled version.
+     */
+    PlaybackQueue applyShuffle(PlaybackQueue& source);
+
+    /*
+     * Replay of the current song
+     */
+    void enableRepeat();
+
+    /*
+     *
+     */
+    void disableRepeat();
 
     /* =============================================================
      * DATA ACCESSORS (Getters & Setters)
@@ -137,14 +180,9 @@ void pauseSong();
 void resumeSong();
 
 /*
- * Helper function used in main.cpp to stop playback completely.
- */
-void stopSong();
-
-/*
  * Utility: Loads song metadata from a CSV file into the library.
  * Format: id,title,artist,album,duration,path
  */
-void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library);
+ void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library);
 
 #endif // MUSIC_PLAYER_H

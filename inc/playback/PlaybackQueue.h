@@ -60,12 +60,21 @@ public:
      * Copy constructor
      */
     PlaybackQueue(const PlaybackQueue& other);
+
+    /*
+     * Copy assignment operator
+     */
     PlaybackQueue& operator=(const PlaybackQueue& other);
+
+    /*
+     * Get all playbackQueue
+     */
+    std::list<Song>& getQueue();
 
     /*
      * Print all songs in the queue
      */
-    void getAllSongs() const;
+    void printAllSongs() const;
 };
 
 /*

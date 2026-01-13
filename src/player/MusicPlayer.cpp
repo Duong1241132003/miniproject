@@ -2,10 +2,7 @@
 #include <mutex>
 #include <atomic>
 #include <condition_variable>
-#include <chrono>
-#include <iostream>
-#include <fstream>
-#include <sstream>
+#include <chrono> 
 #include <thread>      
 #include <windows.h>
 
@@ -20,6 +17,7 @@ static std::condition_variable audioCV;
 static std::atomic<bool> audioRunning = true;       /* Is the audio thread alive? */
 static std::atomic<bool> requestNewSong = false;    /* User requested a track change */
 static std::atomic<bool> requestPause = false;      /* User requested pause */
+static std::atomic<bool> repeatEnabled = false;     /* Controls continuous replay of current song */
 
 /* Playback state */
 static std::atomic<bool> isPaused = false;
@@ -39,13 +37,7 @@ static void audioThreadFunc(MusicPlayer* player);
 MusicPlayer::MusicPlayer()
 {
     /* Load music library from CSV at initialization. */
-    loadLibraryFromCSV("data/playlist.csv", library);
-
-    /* Initialize all indexes for fast lookup. */
-    library.initializeSongByID();
-    library.initializeSongByTitle();
-    library.initializeSongByArtist();
-    library.initializeSongByAlbum();
+    library.loadLibraryFromCSV("data/playlist.csv");
 
     /* Start the background audio processing thread. */
     static std::thread audioThread(audioThreadFunc, this);
@@ -98,62 +90,186 @@ void MusicPlayer::addSongToPlayNext(int id)
     std::cout << "Added '" << song->title << "' to Play Next queue.\n";
 }
 
+void MusicPlayer::printPlayNextQueue() const
+{
+    std::cout << "\n--- PLAY NEXT QUEUE ---\n";
+
+    if (playNextQueue.isEmpty())
+    {
+        std::cout << "(empty)\n";
+        return;
+    }
+
+    playNextQueue.printAllSongs();
+}
+
+
 void MusicPlayer::enableShuffle()
 {
+    /* Prevent enabling Shuffle twice */
+    if (shuffleEnabled)
+    {
+        std::cerr << "[Info] Shuffle already enabled.\n";
+        return;
+    }
+
+    /* Save original queue if no mode is active */
+    if (!baseQueueSaved)
+    {
+        baseQueue = playbackQueue;
+        baseQueueSaved = true;
+    }
+
+    shuffleEnabled = true;
+
+    /* Shuffle SmartPlaylist if active, otherwise base queue */
+    if (smartPlaylistEnabled)
+    {
+        playbackQueue = applyShuffle(smartQueue);
+    }
+    else
+    {
+        playbackQueue = applyShuffle(baseQueue);
+    }
+
+    std::cout << "Shuffle enabled.\n";
+}
+
+void MusicPlayer::disableShuffle()
+{
+    /* Prevent disabling if Shuffle is not active */
+    if (!shuffleEnabled)
+    {
+        std::cerr << "[Info] Shuffle not enabled.\n";
+        return;
+    }
+
+    /* Disable Shuffle */
+    shuffleEnabled = false;
+
+    /* Restore SmartPlaylist if still active */
+    if (smartPlaylistEnabled)
+    {
+        playbackQueue = smartQueue;
+    }
+    else
+    {
+        playbackQueue = baseQueue;
+        baseQueueSaved = false;
+    }
+
+    std::cout << "Shuffle disabled.\n";
+}
+
+
+void MusicPlayer::enableSmartPlaylist(int startSongID, int maxSize)
+{
+    /* Prevent enabling SmartPlaylist twice */
+    if (smartPlaylistEnabled)
+    {
+        std::cerr << "[Info] Smart playlist already enabled.\n";
+        return;
+    }
+
+    /* Find starting song */
+    Song* startSong = library.findSongByID(startSongID);
+
+    /* Abort if song not found */
+    if (startSong == nullptr)
+    {
+        std::cerr << "[Error] Start song not found.\n";
+        return;
+    }
+
+    /* Save original queue only once */
+    if (!baseQueueSaved)
+    {
+        baseQueue = playbackQueue;
+        baseQueueSaved = true;
+    }
+
+    /* Generate SmartPlaylist queue */
+    smartQueue = generateSmartPlaylist(*startSong, library, maxSize);
+    smartPlaylistEnabled = true;
+
+    /* Apply shuffle on top of SmartPlaylist if active */
+    if (shuffleEnabled)
+    {
+        playbackQueue = applyShuffle(smartQueue);
+    }
+    else
+    {
+        playbackQueue = smartQueue;
+    }
+
+    std::cout << "Smart playlist enabled.\n";
+}
+
+void MusicPlayer::disableSmartPlaylist()
+{
+    /* Prevent disabling if SmartPlaylist is not active */
+    if (!smartPlaylistEnabled)
+    {
+        std::cerr << "[Info] Smart playlist not enabled.\n";
+        return;
+    }
+
+    /* Disable SmartPlaylist */
+    smartPlaylistEnabled = false;
+
+    /* Restore Shuffle if still enabled */
+    if (shuffleEnabled)
+    {
+        playbackQueue = applyShuffle(baseQueue);
+    }
+    else
+    {
+        playbackQueue = baseQueue;
+        baseQueueSaved = false;
+    }
+
+    std::cout << "Smart playlist disabled.\n";
+}
+
+PlaybackQueue MusicPlayer::applyShuffle(PlaybackQueue& source)
+{
+    /* Initialize ShuffleManager and prepare playlist */
     ShuffleManager shuffleManager;
     std::vector<Song*> playlist;
 
-    /* Add all songs to the playlist before shuffle */
-    for (Song& song : library.getSongs())
+    /* Push all songs from the source queue into the playlist vector */
+    for (Song& s : source.getQueue())
     {
-        playlist.push_back(&song);
+        playlist.push_back(&s);
     }
 
-    if (playlist.empty())
-    {
-        std::cerr << "[Warning] Library is empty, cannot shuffle.\n";
-        return;
-    }
-
-    /* Randomize the order. */
+    /* Initialize and generate shuffled queue */
     shuffleManager.initialize(playlist);
 
-    /* Create a new queue for the shuffled order. */
-    PlaybackQueue shuffledQueue;
+    /* Create a new PlaybackQueue with the shuffled songs */
+    PlaybackQueue result;
 
-    while (true)
+    /* Add all shuffled songs to the result queue */
+    while (Song* s = shuffleManager.getNextSong())
     {
-        Song* nextSong = shuffleManager.getNextSong();
-        if (nextSong == nullptr)
-        {
-            break;
-        }
-        shuffledQueue.addSong(*nextSong);
+        result.addSong(*s);
     }
 
-    /* Replace the current queue. */
-    playbackQueue = shuffledQueue;
-
-    std::cout << "Shuffle enabled: playback queue updated.\n";
+    return result;
 }
 
-void MusicPlayer::BFS(int startSongID, int maxSize)
+void MusicPlayer::enableRepeat()
 {
-    Song* startSong = library.findSongByID(startSongID);
+    /* Enable continuous replay of the current song */
+    repeatEnabled = true;
+    std::cout << "Repeat enabled.\n";
+}
 
-    /* ERROR HANDLING */
-    if (startSong == nullptr)
-    {
-        std::cerr << "[Error] BFS failed: Start song ID " << startSongID << " not found.\n";
-        return;
-    }
-
-    /* Generate a smart playlist based on graph traversal. */
-    PlaybackQueue smartQueue = generateSmartPlaylist(*startSong, library, maxSize);
-
-    playbackQueue = smartQueue;
-
-    std::cout << "Smart playlist generated using BFS.\n";
+void MusicPlayer::disableRepeat()
+{
+    /* Disable continuous replay and allow normal playlist progression */
+    repeatEnabled = false;
+    std::cout << "Repeat disabled.\n";
 }
 
 void MusicPlayer::playNext()
@@ -274,54 +390,6 @@ void resumeSong()
     std::cout << "[Action] Resume requested.\n";
 }
 
-void loadLibraryFromCSV(const std::string& filePath, MusicLibrary& library)
-{
-    std::ifstream file(filePath);
-
-    if (!file.is_open())
-    {
-        /* ERROR HANDLING*/
-        std::cerr << "[Critical Error] Failed to open CSV file: " << filePath << "\n";
-        std::cerr << "Please check if 'data/playlist.csv' exists.\n";
-        return;
-    }
-
-    std::string line;
-    /* Skip the CSV header. */
-    std::getline(file, line);
-
-    while (std::getline(file, line))
-    {
-        if (line.empty()) continue; // Skip empty lines
-
-        std::stringstream ss(line);
-        std::string token;
-        Song song;
-
-        try {
-            /* Parse CSV columns */
-            std::getline(ss, token, ',');
-            song.id = std::stoi(token);
-
-            std::getline(ss, song.title, ',');
-            std::getline(ss, song.artist, ',');
-            std::getline(ss, song.album, ',');
-
-            std::getline(ss, token, ',');
-            song.duration = std::stoi(token);
-
-            std::getline(ss, song.path); /* Last column */
-
-            library.addSong(song);
-        }
-        catch (...)
-        {
-            std::cerr << "[Warning] Skipping malformed line in CSV.\n";
-            continue;
-        }
-    }
-}
-
 /* =============================================================
  * BACKGROUND AUDIO THREAD
  * ============================================================= */
@@ -388,6 +456,14 @@ static void audioThreadFunc(MusicPlayer* player)
             /* Check if song finished naturally. */
             if (std::string(status) == "stopped" && !isPaused)
             {
+                    /* Restart the same song if repeat mode is enabled */
+                if (repeatEnabled)
+                {
+                    playSong(songToPlay);
+                    break;
+                }
+
+                /* Advance normally when repeat mode is disabled */
                 player->playNext(); 
                 break;
             }

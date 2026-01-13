@@ -1,16 +1,15 @@
 #include "PlaybackHistory.h"
 #include <iostream>
+#include <stdexcept>
 
-// Limit the history to the last 50 songs to maintain performance 
-// since stack operations are O(N)
-static const size_t MAX_HISTORY_SIZE = 50;
+/* Limit history size to avoid performance issues with stack operations */
+static const size_t MAX_HISTORY_SIZE = 200;
 
 void PlaybackHistory::pushSong(const Song& song)
 {
     std::stack<Song> tempStack;
 
-    // Move songs to a temporary stack to find and remove any existing 
-    // instance of the song being added. This ensures no duplicates.
+    /* Filter out duplicates by moving non-matching songs to temp stack */
     while (!history.empty())
     {
         Song current = history.top();
@@ -22,29 +21,29 @@ void PlaybackHistory::pushSong(const Song& song)
         }
     }
 
-    // Check if we exceeded the history limit. Since the temporary stack 
-    // is reversed (top is the oldest), popping here removes the oldest entries.
+    /* Enforce size limit by trimming oldest entries from temp stack */
     while (tempStack.size() >= MAX_HISTORY_SIZE)
     {
         tempStack.pop(); 
     }
 
-    // Restore the filtered and trimmed list back to the main history stack
+    /* Restore filtered history back to main stack */
     while (!tempStack.empty())
     {
         history.push(tempStack.top());
         tempStack.pop();
     }
 
-    // Push the new song to the top as the most recent entry
+    /* Add new song to the top */
     history.push(song);
 }
 
 Song PlaybackHistory::playPreviousSong()
 {
+    /* Prevent undefined behavior when accessing empty stack */
     if (history.empty())
     {
-        std::cout << "Playback history is empty";
+        throw std::runtime_error("Playback history is empty");
     }
 
     Song previousSong = history.top();
@@ -58,9 +57,9 @@ bool PlaybackHistory::isEmpty() const
     return history.empty();
 }
 
-void PlaybackHistory::getHistory() const
+void PlaybackHistory::printHistory() const
 {
-    // Create a copy to iterate without modifying the actual history stack
+    /* Use a copy to iterate without modifying the actual stack */
     std::stack<Song> tempStack = history;
 
     if (tempStack.empty())
@@ -71,17 +70,18 @@ void PlaybackHistory::getHistory() const
 
     std::cout << "--- Recent Playback History (Max " << MAX_HISTORY_SIZE << ") ---\n";
 
-    // Display from top (Most Recent) to bottom (Oldest)
+    /* Display from Most Recent (top) to Oldest (bottom) */
     while (!tempStack.empty())
     {
         const Song& song = tempStack.top();
-        std::cout
-        << "ID: " << song.id
-        << " | Title: " << song.title
-        << " | Artist: " << song.artist
-        << " | Album: " << song.album
-        << " | Duration: " << song.duration << " s"
-        << '\n';
+        
+        /* Format output for each song entry */
+        std::cout << "ID: " << song.id
+                  << " | Title: " << song.title
+                  << " | Artist: " << song.artist
+                  << " | Album: " << song.album
+                  << " | Duration: " << song.duration << " s"
+                  << '\n';
         
         tempStack.pop();
     }
